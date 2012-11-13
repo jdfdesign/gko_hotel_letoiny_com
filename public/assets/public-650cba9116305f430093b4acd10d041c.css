@@ -6231,11 +6231,6 @@ footer .nav > li > a:hover {
   display: none;
 }
 
-/* line 8, ../../app/assets/stylesheets/public.css.scss */
-article .galleria a {
-  float: left;
-}
-
 /* line 11, ../../app/assets/stylesheets/public.css.scss */
 #wrapper-wide-body {
   position: absolute;

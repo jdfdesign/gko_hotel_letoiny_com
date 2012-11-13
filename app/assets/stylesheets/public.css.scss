@@ -6,7 +6,7 @@ $brown: #49453E;
 @import "slideshow";
 
 article .galleria a {
-	float:left;
+	//float:left;
 }
 #wrapper-wide-body {
 	position: absolute;
@@ -60,7 +60,7 @@ h1.page-title{
 .navbar {
 	.brand {
 		position: absolute;
-		bottom: 20px;
+		bottom: 0px;
 		right: 10px;
 		a {
 			padding: 0;
