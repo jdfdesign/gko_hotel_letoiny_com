@@ -3922,15 +3922,15 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #57524a;
-  background-image: -moz-linear-gradient(top, #49453e, #6c675e);
-  background-image: -ms-linear-gradient(top, #49453e, #6c675e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#49453e), to(#6c675e));
-  background-image: -webkit-linear-gradient(top, #49453e, #6c675e);
-  background-image: -o-linear-gradient(top, #49453e, #6c675e);
-  background-image: linear-gradient(top, #49453e, #6c675e);
+  background-color: #49453e;
+  background-image: -moz-linear-gradient(top, #49453e, #49453e);
+  background-image: -ms-linear-gradient(top, #49453e, #49453e);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#49453e), to(#49453e));
+  background-image: -webkit-linear-gradient(top, #49453e, #49453e);
+  background-image: -o-linear-gradient(top, #49453e, #49453e);
+  background-image: linear-gradient(top, #49453e, #49453e);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=ie-hex-str(#49453e), endColorstr=ie-hex-str(#6c675e), GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=ie-hex-str(#49453e), endColorstr=ie-hex-str(#49453e), GradientType=0);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -4051,8 +4051,8 @@ input[type="submit"].btn.btn-mini {
   font-weight: normal;
   line-height: 1;
   color: white;
-  background-color: #aba79e;
-  border: 1px solid #5e5a52;
+  background-color: #8d8679;
+  border: 1px solid #3b3832;
   -webkit-box-shadow: "inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)";
   -moz-box-shadow: "inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)";
   box-shadow: "inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)";
@@ -4179,7 +4179,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav .active > a:hover {
   color: white;
   text-decoration: none;
-  background-color: #6c675e;
+  background-color: #49453e;
 }
 
 /* line 239, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -4188,7 +4188,7 @@ input[type="submit"].btn.btn-mini {
   width: 1px;
   margin: 0 9px;
   overflow: hidden;
-  background-color: #6c675e;
+  background-color: #49453e;
   border-right: 1px solid #49453e;
 }
 
@@ -4205,18 +4205,18 @@ input[type="submit"].btn.btn-mini {
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #57524a;
-  background-image: -moz-linear-gradient(top, #49453e, #6c675e);
-  background-image: -ms-linear-gradient(top, #49453e, #6c675e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#49453e), to(#6c675e));
-  background-image: -webkit-linear-gradient(top, #49453e, #6c675e);
-  background-image: -o-linear-gradient(top, #49453e, #6c675e);
-  background-image: linear-gradient(top, #49453e, #6c675e);
+  background-color: #49453e;
+  background-image: -moz-linear-gradient(top, #49453e, #49453e);
+  background-image: -ms-linear-gradient(top, #49453e, #49453e);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#49453e), to(#49453e));
+  background-image: -webkit-linear-gradient(top, #49453e, #49453e);
+  background-image: -o-linear-gradient(top, #49453e, #49453e);
+  background-image: linear-gradient(top, #49453e, #49453e);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=ie-hex-str(#49453e), endColorstr=ie-hex-str(#6c675e), GradientType=0);
-  border-color: #6c675e #6c675e #43403a;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=ie-hex-str(#49453e), endColorstr=ie-hex-str(#49453e), GradientType=0);
+  border-color: #49453e #49453e #201e1b;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #6c675e;
+  *background-color: #49453e;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: "inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)";
@@ -4225,12 +4225,12 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 451, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
-  background-color: #6c675e;
-  *background-color: #5e5a52;
+  background-color: #49453e;
+  *background-color: #3b3832;
 }
 /* line 458, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-  background-color: #514d46 \9;
+  background-color: #2d2b27 \9;
   /* IE6-9 */
 }
 
@@ -5709,7 +5709,7 @@ that IE7/8 do not support :nth-child.
 /* line 2, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/app/assets/stylesheets/gko/public/_footer.scss */
 footer {
   min-height: 70px;
-  background-color: #6c675e;
+  background-color: #49453e;
 }
 /* line 9, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/app/assets/stylesheets/gko/public/_footer.scss */
 footer .nav {
@@ -5744,7 +5744,7 @@ footer .nav > li > a:hover {
 /* line 2, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/app/assets/stylesheets/gko/public/_copyright.scss */
 #copyright-container {
   min-height: 40px;
-  background-color: #6c675e;
+  background-color: #49453e;
   color: copyrightText;
 }
 /* line 6, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/app/assets/stylesheets/gko/public/_copyright.scss */
@@ -7782,7 +7782,7 @@ ul#ticker li span {
   /* line 79, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/vendor/assets/stylesheets/twitter/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .dropdown-menu a:hover {
-    background-color: #6c675e;
+    background-color: #49453e;
   }
 
   /* line 83, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-4d36df3e4bae/gko_core/vendor/assets/stylesheets/twitter/bootstrap/_responsive-navbar.scss */
@@ -7828,8 +7828,8 @@ ul#ticker li span {
     float: none;
     padding: 10px 15px;
     margin: 10px 0;
-    border-top: 1px solid #6c675e;
-    border-bottom: 1px solid #6c675e;
+    border-top: 1px solid #49453e;
+    border-bottom: 1px solid #49453e;
     -webkit-box-shadow: "inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1)";
     -moz-box-shadow: "inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1)";
     box-shadow: "inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1)";

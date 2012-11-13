@@ -54,6 +54,7 @@ h1.page-title{
 .navbar-inner {
 	height: 140px;
 	text-shadow: 0 1px 1px #444;
+	@include reset-filter;
 }
 
 
@@ -63,6 +64,7 @@ h1.page-title{
 	left: 0;
 	right: 0;
 	z-index: 1003;
+	
 	.brand {
 		position: absolute;
 		bottom: 0px;
