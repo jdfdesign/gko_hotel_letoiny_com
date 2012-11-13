@@ -4,9 +4,9 @@ $brown: #49453E;
 @import "gko/public/base";
 @import "scrollpane";
 @import "slideshow";
-
-article .galleria a {
-	//float:left;
+@import "flexslider/flexslider";
+article .flexslider {
+	margin-bottom: $baseLineHeight;
 }
 #wrapper-wide-body {
 	position: absolute;

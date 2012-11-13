@@ -5,7 +5,7 @@
 //= require jquery.lightbox.js
 //= require webcam.js 
 //= require slideshow2.js
-
+//= require flexslider/jquery.flexslider.js
 $(document).ready(function() { 
 	/////////////////////////////////////////////////
   var clickevent = ($.support.touch ? 'touchstart': 'click'),
@@ -213,13 +213,15 @@ $(document).ready(function() {
         getAvailableSize(); 
 		Carousel.addTheme();
 				
-        gallery = Carousel.init($('#background-slideshow'), {
+        gallery = Carousel.init($('#background-slideshow'), available_size.h,{
             width: available_size.w,
             height: available_size.h
         }).bind(Galleria.SHOW_THUMBS,
         function(e) {
-					slide.hide(slider);
-        });
+			slide.hide(slider);
+        }).bind(Galleria.READY, function(e){
+			$(this).data("enterFullscreen");
+		});
 
  				$("#main-column .galleria img").bind(clickevent, function(e) {
 	        e.preventDefault();
@@ -317,5 +319,15 @@ $(document).ready(function() {
     //arbitrary
     /////////////////////////////////////////////////
     init();
+
+	$('.carousel').flexslider({
+		animation: "slide",
+		controlNav: false,
+	   animationLoop: false,
+	   itemWidth: 210,
+	   itemMargin: 5,
+	   minItems: 2,
+	   maxItems: 4
+	 });
 
 });

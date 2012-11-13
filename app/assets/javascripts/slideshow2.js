@@ -1,6 +1,6 @@
 
 var Carousel = {
-	init: function(identifier) {
+	init: function(identifier, height) {
 		if(identifier == undefined) {
 			identifier = ".galleria";
 		}
@@ -11,7 +11,7 @@ var Carousel = {
 				debug: false,
 				autoplay: true,
 				responsive: true,
-				height: .65,
+				height: height || .65,
 				imageCrop: 'landscape',
 				transition: 'slide',
 				thumbMargin: 10,
@@ -103,7 +103,7 @@ var Carousel = {
 		                this.$('loader').fadeOut(200);
 		            });
 		
-		this.enterFullscreen();
+		
 		        }
 		    });
 	} 

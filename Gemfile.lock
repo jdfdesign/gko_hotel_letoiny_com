@@ -1,11 +1,11 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 4d36df3e4bae79af534264704495338f9fb6850f
+  revision: 2b65a041aa4e6ca4a9751e8355eb70d0d3793962
   specs:
-    gko_auth (0.4.38)
+    gko_auth (0.4.39)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-    gko_core (0.4.38)
+    gko_core (0.4.39)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -45,18 +45,18 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.4.38)
+    gko_documents (0.4.39)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.4.38)
-      gko_core (= 0.4.38)
-      gko_inquiries (= 0.4.38)
-    gko_images (0.4.38)
-    gko_inquiries (0.4.38)
+    gko_hotel (0.4.39)
+      gko_core (= 0.4.39)
+      gko_inquiries (= 0.4.39)
+    gko_images (0.4.39)
+    gko_inquiries (0.4.39)
       filters_spam (~> 0.2)
-    gko_newsletters (0.4.38)
+    gko_newsletters (0.4.39)
       createsend (~> 1.0.4)
-    gko_twits (0.4.38)
+    gko_twits (0.4.39)
 
 GEM
   remote: http://rubygems.org/
@@ -273,14 +273,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.4.38)!
-  gko_core (= 0.4.38)!
-  gko_documents (= 0.4.38)!
-  gko_hotel (= 0.4.38)!
-  gko_images (= 0.4.38)!
-  gko_inquiries (= 0.4.38)!
-  gko_newsletters (= 0.4.38)!
-  gko_twits (= 0.4.38)!
+  gko_auth (= 0.4.39)!
+  gko_core (= 0.4.39)!
+  gko_documents (= 0.4.39)!
+  gko_hotel (= 0.4.39)!
+  gko_images (= 0.4.39)!
+  gko_inquiries (= 0.4.39)!
+  gko_newsletters (= 0.4.39)!
+  gko_twits (= 0.4.39)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)

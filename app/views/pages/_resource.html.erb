@@ -1,0 +1,9 @@
+<%= render_page_title(resource.title) %>
+<div id="carousel_<%= rand(10000) %>" class="flexslider carousel">
+  <ul class="slides">
+	<% resource.images.each do |img| %>
+		<li><%= image_fu(img, "210x140#") %></li>
+	<% end %>
+  </ul>
+</div>
+<%= render_html_text(resource.body) %>
