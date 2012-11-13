@@ -6055,10 +6055,10 @@ footer .nav > li > a:hover {
 /* line 120, ../../app/assets/stylesheets/slideshow.css.scss */
 .galleria-thumbnails-container {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 74px;
   background: url(/assets/bg.png);
   z-index: 2;
 }
@@ -6069,7 +6069,7 @@ footer .nav > li > a:hover {
   top: 10px;
   right: 10px;
   left: 10px;
-  bottom: 41px;
+  bottom: 10px;
   overflow: auto !important;
 }
 
@@ -6231,7 +6231,12 @@ footer .nav > li > a:hover {
   display: none;
 }
 
-/* line 9, ../../app/assets/stylesheets/public.css.scss */
+/* line 8, ../../app/assets/stylesheets/public.css.scss */
+article .galleria a {
+  float: left;
+}
+
+/* line 11, ../../app/assets/stylesheets/public.css.scss */
 #wrapper-wide-body {
   position: absolute;
   width: 100%;
@@ -6239,7 +6244,7 @@ footer .nav > li > a:hover {
   overflow: hidden;
 }
 
-/* line 16, ../../app/assets/stylesheets/public.css.scss */
+/* line 18, ../../app/assets/stylesheets/public.css.scss */
 .container-fluid {
   width: 100%;
   float: left;
@@ -6248,7 +6253,7 @@ footer .nav > li > a:hover {
   padding: 0;
 }
 
-/* line 24, ../../app/assets/stylesheets/public.css.scss */
+/* line 26, ../../app/assets/stylesheets/public.css.scss */
 .row-fluid {
   width: 100%;
   margin: 0;
@@ -6258,7 +6263,7 @@ footer .nav > li > a:hover {
 
 /* =SPECIFIC
 ----------------------------------------------------*/
-/* line 33, ../../app/assets/stylesheets/public.css.scss */
+/* line 35, ../../app/assets/stylesheets/public.css.scss */
 #logo_relais_chateaux {
   position: absolute;
   bottom: 140px;
@@ -6267,7 +6272,7 @@ footer .nav > li > a:hover {
   opacity: .7;
 }
 
-/* line 41, ../../app/assets/stylesheets/public.css.scss */
+/* line 43, ../../app/assets/stylesheets/public.css.scss */
 h1.page-title {
   font-weight: normal;
   font-size: 24px;
@@ -6278,19 +6283,19 @@ h1.page-title {
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
-/* line 52, ../../app/assets/stylesheets/public.css.scss */
+/* line 54, ../../app/assets/stylesheets/public.css.scss */
 .navbar-inner {
   height: 140px;
   text-shadow: 0 1px 1px #444;
 }
 
-/* line 59, ../../app/assets/stylesheets/public.css.scss */
+/* line 61, ../../app/assets/stylesheets/public.css.scss */
 .navbar .brand {
   position: absolute;
   bottom: 20px;
   right: 10px;
 }
-/* line 63, ../../app/assets/stylesheets/public.css.scss */
+/* line 65, ../../app/assets/stylesheets/public.css.scss */
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
@@ -6307,26 +6312,26 @@ h1.page-title {
   background-color: transparent;
   border: 0;
 }
-/* line 77, ../../app/assets/stylesheets/public.css.scss */
+/* line 79, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav {
   margin-top: 24px;
 }
-/* line 80, ../../app/assets/stylesheets/public.css.scss */
+/* line 82, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav > li {
   line-height: 14px;
   float: none;
 }
-/* line 84, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav > li > a {
   font-size: 12px;
   font-weight: 300;
   padding: 0;
 }
-/* line 90, ../../app/assets/stylesheets/public.css.scss */
+/* line 92, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu {
   float: right;
 }
-/* line 92, ../../app/assets/stylesheets/public.css.scss */
+/* line 94, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu li > a {
   padding-left: 26px;
   background: transparent url(/assets/locale_icons.png) no-repeat top center;
@@ -6335,7 +6340,7 @@ h1.page-title {
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-/* line 103, ../../app/assets/stylesheets/public.css.scss */
+/* line 105, ../../app/assets/stylesheets/public.css.scss */
 .grid > li h2 {
   text-transform: uppercase;
   font-family: "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
@@ -6347,7 +6352,7 @@ h1.page-title {
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
-/* line 114, ../../app/assets/stylesheets/public.css.scss */
+/* line 116, ../../app/assets/stylesheets/public.css.scss */
 #footer-container {
   height: 70px;
   position: absolute;
@@ -6356,47 +6361,47 @@ h1.page-title {
   text-shadow: 0 1px 1px #444;
 }
 
-/* line 122, ../../app/assets/stylesheets/public.css.scss */
+/* line 124, ../../app/assets/stylesheets/public.css.scss */
 #footer {
   padding: 8px 8px 0px 14px;
   position: relative;
   height: 70px;
 }
-/* line 126, ../../app/assets/stylesheets/public.css.scss */
+/* line 128, ../../app/assets/stylesheets/public.css.scss */
 #footer iframe {
   position: absolute;
   left: 16px;
   bottom: 14px;
 }
-/* line 131, ../../app/assets/stylesheets/public.css.scss */
+/* line 133, ../../app/assets/stylesheets/public.css.scss */
 #footer .nav > li > a {
   padding: 2px 10px 2px;
   line-height: 14px;
 }
-/* line 135, ../../app/assets/stylesheets/public.css.scss */
+/* line 137, ../../app/assets/stylesheets/public.css.scss */
 #footer .pipe-menu-container ul.nav {
   float: left;
 }
-/* line 137, ../../app/assets/stylesheets/public.css.scss */
+/* line 139, ../../app/assets/stylesheets/public.css.scss */
 #footer .pipe-menu-container ul.nav li {
   float: left;
 }
-/* line 141, ../../app/assets/stylesheets/public.css.scss */
+/* line 143, ../../app/assets/stylesheets/public.css.scss */
 #footer .tools-menu-container ul.nav {
   float: right;
   margin-right: 24px;
 }
-/* line 144, ../../app/assets/stylesheets/public.css.scss */
+/* line 146, ../../app/assets/stylesheets/public.css.scss */
 #footer .tools-menu-container ul.nav li {
   float: left;
 }
 
-/* line 154, ../../app/assets/stylesheets/public.css.scss */
+/* line 156, ../../app/assets/stylesheets/public.css.scss */
 #socials {
   float: left;
 }
 
-/* line 157, ../../app/assets/stylesheets/public.css.scss */
+/* line 159, ../../app/assets/stylesheets/public.css.scss */
 #socials a {
   width: 24px;
   height: 24px;
@@ -6404,22 +6409,22 @@ h1.page-title {
   cursor: pointer;
   padding: 0 !important;
 }
-/* line 163, ../../app/assets/stylesheets/public.css.scss */
+/* line 165, ../../app/assets/stylesheets/public.css.scss */
 #socials a:hover {
   background-position: bottom center;
 }
 
-/* line 167, ../../app/assets/stylesheets/public.css.scss */
+/* line 169, ../../app/assets/stylesheets/public.css.scss */
 a#facebook {
   background: transparent url(/assets/facebook_icons.png) no-repeat top center;
 }
 
-/* line 170, ../../app/assets/stylesheets/public.css.scss */
+/* line 172, ../../app/assets/stylesheets/public.css.scss */
 a#twitter {
   background: transparent url(/assets/twitter_icons.png) no-repeat top center;
 }
 
-/* line 173, ../../app/assets/stylesheets/public.css.scss */
+/* line 175, ../../app/assets/stylesheets/public.css.scss */
 a#toolfree {
   background: transparent url(/assets/tollfreebtn.png) no-repeat top left;
 }
@@ -6427,7 +6432,7 @@ a#toolfree {
 /*-----------------------------------------
  SIBEBAR
 ----------------------------------------- */
-/* line 179, ../../app/assets/stylesheets/public.css.scss */
+/* line 181, ../../app/assets/stylesheets/public.css.scss */
 #sidebar {
   width: 290px;
   position: absolute;
@@ -6441,7 +6446,7 @@ a#toolfree {
 /*-----------------------------------------
  HOME
 ----------------------------------------- */
-/* line 192, ../../app/assets/stylesheets/public.css.scss */
+/* line 194, ../../app/assets/stylesheets/public.css.scss */
 #background-slideshow {
   position: absolute;
   z-index: 998;
@@ -6450,12 +6455,12 @@ a#toolfree {
   width: 100%;
   overflow: hidden;
 }
-/* line 199, ../../app/assets/stylesheets/public.css.scss */
+/* line 201, ../../app/assets/stylesheets/public.css.scss */
 #background-slideshow .galleria-bar {
   display: none;
 }
 
-/* line 204, ../../app/assets/stylesheets/public.css.scss */
+/* line 206, ../../app/assets/stylesheets/public.css.scss */
 #content-container {
   position: absolute;
   bottom: 70px;
@@ -6470,12 +6475,12 @@ a#toolfree {
   opacity: .9;
   text-shadow: 0 1px 1px #fff;
 }
-/* line 216, ../../app/assets/stylesheets/public.css.scss */
+/* line 218, ../../app/assets/stylesheets/public.css.scss */
 #content-container a:hover {
   text-shadow: 0 1px 1px #444;
 }
 
-/* line 220, ../../app/assets/stylesheets/public.css.scss */
+/* line 222, ../../app/assets/stylesheets/public.css.scss */
 #content {
   /*width:800px;*/
   width: 100%;
@@ -6487,7 +6492,7 @@ a#toolfree {
   display: block;
 }
 
-/* line 230, ../../app/assets/stylesheets/public.css.scss */
+/* line 232, ../../app/assets/stylesheets/public.css.scss */
 #main-column-tab {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
@@ -6510,12 +6515,12 @@ a#toolfree {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 257, ../../app/assets/stylesheets/public.css.scss */
+/* line 259, ../../app/assets/stylesheets/public.css.scss */
 #main-column-tab.closed {
   background-image: url(/assets/icon_arrow_top_36_white.png);
 }
 
-/* line 261, ../../app/assets/stylesheets/public.css.scss */
+/* line 263, ../../app/assets/stylesheets/public.css.scss */
 #main-column {
   position: absolute;
   left: 340px;
@@ -6525,19 +6530,19 @@ a#toolfree {
   padding: 0px;
   right: 0px;
 }
-/* line 269, ../../app/assets/stylesheets/public.css.scss */
+/* line 271, ../../app/assets/stylesheets/public.css.scss */
 #main-column .diaporama {
   overflow: hidden;
   height: 80px;
   padding: 3px;
   margin-top: 8px;
 }
-/* line 274, ../../app/assets/stylesheets/public.css.scss */
+/* line 276, ../../app/assets/stylesheets/public.css.scss */
 #main-column .diaporama img {
   border: 2px solid white;
 }
 
-/* line 279, ../../app/assets/stylesheets/public.css.scss */
+/* line 281, ../../app/assets/stylesheets/public.css.scss */
 #main-column.content-sidebar {
   position: absolute;
 }
@@ -6555,34 +6560,34 @@ a#toolfree {
 	background-color:#3B3831; 
 }
  */
-/* line 297, ../../app/assets/stylesheets/public.css.scss */
+/* line 299, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul {
   list-style: disc outside;
   margin-left: 30px;
 }
-/* line 298, ../../app/assets/stylesheets/public.css.scss */
+/* line 300, ../../app/assets/stylesheets/public.css.scss */
 .html-text li {
   margin-bottom: 0px;
 }
-/* line 299, ../../app/assets/stylesheets/public.css.scss */
+/* line 301, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul, .html-text ol {
   margin-bottom: .8em;
 }
-/* line 300, ../../app/assets/stylesheets/public.css.scss */
+/* line 302, ../../app/assets/stylesheets/public.css.scss */
 .html-text p {
   margin-bottom: .8em;
   text-align: justify;
 }
-/* line 302, ../../app/assets/stylesheets/public.css.scss */
+/* line 304, ../../app/assets/stylesheets/public.css.scss */
 .html-text table {
   margin-bottom: 40px;
 }
-/* line 307, ../../app/assets/stylesheets/public.css.scss */
+/* line 309, ../../app/assets/stylesheets/public.css.scss */
 .html-text h1 {
   font-size: 26px;
   line-height: 36px;
 }
-/* line 312, ../../app/assets/stylesheets/public.css.scss */
+/* line 314, ../../app/assets/stylesheets/public.css.scss */
 .html-text h2 {
   line-height: 24px;
   font-size: 16px;
@@ -6592,7 +6597,7 @@ a#toolfree {
   border-bottom: 1px solid #B7B6B6;
   font-weight: normal;
 }
-/* line 322, ../../app/assets/stylesheets/public.css.scss */
+/* line 324, ../../app/assets/stylesheets/public.css.scss */
 .html-text h3 {
   line-height: 24px;
   font-size: 14px;
@@ -6603,17 +6608,17 @@ a#toolfree {
 }
 
 /* loading screen */
-/* line 333, ../../app/assets/stylesheets/public.css.scss */
+/* line 335, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading {
   overflow: hidden !important;
 }
 
-/* line 334, ../../app/assets/stylesheets/public.css.scss */
+/* line 336, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading .ui-loader {
   display: block;
 }
 
-/* line 335, ../../app/assets/stylesheets/public.css.scss */
+/* line 337, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader {
   display: none;
   position: absolute;
@@ -6626,7 +6631,7 @@ a#toolfree {
   padding: 10px 30px;
 }
 
-/* line 336, ../../app/assets/stylesheets/public.css.scss */
+/* line 338, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader .ui-icon {
   position: static;
   display: block;
@@ -6637,7 +6642,7 @@ a#toolfree {
   background: transparent url(/assets/gko-core/ajax-loader.gif) no-repeat;
 }
 
-/* line 341, ../../app/assets/stylesheets/public.css.scss */
+/* line 343, ../../app/assets/stylesheets/public.css.scss */
 .ui-icon-loading {
   position: static;
   display: block;
@@ -6655,14 +6660,14 @@ a#toolfree {
   background-size: 35px 35px;
 }
 
-/* line 358, ../../app/assets/stylesheets/public.css.scss */
+/* line 360, ../../app/assets/stylesheets/public.css.scss */
 .hotel_inquiry select,
 .table_inquiry select {
   width: auto;
   display: inline;
 }
 
-/* line 364, ../../app/assets/stylesheets/public.css.scss */
+/* line 366, ../../app/assets/stylesheets/public.css.scss */
 #newsletter_container,
 #diaporama_container,
 #webcam_container {
@@ -6676,13 +6681,13 @@ a#toolfree {
   display: none;
 }
 
-/* line 374, ../../app/assets/stylesheets/public.css.scss */
+/* line 376, ../../app/assets/stylesheets/public.css.scss */
 #newsletter_container label {
   text-align: left;
   color: #3B3831;
 }
 
-/* line 378, ../../app/assets/stylesheets/public.css.scss */
+/* line 380, ../../app/assets/stylesheets/public.css.scss */
 #newsletter_container a {
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
@@ -6709,14 +6714,14 @@ a#toolfree {
   height: 28px;
 }
 
-/* line 404, ../../app/assets/stylesheets/public.css.scss */
+/* line 406, ../../app/assets/stylesheets/public.css.scss */
 #diaporama_container {
   padding: 10px;
 }
 
 /* =TICKER
 ----------------------------------------------------*/
-/* line 409, ../../app/assets/stylesheets/public.css.scss */
+/* line 411, ../../app/assets/stylesheets/public.css.scss */
 #ticker-wrapper {
   position: absolute;
   right: 30px;
@@ -6730,7 +6735,7 @@ a#toolfree {
   text-shadow: 0 1px 1px #fff;
 }
 
-/* line 422, ../../app/assets/stylesheets/public.css.scss */
+/* line 424, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker {
   width: 220px;
   height: 120px;
@@ -6739,7 +6744,7 @@ ul#ticker {
   margin: 0;
 }
 
-/* line 430, ../../app/assets/stylesheets/public.css.scss */
+/* line 432, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li {
   width: 200px;
   height: 99px;
@@ -6747,19 +6752,19 @@ ul#ticker li {
   display: block;
 }
 
-/* line 437, ../../app/assets/stylesheets/public.css.scss */
+/* line 439, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li a {
   color: white;
   display: block;
   text-decoration: none;
 }
-/* line 441, ../../app/assets/stylesheets/public.css.scss */
+/* line 443, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 447, ../../app/assets/stylesheets/public.css.scss */
+/* line 449, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li span {
   display: block;
   color: white;
@@ -7875,17 +7880,21 @@ ul#ticker li span {
   }
 }
 @media (min-width: 980px) {
-  /* line 462, ../../app/assets/stylesheets/public.css.scss */
+  /* line 464, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li > a {
     float: none;
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: transparent;
   }
-  /* line 475, ../../app/assets/stylesheets/public.css.scss */
+  /* line 477, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li > a:hover {
     background-color: transparent;
     color: white;
     text-decoration: none;
   }
+}
+/* line 485, ../../app/assets/stylesheets/public.css.scss */
+#home #content-container {
+  display: none;
 }
