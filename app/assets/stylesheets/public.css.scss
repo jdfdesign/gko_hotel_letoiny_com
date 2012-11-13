@@ -5,7 +5,9 @@ $brown: #49453E;
 @import "scrollpane";
 @import "slideshow";
 
-
+article .galleria a {
+	float:left;
+}
 #wrapper-wide-body {
 	position: absolute;
 	width:100%;
@@ -480,4 +482,6 @@ ul#ticker li span {
 	}
 	
 }
-    
+  #home #content-container {
+	display:none;
+}

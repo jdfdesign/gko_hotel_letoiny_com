@@ -22,9 +22,9 @@ group :production do
  gem "gko_documents", prod_version, :git => prod_location
  gem 'gko_newsletters', prod_version, :git => prod_location
  gem 'gko_twits', prod_version, :git => prod_location 
- gem 'gko_hotel', prod_version, :git => prod_location 
- 
+ gem 'gko_hotel', prod_version, :git => prod_location  
 end
+
 #group :development do
 #  gem "gko_core", :path => File.expand_path('~/Github/gko_cms3/gko_core', __FILE__)
 #  gem "gko_auth", :path => File.expand_path('~/Github/gko_cms3/gko_auth', __FILE__)
