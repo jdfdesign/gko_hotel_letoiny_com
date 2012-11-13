@@ -1,0 +1,66 @@
+// Layout 
+$containerMaxWidth: 0; 
+$rowMaxWidth: 100%;
+
+$bodyBackgroundColor: #000;  
+$contentBackgroundColor: transparent;
+$footerBackgroundColor: #49453E;
+$copyrightBackgroundColor: $footerBackgroundColor; 
+$mainBackgroundColor: transparent;
+$sidebarBackgroundColor: transparent;
+
+
+// Typography
+$baseFontFamily: "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif; 
+$baseFontSize: 13px;
+$baseLineHeight: 20px;
+$textColor: #3B3831; 
+$headingFontFamily: Georgia,'Times New Roman', Times, serif;  
+$headingTextColor: $textColor;
+$headingBaseFontSize: 26px;
+
+// Links
+$linkColor: $textColor;
+$linkColorHover: darken($linkColor, 15%);
+$linkColorActive: darken($linkColor, 15%);
+
+// Header links
+$headerLinkColor: $linkColor;
+$headerLinkColorHover: $linkColorHover;
+$headerLinkColorActive: $linkColorActive;
+
+// Footer links
+$footerLinkColor: #DEDAD1;
+$footerLinkColorHover: white;
+$footerLinkColorActive: white;
+$footerResponsiveLinkBorder: lighter($textColor, 15%);
+
+// Navbar
+$navbarBackgroundHighlight: #6c675e;
+$navbarBackground: #49453E; 
+$navbarText: #DEDAD1;
+$navbarLinkColor: #DEDAD1; 
+$navbarLinkColorHover: white;
+$navbarLinkColorActive: white; 
+$navbarButtonBackgroundHighlight: $navbarBackgroundHighlight; 
+$navbarButtonBackground: $navbarBackground; 
+$navbarButtonIconBarColor: white;
+$navbarResponsiveLinkBorder: lighter($textColor, 15%);
+$navbarDropdownBackground: $navbarBackground;
+$navbarDropdownLinkColor: $navbarLinkColor;
+$navbarDropdownLinkColorHover: $navbarLinkColorHover;
+$navbarDropdownLinkColorActive: $navbarLinkColorActive;
+
+ 
+// Form 
+$inputTextColor: $textColor;
+$inputBackgroundColor: white;
+$inputBorderColor: #DEDAD1;  
+$inputFocusBorderColor: rgba(224, 224, 219, 0.8); //$bodyBackgroundColor 
+$inputBorderRadius: 0; 
+
+// Grid
+$blockGridImageBorder: none;
+$blockGridImageBackgroundColor: transparent; 
+$blockGridBackgroundColor: transparent; 
+$blockGridImageCorner: none;

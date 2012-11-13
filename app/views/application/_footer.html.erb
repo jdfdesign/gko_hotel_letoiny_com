@@ -1,0 +1,18 @@
+<footer id='footer-container' class='container-fluid'>
+  <div id='footer' class='row-fluid'>
+    <div class="span12">
+      <%= render_menu('pipe') %>
+      <div id='site-infos'>
+
+        <ul id='socials' class="nav">
+          <li><%= link_to("facebook", "http://www.facebook.com/HOTELLETOINYSTBARTH?v=page_getting_started", :id => "facebook", :title => t("facebook_btn"), :rel => "tooltip",:target => "_blank") %></li> 
+          <li><%= link_to("twitter", "http://twitter.com/#!/letoiny", :id => "twitter", :title => t("twitter_btn"), :rel => "tooltip",:target => "_blank") %></li>
+          <li><%= link_to("(800) 680 - 0832".html_safe, "javascript(:void)", :id => "toolfree", :title => t("tool_free_btn"), :rel => "tooltip") %></li> 
+
+        </ul>
+ 
+      </div>
+      <%= render_menu('tools') %> 
+              <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHotel-Le-Toiny-St-Barth%2F102215559842737%3Fv%3Dinfo%23%21%2Fpages%2FHotel-Le-Toiny-St-Barth%2F102215559842737%3Fv%3Dwall&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=dark&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:40%; height:30px;" allowtransparency="true"></iframe>   
+    </div>
+</footer>

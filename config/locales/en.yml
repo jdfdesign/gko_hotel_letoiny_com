@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en: 
+  book_table_title: Book a table at Le Gaiac
+  full_hotel_address: "Hotel Le Toiny<br/>Anse de Toiny<br/>97133 Saint-Barthélemy<br/>Guadeloupe<br/>T. (590)590278888<br/>F. (590)590278930<br/>Email. reservations@letoiny.com"
+  tollfree_address: "Call us for free from US and Canada at ( 800 ) 680 - 0832"
+  book_table_tab: "Book a table at Le Gaiac"
+  book_hotel_tab: "Book a room" 
+  tool_free_btn: "Call us for free from US and Canada at (800) 680 - 0832"
+  facebook_btn: "Visit our Facebook page"
+  twitter_btn: "Follow us on Twitter"
+  r_and_c: "<b>Who We Are?</b><br>Established over half a century ago, Relais & Châteaux is an association of the world’s finest hoteliers, chefs and restaurateurs that has set the standard for excellence in hospitality. Relais & Châteaux has redefined luxury hospitality by emphasizing holistic experiences that transport its guests, taking them on a sensual journey and introducing them to a deeper, truer understanding of the Art of Living."

@@ -1,0 +1,87 @@
+<%
+has_left_sidebar = content_for?(:left_sidebar) 
+has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
+%>
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title><%= @meta_title || site.title %></title>
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="<%= @meta_description %>" />
+  <meta name="keywords" content="<%= @meta_keywords %>" />
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+ 
+  <!-- Le styles -->
+  <%= stylesheet_link_tag "mobile" %>
+
+  <!-- Le fav and touch icons -->
+  <!-- <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png"> --> 
+   
+	<% if site.preferred_typekit_key.present? %>
+    <%= "<script type='text/javascript' src='http://use.typekit.com/#{site.preferred_typekit_key}.js'></script>".html_safe %>
+    <%= "<script type='text/javascript'>try{Typekit.load();}catch(e){}</script>".html_safe %>
+  <% end %>
+  <%= yield :head %>
+  <%= csrf_meta_tag %>
+</head>
+<body id='<%= @body_id %>' class='mobile'>
+  <div id="wrapper-wide-body">
+    
+    <!-- Header
+    ================================================== -->
+    <%= render '/shared/header' %>
+    
+    <!-- Content
+    ================================================== -->
+    <div id='content-container' class='container-fluid'>
+      <div id="content" class='row-fluid'>
+        <% if content_for?(:page_content) %>
+          <div id="main-column" class='span12 <%= @body_id %>'>
+            <div class="main-column-inner"><%= yield :page_content %></div>
+          </div> 
+        <% else %>
+          
+          <div id="main-column" class='<%= has_sidebar || has_left_sidebar ? 'span9' : 'span12' %> <%= @body_id %> '>
+            <div class="main-column-inner">
+              <%= render "shared/flash" %>
+              <%= yield %>
+            </div>
+          </div>
+          <% if has_left_sidebar %>
+          <aside id='left_sidebar' class="span3"><%= yield :left_sidebar %></aside>
+          <% end %>
+          <% if has_sidebar %>
+          <aside id='sidebar' class="span3">
+            <div id='sidebar-header'><%= yield :sidebar_header %></div>
+            <div id='sidebar-content'><%= yield :sidebar %></div>
+          </aside>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    
+    <!-- Footer
+    ================================================== -->
+    <%= render '/shared/footer' %>   
+  </div>
+  
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+	<%= javascript_include_tag "gko_public_all" %>
+	<%= yield :after_javascript_libraries %>
+	<%#= javascript_include_tag "mobile" %>
+	
+  <!-- Analytics
+  ================================================== -->
+  <%= render '/shared/google_analytics' %>
+<body>
+</html>

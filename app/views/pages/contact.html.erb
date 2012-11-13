@@ -1,0 +1,27 @@
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <%= t(:'book_hotel_tab') %>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <%= render :partial => 'hotel_inquiries/form' %>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        <%= t(:'book_table_tab') %>
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <%= render :partial => 'table_inquiries/form' %>
+      </div>
+    </div>
+  </div>
+</div>
+<p><b><%= t("tollfree_address").html_safe %></b></p><p><%= t("full_hotel_address").html_safe %></p>

@@ -1,0 +1,11 @@
+<% content_for :page_content do %> 
+  <% if @twits.try(:any?) %>
+  <div id="ticker-wrapper">
+    <ul id="ticker">
+      <% @twits.each do |twit| %>
+        <li><a href="#"><%= twit.body.try(:html_safe) %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+<% end %>   
