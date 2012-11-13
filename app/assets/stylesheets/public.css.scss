@@ -58,6 +58,11 @@ h1.page-title{
 
 
 .navbar {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	z-index: 1003;
 	.brand {
 		position: absolute;
 		bottom: 0px;
