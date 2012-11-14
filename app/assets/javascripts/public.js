@@ -2,10 +2,12 @@
 //= require jquery.easing.min.js
 //= require jquery.mousewheel.js
 //= require jquery.jscrollpane.min.js
-//= require jquery.lightbox.js
 //= require webcam.js 
 //= require flexslider/jquery.flexslider.js
 //= require supersized.3.2.7.js
+//= require load-image.min.js
+//= require twitter/bootstrap/modal.js
+//= require bootstrap-image-gallery.js
 
 var available_size = {w: 896,h: 600}, 
 	breakpoint = 979;
@@ -33,16 +35,18 @@ var Site = {
 		footerHeight = $('#footer-container').outerHeight();
 		isHome = ($body.attr('id') == 'home');
 		
+		$('#supersized').addClass('visible-desktop');
 		Site.attachEvents();
+		Carousel.init();
 		Site.rescale();
 	},
 
     attachEvents : function() {
 		
-		$("#main-column .carousel").on('click', ' img',  function(e) {
+	/*	$("#main-column .carousel").on('click', ' img',  function(e) {
 			e.preventDefault();
-			Modal.show();
-		}) 
+			Carousel.modal();
+		}) */
 
 		$('#newsletter_registration').on('click', function(e) {  
 			newsletter_container = $('<div id="newsletter_container" style="width:360px;min-height:30px;padding:14px;"><label for="newsletter_registration_email">Email</label><input id="newsletter_registration_email" maxlength="255" name="newsletter_registration_email" size="50" type="email" value=""><a id="ok_newsletter_registration">OK</a></div>').insertAfter($("#content-container"));
@@ -79,20 +83,33 @@ var Site = {
     },
 
 	rescale: function() {
+		
 		Util.getAvailableSize();
 		if(available_size.w > breakpoint) {
-			if(!isHome) {   
-				Slide.init();
-				Carousel.init();
-				Site.init_scrollpane();
-			} else {
-			 	// start the ticker 
-			 	Home.init();
+			if($body.hasClass('breakpoint')) {
+				Slide.rescale();
+			}
+			else {
+				if(isHome) {  
+					// start the ticker 
+				 	Home.init(); 
+				} else {
+				 	Slide.init();
+				
+					Site.init_scrollpane();
+				}
+				$body.addClass('breakpoint');
 			}
 		}
 		else {
-		//	Slide.destroy();
-		//	scrollpaneApi.destroy();
+			$body.removeClass('breakpoint');
+			if(scrollpaneApi) {
+				scrollpaneApi.destroy();
+				scrollpaneApi = undefined;
+			}
+			Slide.destroy();
+
+			
 		}
 	},
 
@@ -125,10 +142,11 @@ var Slide = {
 	                Slide.hide($slider);
 	            }
 	        });
-       		if ($("#main-column-scroll") != 1) {
-           		$("#main-column").wrapInner("<div id='main-scroll' style='max-width:500px;'></div");
-					//$("#main-column").wrapInner("<div id='main-scroll'></div");
+       		if ($("#main-scroll").length == 0) {
+           		$("#main-column").wrapInner("<div id='main-scroll'></div");
        		}
+			$('#main-scroll').css('max-width', '500px');
+			Slide.rescale();
 			this.initialised = true;
 		}
     },
@@ -166,7 +184,8 @@ var Slide = {
         });
     },
     rescale: function() {
-		var h = ( 70 * available_size.h / Util.getScreenSize().h) + '%';
+		var h = 0.7 * available_size.h - $sliderTab.height();
+	
 		$slider.css("height", h);
 		$('#main-column').css('width', Math.max(300, available_size.w - 310));
 		
@@ -174,6 +193,7 @@ var Slide = {
 	destroy: function() {
 		$slider.css({background: 'transparent', height: 'auto'});
 		$('#main-column').css('width', 'auto');
+		$('#main-scroll').css('max-width', 'none');
 		$sliderTab.remove();
 		this.initialised = false;
     }
@@ -183,7 +203,7 @@ var Carousel = {
 	
 	init : function() {
 
-		$('.carousel').flexslider({
+		$('#carousel').flexslider({
 			animation: "slide",
 			controlNav: false,
 			animationLoop: false,
@@ -198,37 +218,6 @@ var Newsletter = {
 	
 	show : function() {
 
-	}
-}
-var Modal = {
-	
-	show : function() {
-		$('#myModal .flexslider:first').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			sync: "#carousel_modal"
-		});
-		$('#carousel_modal').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			itemWidth: 140,
-			itemMargin: 5,
-			minItems: 2,
-			maxItems: 4
-		 });
-		$('#myModal').modal({
-		    backdrop: false,
-		    keyboard: true
-		}).css({
-			height: Math.min(600, available_size.h),
-		    width: Math.min(800, available_size.w),
-		    'marginLeft': function () {
-		        return -($(this).width() / 2);
-		    }
-		});
 	}
 }
 
@@ -255,8 +244,8 @@ var Util = {
         winHeight = Math.max(winHeightMin, $(window).height()),
         winWidth = Math.max(winWidthMin, $(window).width()),
         pageSize = {
-            w: winWidth,//Math.min(screenWidth, winWidth),
-            h: winHeight//Math.min(screenHeight, winHeight)
+            w: $(window).width(),//Math.min(screenWidth, winWidth),
+            h: $(window).height()//Math.min(screenHeight, winHeight)
         };
 				//log("port" + port + "getScreenSize screenWidth " + screenWidth + " winWidth " + winWidth);
         return pageSize;

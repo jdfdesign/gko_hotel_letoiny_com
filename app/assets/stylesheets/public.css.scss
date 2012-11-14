@@ -5,6 +5,7 @@ $brown: #49453E;
 @import "scrollpane";
 @import "flexslider/flexslider";
 @import "supersized";
+@import "bootstrap-image-gallery";
 
 /* =PATCH
 ----------------------------------------------------*/
@@ -373,7 +374,7 @@ ul#ticker li span {
 		@include box-shadow(none);
 	}
 	.nav-collapse {
-		
+		background-color: $navbarBackground;
 		.nav > li {
 			&.dropdown {
 				border-top: 1px dotted $navbarLinkColor;
@@ -428,7 +429,7 @@ ul#ticker li span {
 		height:70%; /* must have an px height for scrollpane */
 		min-height:300px;
 		overflow:visible;
-		z-index: 999;
+		z-index: 900;
 		background: #49bce7;
 		
 		@include opacity(90);
@@ -483,7 +484,7 @@ ul#ticker li span {
 		height: $footerHeight;
 		position: absolute;
 		bottom: 0px;
-		z-index: 1003;
+		z-index: 910;
 		text-shadow: 0 1px 1px #444;
 		width: 100%;
 	}
@@ -524,7 +525,7 @@ ul#ticker li span {
 		top: 0px;
 		left: 0;
 		right: 0;
-		z-index: 1003;
+		z-index: 910;
 
 		.brand {
 			position: absolute;
@@ -534,16 +535,6 @@ ul#ticker li span {
 	}
 	
 }
-  #home #content-container {
+#home #content-container {
 	display:none;
-}
-#myModal {
-	.modal-header {
-		min-height : 24px;
-	}
-	.modal-body {
-		overflow: hidden;
-		max-height: none;
-		padding: 15px;
-	}
 }

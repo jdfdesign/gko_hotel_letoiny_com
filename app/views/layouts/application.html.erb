@@ -65,7 +65,7 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
         </div>
       </div>
       <% end %>  
-      <%= link_to(image_tag("logo_relais_chateaux_white.png", :title => t("r_and_c").html_safe, :rel => "tooltip", :data => { :placement => 'right'}), "http://www.relaischateaux.com/fr/search-book/hotel-restaurant/toiny/", :id => "logo_relais_chateaux", :target => "_blank") %>
+      <%= link_to(image_tag("logo_relais_chateaux_white.png", :title => t("r_and_c").html_safe, :rel => "tooltip", :data => { :placement => 'right'}), "http://www.relaischateaux.com/fr/search-book/hotel-restaurant/toiny/", :id => "logo_relais_chateaux", :target => "_blank", :class => 'visible-desktop') %>
       
       <!-- Footer
       ================================================== -->
@@ -75,6 +75,20 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
   
   <%= render(:partial => "table_inquiries/modal_form") %>
 
+
+	<!-- modal-gallery is the modal dialog used for the image gallery -->
+	<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+	    <div class="modal-header">
+	        <a class="close" data-dismiss="modal">&times;</a>
+	        <h3 class="modal-title"></h3>
+	    </div>
+	    <div class="modal-body"><div class="modal-image"></div></div>
+	    <div class="modal-footer">
+	        <a class="btn modal-next"><%= t("next") %> <i class="icon-arrow-right"></i></a>
+	        <a class="btn modal-prev"><i class="icon-arrow-left"></i> <%= t("previous") %> </a>
+	        <a class="btn modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play"></i> Slideshow</a>
+	    </div>
+	</div>
   
   <!-- Le javascript
   ================================================== -->
