@@ -1,0 +1,17 @@
+.galleria-thumbnails .galleria-image {
+	width: 48px;
+	height: 32px;
+	float: left;
+	margin: 0 7px 7px 0;
+	border: 3px solid #fff;
+	cursor: pointer
+}
+.galleria-bar {
+	width: 60px;
+	}
+#diaporama .ui-btn {
+	position:absolute;
+	top:4px;   
+	left:4px;
+	z-index:100;
+}

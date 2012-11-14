@@ -68,6 +68,17 @@
 	float: left;
 	height: 100%;
 }
+.jspArrow.jspArrowDown {
+	background-image:asset-url("d.gif", image);
+	background-repeat:
+	no-repeat;
+	background-position:50% 50%;
+} 
+.jspArrow.jspArrowUp {
+	background-image:asset-url("u.gif", image);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
 .jspVerticalBar .jspArrow:focus {
 	outline: none;
 }

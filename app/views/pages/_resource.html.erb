@@ -1,9 +1,36 @@
 <%= render_page_title(resource.title) %>
+<% if resource.images.any? %>
+<div class="modal fade" id="myModal">
+  <div class="modal-header">
+	<a class="close" data-dismiss="modal">×</a>
+  </div>
+  <div class="modal-body">
+	<div id="slider" class="flexslider">
+	  <ul class="slides">
+		<% resource.images.each do |img| %>
+			<li><%= image_fu(img, :large) %></li>
+		<% end %>
+	  </ul>
+	</div>
+	<div id="carousel_modal" class="flexslider carousel">
+	  <ul class="slides">
+		<% resource.images.each do |img| %>
+			<li><%= image_fu(img, "210x140#") %></li>
+		<% end %>
+	  </ul>
+	</div>
+  </div>
+</div>​
+
+<div class="slideshow">
+
 <div id="carousel_<%= rand(10000) %>" class="flexslider carousel">
   <ul class="slides">
 	<% resource.images.each do |img| %>
 		<li><%= image_fu(img, "210x140#") %></li>
 	<% end %>
   </ul>
+</div>
+<% end %>
 </div>
 <%= render_html_text(resource.body) %>

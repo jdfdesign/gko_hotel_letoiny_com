@@ -34,16 +34,7 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
   <%= csrf_meta_tag %>
 </head>
 <body id='<%= @body_id %>'>
-  <% if @background_images.any? %>
-  <div id="wrapper-wide-background-slideshow" class="wrapper-wide <%= resource_instance_name %>">
-    <div id="background-slideshow" class="container">
-      <%= render :partial => 'images/shared/list', 
-        :locals => { 
-          :images => @background_images, 
-          :image_style => '1024x768' } %>
-    </div>
-  </div>
-  <% end %>
+
   <div id="wrapper-wide-body">
     
     <!-- Header
@@ -74,7 +65,7 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
         </div>
       </div>
       <% end %>  
-      <%= link_to(image_tag("logo_relais_chateaux_white.png", :title => t("r_and_c"), :rel => "tooltip"), "http://www.relaischateaux.com/fr/search-book/hotel-restaurant/toiny/", :id => "logo_relais_chateaux", :target => "_blank") %>
+      <%= link_to(image_tag("logo_relais_chateaux_white.png", :title => t("r_and_c").html_safe, :rel => "tooltip", :data => { :placement => 'right'}), "http://www.relaischateaux.com/fr/search-book/hotel-restaurant/toiny/", :id => "logo_relais_chateaux", :target => "_blank") %>
       
       <!-- Footer
       ================================================== -->
@@ -91,6 +82,19 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
 	<%= javascript_include_tag "gko_public_all" %>
 	<%= yield :after_javascript_libraries %>
 	<%= javascript_include_tag "public" %>
+	<script type="text/javascript">
+		
+		jQuery(function($){
+			
+			$.supersized({
+				slide_interval :   3000,		// Length between transitions
+				transition :   3, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+				transition_speed :	800,		// Speed of transition
+				slides  :  [<%= raw @background_images.map{|c| "{image: '#{c.url}'}" }.join(",").to_s %>]
+			});
+	    });
+	    
+	</script>
 	
   <!-- Analytics
   ================================================== -->
