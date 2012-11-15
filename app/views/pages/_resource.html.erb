@@ -3,7 +3,7 @@
 <div id="carousel" class="flexslider carousel">
   <ul class="slides"  data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="li.gallery-item">
 	<% resource.images.each do |img| %>
-		<%= content_tag(:li, :class => "gallery-item", :rel => "gallery", :data => {:href => "#{img.url}"}) do %>
+		<%= content_tag(:li, :class => "gallery-item", :rel => "gallery", :data => {:href => "#{img.thumbnail(:large).url}"}) do %>
 			<%= image_fu(img, "210x140#") %>
 		<% end %>
 	<% end %>
