@@ -1,10 +1,13 @@
-GIT
-  remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: f93dd133ab9fdb84c6ec8eab4b2fd14eb4c2a2c3
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_auth
   specs:
     gko_auth (0.4.50)
       cancan (= 1.6.8)
       devise (= 2.1.2)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_core
+  specs:
     gko_core (0.4.50)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
@@ -45,17 +48,41 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_documents
+  specs:
     gko_documents (0.4.50)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_hotel
+  specs:
     gko_hotel (0.4.50)
       gko_core (= 0.4.50)
       gko_inquiries (= 0.4.50)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_images
+  specs:
     gko_images (0.4.50)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_inquiries
+  specs:
     gko_inquiries (0.4.50)
       filters_spam (~> 0.2)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_newsletters
+  specs:
     gko_newsletters (0.4.50)
       createsend (~> 1.0.4)
+
+PATH
+  remote: /Users/regisbruggheman/Github/gko_cms3/gko_twits
+  specs:
     gko_twits (0.4.50)
 
 GEM
@@ -277,14 +304,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.4.50)!
-  gko_core (= 0.4.50)!
-  gko_documents (= 0.4.50)!
-  gko_hotel (= 0.4.50)!
-  gko_images (= 0.4.50)!
-  gko_inquiries (= 0.4.50)!
-  gko_newsletters (= 0.4.50)!
-  gko_twits (= 0.4.50)!
+  gko_auth!
+  gko_core!
+  gko_documents!
+  gko_hotel!
+  gko_images!
+  gko_inquiries!
+  gko_newsletters!
+  gko_twits!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)
