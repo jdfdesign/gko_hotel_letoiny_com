@@ -1,4 +1,4 @@
-//= require gko/gko.utils.js
+//= require gko/jquery.mobile.events.js
 //= require jquery.easing.min.js
 //= require jquery.mousewheel.js
 //= require jquery.jscrollpane.min.js
@@ -6,7 +6,14 @@
 //= require flexslider/jquery.flexslider.js
 //= require supersized.3.2.7.js
 //= require load-image.min.js
+//= require twitter/bootstrap/transition.js
+//= require twitter/bootstrap/alert.js
+//= require twitter/bootstrap/button.js
+//= require twitter/bootstrap/collapse.js
+//= require twitter/bootstrap/dropdown.js
 //= require twitter/bootstrap/modal.js
+//= require twitter/bootstrap/tooltip.js
+//= require twitter_ext/bootstrap-datepicker.js
 //= require bootstrap-image-gallery.js
 
 var available_size = {w: 896,h: 600}, 
@@ -15,7 +22,7 @@ var available_size = {w: 896,h: 600},
 	$sliderTab = undefined,
 	$body = undefined,
 	$scrollpane = undefined,
-	colors = ["#7ad9fd","#90f2ee","#cdf18a"],
+	colors = ["#b7e9fc","#96daf3","#e6feba"],
 	headerHeight = 0,
 	footerHeight = 0,
 	slide_open = true,
@@ -31,7 +38,7 @@ var Site = {
 		$sliderTab = $("#main-column-tab");
 		$body = $("body");
 		$scrollpane = $('#main-column');
-		headerHeight = $('#header-container').outerHeight();
+		headerHeight = $('header.navbar').outerHeight();
 		footerHeight = $('#footer-container').outerHeight();
 		isHome = ($body.attr('id') == 'home');
 		
@@ -39,6 +46,8 @@ var Site = {
 		Site.attachEvents();
 		Carousel.init();
 		Site.rescale();
+		
+		$('a[rel="tooltip"], a[rel="tooltip nofollow"]').tooltip({html: true});
 	},
 
     attachEvents : function() {
@@ -67,6 +76,23 @@ var Site = {
 		});
 			e.preventDefault();
 		});
+
+
+		// Start slideshow button:
+		    $('#start-slideshow').button().click(function () {
+		        var options = $(this).data(),
+		            modal = $(options.target),
+		            data = modal.data('modal');
+		        if (data) {
+		            $.extend(data.options, options);
+		        } else {
+		            options = $.extend(modal.data(), options);
+		        }
+		        //modal.find('.modal-slideshow').find('i')
+		        //    .removeClass('icon-play')
+		        //    .addClass('icon-pause');
+		        modal.modal(options);
+		    });
 		
 		// Enable ajax on form to send register user to bronto
 		//------------------------------------------------------- 
@@ -172,7 +198,7 @@ var Slide = {
             dest[slide_orientation] = -el.width();
         }
         else {
-            dest[slide_orientation] = parseValue(el.css(slide_orientation)) - el.height();
+            dest[slide_orientation] = parseFloat(el.css(slide_orientation)) - el.height();
         }
         Slide.move(el, dest);
         $sliderTab.addClass("closed");
@@ -228,26 +254,17 @@ var Home = {
 			{
 				$(this).detach().appendTo('ul#ticker').removeAttr('style');	
 			});
-			ticker();
+			//ticker();
 		}, 3000);
 	}
 }
 var Util = {
 
     getScreenSize : function() {
-        var orientation = jQuery.event.special.orientationchange.orientation(),
-        port = orientation === "portrait",
-        winHeightMin = port ? 480 : 320,
-        winWidthMin = port ? 320 : 480,
-        screenHeight = port ? screen.availHeight : screen.availWidth,
-        screenWidth = port ? screen.availWidth : screen.availHeight,
-        winHeight = Math.max(winHeightMin, $(window).height()),
-        winWidth = Math.max(winWidthMin, $(window).width()),
         pageSize = {
-            w: $(window).width(),//Math.min(screenWidth, winWidth),
-            h: $(window).height()//Math.min(screenHeight, winHeight)
+            w: $(window).width(),
+            h: $(window).height()
         };
-				//log("port" + port + "getScreenSize screenWidth " + screenWidth + " winWidth " + winWidth);
         return pageSize;
     },
 

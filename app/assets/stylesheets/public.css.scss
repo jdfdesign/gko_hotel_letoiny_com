@@ -1,11 +1,21 @@
-$brown: #49453E;
+$brown: #44413A;
+
 @import "variables";
 @import "twitter/bootstrap";
+@import "font-awesome";
 @import "gko/public/base";
 @import "scrollpane";
 @import "flexslider/flexslider";
 @import "supersized";
 @import "bootstrap-image-gallery";
+
+$zindexPane: 100;
+$zindexLogoRelais: 90;
+
+
+* {
+@include box-sizing(border-box);
+}
 
 /* =PATCH
 ----------------------------------------------------*/
@@ -17,21 +27,39 @@ $brown: #49453E;
 	}
 }
 .flexslider {
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight / 2;
 }
+
+.flex-direction-nav a { opacity: 1; }
+.flex-direction-nav .flex-next {right: 6px;}
+.flex-direction-nav .flex-prev {left: 6px;}
+.flexslider:hover .flex-next {opacity: 1;}
+.flexslider:hover .flex-prev {opacity: 1;}
 .main-content-inner {
 	padding: $baseLineHeight 0;
 }
+.accordion-group {
+	background-color: $white;
+}
+
 /* =SPECIFIC
 ----------------------------------------------------*/  
 #logo_relais_chateaux {
 	position:absolute; 
 	bottom:140px;
 	right:20px;
-	z-index: 999;
+	z-index: $zindexLogoRelais;
 	opacity: .7;
 }
-
+#start-slideshow {
+	text-align: right;
+	margin-bottom: $baseLineHeight;
+	font-size: 10px;
+	text-decoration: none;
+	i {
+		padding-left: 4px;
+	}
+}
 h1.page-title{
 	font-weight:normal;
 	font-size: 24px;
@@ -44,16 +72,16 @@ h1.page-title{
 
 
 .navbar-inner {
-	height: 140px;
+
 	text-shadow: 0 1px 1px #444;
 	@include reset-filter;
+	@include border-radius(0);
 }
 
 
 .navbar {
 	.brand {
-		float: none;
-		text-align: center;
+
 		a {
 			padding: 0;
 			margin: 0 auto;
@@ -67,27 +95,56 @@ h1.page-title{
 			@include hide-text;
 		}
 	}
-	.nav-collapse {
-		.nav {
-			margin-top: 24px;
+	.header-top {
+		@include clearfix;
+		nav {
+			float:right;
 		}
 		.nav > li {
-			line-height: 14px;
+			margin-left: 4px;
+		}
+		.nav > li > a {
+			background-color: darken($brown, 8%);
+			@include border-radius(0 0 8px 8px);
+			padding: 6px 10px 6px;
+			font-size: 11px;
+		}
+	}
+	.header-nav {
+		@include clearfix;
+
+	}
+	#locales-menu {
+		li > a {
+			line-height: 12px;
+			padding-left:56px;
+			background:transparent asset-url("locale_icons.png", image) no-repeat top center; 
+		}
+	}
+
+	.nav-collapse {
+		nav {
+			//border-right: 1px solid lighten($brown, 8%);
+		}
+		.nav {
+			margin-top: 16px;
+		}
+		.nav > li {
+			//line-height: 14px;
 			float: none;
+			//border-bottom: 1px solid lighten($brown, 8%);
+			&:last-child {
+				border-bottom: none;
+			}
 		}
 		.nav > li > a {
 			font-size: 12px;
 			font-weight: 300;
-			padding: 0;
+			padding: 0 12px;
+			
 		}
 	}
-	#locales-menu {
-		float: right;
-		li > a {
-			padding-left:26px;
-			background:transparent asset-url("locale_icons.png", image) no-repeat top center; 
-		}
-	}
+
 }
 
 /*-----------------------------------------
@@ -115,6 +172,7 @@ h1.page-title{
 			
 		}
 		.country {
+			clear: both;
 			font-weight: bold;
 		}
 		.links {
@@ -130,17 +188,16 @@ h1.page-title{
 	
 }
 #footer {
-	padding: 8px 8px 0px 14px;
+	//padding: 0 8px 0px 14px;
 	position:relative;
 	height: $footerHeight;
 	iframe {
-		position: absolute;
-		left: 16px;
-		bottom: 14px;
+		position: relative;
+		float: right;
 	}
 	.nav > li > a {
-		padding: 2px 10px 2px;
-		line-height: 14px;
+		padding: 0 10px 0;
+		line-height: $footerHeight - 2;
 	}
 	.pipe-menu-container ul.nav {
 		float:left;
@@ -148,41 +205,40 @@ h1.page-title{
 			float:left;
 		}
 	}
-	.tools-menu-container ul.nav {
-		float:right;
-		margin-right: 24px;
-		li {
-			float:left;
+} 
+#socials-container {
+	float:right; 
+	margin-right: $footerHeight;
+	.nav > li > a {
+		cursor:pointer;
+		margin: 0 !important;
+		padding:0 !important;
+		text-align: center;
+		vertical-align: middle;
+		height: $footerHeight;
+		width: $footerHeight;
+		line-height: $footerHeight;
+		font-size: 18px;
+		border-left: 1px solid lighten($brown, 8%);
+		background-color: $brown;
+		[class^="icon-"], [class*=" icon-"] {
+			line-height: $footerHeight / 2;
+			height: $footerHeight;
+			width: $footerHeight;
 		}
+		&:hover {
+			background-color: lighten($brown, 8%);
+		};
+	}
+	.nav > li > a#toolfree {
+		background-color: #98cb38;
+		&:hover {
+			background-color: lighten(#98cb38, 8%);
+		};
 	}
 } 
 
 
-
-
-
-#socials {
- float:left; 
-} 
-#socials a {
-	width:24px;
-	height:24px; 
-	text-indent:-9000px;
-	cursor:pointer;
-	padding:0 !important;
-	&:hover {
-		background-position:bottom center;
-	};
-}
-a#facebook {
-	background:transparent asset-url("facebook_icons.png", image) no-repeat top center;
-}
-a#twitter {
-	background:transparent asset-url("twitter_icons.png", image) no-repeat top center;
-}
-a#toolfree {
-	background:transparent asset-url("tollfreebtn.png", image) no-repeat top left;
-}
 /*-----------------------------------------
  SIBEBAR
 ----------------------------------------- */
@@ -191,20 +247,8 @@ a#toolfree {
  HOME
 ----------------------------------------- */
 
-/*
-#main-column a {
-	color: #3B3831;
-	text-decoration:none;
-}
-#main-column a:visited,
-#main-column a:active,
-#main-column a:hover {
-	color: #fff;
-	text-decoration:underline;
-	background-color:#3B3831; 
-}
- */
 .html-text {
+	clear: both;
 	ul { list-style: disc outside; margin-left: 30px; }
 	li { margin-bottom: 0px; }
 	ul, ol { margin-bottom: .8em; }
@@ -212,7 +256,9 @@ a#toolfree {
 	 
 	table {
 	  margin-bottom: $baseLineHeight * 2;
-	 // margin-top: 1.6em; 
+	  td {
+		border-color: $textColor;
+	  }
 	}
 	
 	h1 {
@@ -365,9 +411,13 @@ ul#ticker li span {
 @media (max-width: 979px) {
 	.navbar {
 		.brand {
-			margin: $baseLineHeight 0 0 0;
+			//margin: $baseLineHeight 0 0 0;
+			float: none;
+			text-align: center;
+			padding: $baseLineHeight 0 $baseLineHeight;
 		}	
 	}
+	
 	.navbar-inner {
 		padding: 0;
 		@include border-radius(none);
@@ -429,7 +479,7 @@ ul#ticker li span {
 		height:70%; /* must have an px height for scrollpane */
 		min-height:300px;
 		overflow:visible;
-		z-index: 900;
+		z-index: $zindexPane;
 		background: #49bce7;
 		
 		@include opacity(90);
@@ -500,24 +550,11 @@ ul#ticker li span {
 	}
 	
 	#secondary-menu {
-		// Links
-		.nav > li > a {
-		  float: none;
-		  // Vertically center the text given @footerHeight
-		  //$elementHeight: 20px;
-		  //padding: (($footerHeight - $elementHeight) / 2 - 1) 10px (($footerHeight - $elementHeight) / 2 + 1);
-		  //line-height: 19px;
-		  //color: $footerLinkColor;
-		  text-decoration: none;
-		  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-		background-color: $footerLinkBackground;
+		.nav > li {
+			float: none;
 		}
-
-		// Hover
 		.nav > li > a:hover {
-		  background-color: $footerLinkBackgroundHover;
-		  color: $footerLinkColorHover;
-		  text-decoration: none;
+			background-color: transparent;
 		}
 	}
 	.navbar {
@@ -528,10 +565,25 @@ ul#ticker li span {
 		z-index: 910;
 
 		.brand {
-			position: absolute;
-			bottom: 0px;
-			right: 10px;
+			padding: 0;
+			//background-color: lighten($brown, 4%);
+		//	border-right: 1px solid lighten($brown, 8%);
+			margin: 0;
+			text-align: center;
+			vertical-align: middle;
+			@include size($navbarHeight, $navbarHeight + 20);
+			a {
+				text-align: center;
+				margin-top: 32px;
+			}
 		}
+	}
+	.header-top {
+		position: absolute;
+		top: 0;
+		right: 0;
+		right: 0;
+		z-index: 910;
 	}
 	
 }
