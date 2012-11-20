@@ -556,6 +556,9 @@ ul#ticker li span {
 		.nav > li > a:hover {
 			background-color: transparent;
 		}
+		.dropdown-menu {
+			@include clear-dropdown();
+		}
 	}
 	.navbar {
 		position: absolute;
