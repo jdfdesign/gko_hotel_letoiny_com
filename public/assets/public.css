@@ -8612,47 +8612,60 @@ img {
   max-width: none;
 }
 
-/* line 30, ../../app/assets/stylesheets/public.css.scss */
+/* line 31, ../../app/assets/stylesheets/public.css.scss */
+.modal {
+  margin-left: -280px;
+  top: 10%;
+}
+
+/* line 35, ../../app/assets/stylesheets/public.css.scss */
+.modal.fade.in {
+  top: 10%;
+}
+
+/* =SPECIFIC
+----------------------------------------------------*/
+/* line 42, ../../app/assets/stylesheets/public.css.scss */
 .flexslider {
   margin-bottom: 10px;
 }
 
-/* line 34, ../../app/assets/stylesheets/public.css.scss */
+/* line 46, ../../app/assets/stylesheets/public.css.scss */
 .flex-direction-nav a {
   opacity: 1;
 }
 
-/* line 35, ../../app/assets/stylesheets/public.css.scss */
+/* line 47, ../../app/assets/stylesheets/public.css.scss */
 .flex-direction-nav .flex-next {
   right: 6px;
 }
 
-/* line 36, ../../app/assets/stylesheets/public.css.scss */
+/* line 48, ../../app/assets/stylesheets/public.css.scss */
 .flex-direction-nav .flex-prev {
   left: 6px;
 }
 
-/* line 37, ../../app/assets/stylesheets/public.css.scss */
+/* line 49, ../../app/assets/stylesheets/public.css.scss */
 .flexslider:hover .flex-next {
   opacity: 1;
 }
 
-/* line 38, ../../app/assets/stylesheets/public.css.scss */
+/* line 50, ../../app/assets/stylesheets/public.css.scss */
 .flexslider:hover .flex-prev {
   opacity: 1;
 }
 
-/* line 39, ../../app/assets/stylesheets/public.css.scss */
+/* line 51, ../../app/assets/stylesheets/public.css.scss */
 .main-content-inner {
   padding: 20px 0;
 }
 
-/* line 42, ../../app/assets/stylesheets/public.css.scss */
+/* line 54, ../../app/assets/stylesheets/public.css.scss */
 .accordion-group {
   background-color: white;
 }
 
-/* line 45, ../../app/assets/stylesheets/public.css.scss */
+/* line 57, ../../app/assets/stylesheets/public.css.scss */
 .modal {
   background-color: #efe9e3;
   -webkit-border-radius: 10px 10px 0 0;
@@ -8660,7 +8673,7 @@ img {
   border-radius: 10px 10px 0 0;
 }
 
-/* line 49, ../../app/assets/stylesheets/public.css.scss */
+/* line 61, ../../app/assets/stylesheets/public.css.scss */
 .modal-header {
   -webkit-border-radius: 6px 6px 0 0;
   -moz-border-radius: 6px 6px 0 0;
@@ -8668,21 +8681,19 @@ img {
   background-color: #44413a;
   color: white;
 }
-/* line 53, ../../app/assets/stylesheets/public.css.scss */
+/* line 65, ../../app/assets/stylesheets/public.css.scss */
 .modal-header .close {
   color: white;
   text-shadow: black;
 }
 
-/* line 58, ../../app/assets/stylesheets/public.css.scss */
+/* line 70, ../../app/assets/stylesheets/public.css.scss */
 .modal-footer {
   background-color: transparent;
   border-top: 1px solid #e0d5c9;
 }
 
-/* =SPECIFIC
-----------------------------------------------------*/
-/* line 65, ../../app/assets/stylesheets/public.css.scss */
+/* line 74, ../../app/assets/stylesheets/public.css.scss */
 #logo_relais_chateaux {
   position: absolute;
   bottom: 140px;
@@ -8691,19 +8702,19 @@ img {
   opacity: .7;
 }
 
-/* line 72, ../../app/assets/stylesheets/public.css.scss */
+/* line 81, ../../app/assets/stylesheets/public.css.scss */
 #start-slideshow {
   text-align: right;
   margin-bottom: 20px;
   font-size: 10px;
   text-decoration: none;
 }
-/* line 77, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
 #start-slideshow i {
   padding-left: 4px;
 }
 
-/* line 81, ../../app/assets/stylesheets/public.css.scss */
+/* line 90, ../../app/assets/stylesheets/public.css.scss */
 h1.page-title {
   font-weight: normal;
   font-size: 24px;
@@ -8711,7 +8722,7 @@ h1.page-title {
   margin-bottom: 8px;
 }
 
-/* line 87, ../../app/assets/stylesheets/public.css.scss */
+/* line 96, ../../app/assets/stylesheets/public.css.scss */
 .nav > li > a {
   font-size: 11px;
   font-weight: 300;
@@ -8722,7 +8733,7 @@ h1.page-title {
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
-/* line 98, ../../app/assets/stylesheets/public.css.scss */
+/* line 107, ../../app/assets/stylesheets/public.css.scss */
 .navbar-inner {
   text-shadow: 0 1px 1px #444;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -8731,7 +8742,7 @@ h1.page-title {
   border-radius: 0;
 }
 
-/* line 109, ../../app/assets/stylesheets/public.css.scss */
+/* line 118, ../../app/assets/stylesheets/public.css.scss */
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
@@ -8748,7 +8759,7 @@ h1.page-title {
   background-color: transparent;
   border: 0;
 }
-/* line 122, ../../app/assets/stylesheets/public.css.scss */
+/* line 131, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top {
   *zoom: 1;
 }
@@ -8762,17 +8773,17 @@ h1.page-title {
 .navbar .header-top:after {
   clear: both;
 }
-/* line 124, ../../app/assets/stylesheets/public.css.scss */
+/* line 133, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top .nav > li > a {
   background-color: #2e2c27;
   padding: 6px 10px 6px;
   font-size: 10px;
 }
-/* line 128, ../../app/assets/stylesheets/public.css.scss */
+/* line 137, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-top .nav > li > a:hover {
   background-color: #98cb38;
 }
-/* line 133, ../../app/assets/stylesheets/public.css.scss */
+/* line 142, ../../app/assets/stylesheets/public.css.scss */
 .navbar .header-nav {
   *zoom: 1;
 }
@@ -8786,25 +8797,25 @@ h1.page-title {
 .navbar .header-nav:after {
   clear: both;
 }
-/* line 138, ../../app/assets/stylesheets/public.css.scss */
+/* line 147, ../../app/assets/stylesheets/public.css.scss */
 .navbar #locales-menu li > a {
   line-height: 12px;
   padding-left: 56px;
   background: transparent url(/assets/locale_icons.png) no-repeat top center;
 }
-/* line 149, ../../app/assets/stylesheets/public.css.scss */
+/* line 158, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav {
   margin-top: 16px;
 }
-/* line 152, ../../app/assets/stylesheets/public.css.scss */
+/* line 161, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav > li {
   float: none;
 }
-/* line 156, ../../app/assets/stylesheets/public.css.scss */
+/* line 165, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav > li:last-child {
   border-bottom: none;
 }
-/* line 160, ../../app/assets/stylesheets/public.css.scss */
+/* line 169, ../../app/assets/stylesheets/public.css.scss */
 .navbar .nav-collapse .nav > li > a {
   padding: 0 12px;
 }
@@ -8812,7 +8823,7 @@ h1.page-title {
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-/* line 171, ../../app/assets/stylesheets/public.css.scss */
+/* line 180, ../../app/assets/stylesheets/public.css.scss */
 .grid > li h2 {
   text-transform: uppercase;
   font-family: "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
@@ -8820,25 +8831,25 @@ h1.page-title {
   font-weight: bold;
   line-height: 20px;
 }
-/* line 178, ../../app/assets/stylesheets/public.css.scss */
+/* line 187, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 180, ../../app/assets/stylesheets/public.css.scss */
+/* line 189, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail:hover {
   background-color: white;
 }
 
-/* line 185, ../../app/assets/stylesheets/public.css.scss */
+/* line 194, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item {
   text-align: center;
 }
-/* line 191, ../../app/assets/stylesheets/public.css.scss */
+/* line 200, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item .thumbnail .country {
   clear: both;
   font-weight: bold;
 }
-/* line 195, ../../app/assets/stylesheets/public.css.scss */
+/* line 204, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item .thumbnail .links {
   display: none;
 }
@@ -8846,41 +8857,41 @@ h1.page-title {
 /*-----------------------------------------
  FOOTER
 ----------------------------------------- */
-/* line 203, ../../app/assets/stylesheets/public.css.scss */
+/* line 212, ../../app/assets/stylesheets/public.css.scss */
 #footer-container {
   text-shadow: 0 1px 1px #444;
 }
 
-/* line 207, ../../app/assets/stylesheets/public.css.scss */
+/* line 216, ../../app/assets/stylesheets/public.css.scss */
 #footer {
   position: relative;
   height: 40px;
 }
-/* line 211, ../../app/assets/stylesheets/public.css.scss */
+/* line 220, ../../app/assets/stylesheets/public.css.scss */
 #footer iframe {
   position: relative;
   float: right;
 }
-/* line 215, ../../app/assets/stylesheets/public.css.scss */
+/* line 224, ../../app/assets/stylesheets/public.css.scss */
 #footer .nav > li > a {
   padding: 0 10px 0;
   line-height: 38px;
 }
-/* line 219, ../../app/assets/stylesheets/public.css.scss */
+/* line 228, ../../app/assets/stylesheets/public.css.scss */
 #footer .pipe-menu-container ul.nav {
   float: left;
 }
-/* line 221, ../../app/assets/stylesheets/public.css.scss */
+/* line 230, ../../app/assets/stylesheets/public.css.scss */
 #footer .pipe-menu-container ul.nav li {
   float: left;
 }
 
-/* line 226, ../../app/assets/stylesheets/public.css.scss */
+/* line 235, ../../app/assets/stylesheets/public.css.scss */
 #socials-container {
   float: right;
   margin-right: 40px;
 }
-/* line 229, ../../app/assets/stylesheets/public.css.scss */
+/* line 238, ../../app/assets/stylesheets/public.css.scss */
 #socials-container .nav > li > a {
   cursor: pointer;
   margin: 0 !important;
@@ -8894,21 +8905,21 @@ h1.page-title {
   border-left: 1px solid #5a564d;
   background-color: #44413a;
 }
-/* line 241, ../../app/assets/stylesheets/public.css.scss */
+/* line 250, ../../app/assets/stylesheets/public.css.scss */
 #socials-container .nav > li > a [class^="icon-"], #socials-container .nav > li > a [class*=" icon-"] {
   line-height: 20px;
   height: 40px;
   width: 40px;
 }
-/* line 246, ../../app/assets/stylesheets/public.css.scss */
+/* line 255, ../../app/assets/stylesheets/public.css.scss */
 #socials-container .nav > li > a:hover {
   background-color: #5a564d;
 }
-/* line 250, ../../app/assets/stylesheets/public.css.scss */
+/* line 259, ../../app/assets/stylesheets/public.css.scss */
 #socials-container .nav > li > a#toolfree {
   background-color: #98cb38;
 }
-/* line 252, ../../app/assets/stylesheets/public.css.scss */
+/* line 261, ../../app/assets/stylesheets/public.css.scss */
 #socials-container .nav > li > a#toolfree:hover {
   background-color: #a9d358;
 }
@@ -8919,42 +8930,42 @@ h1.page-title {
 /*-----------------------------------------
  HOME
 ----------------------------------------- */
-/* line 267, ../../app/assets/stylesheets/public.css.scss */
+/* line 276, ../../app/assets/stylesheets/public.css.scss */
 .html-text {
   clear: both;
 }
-/* line 269, ../../app/assets/stylesheets/public.css.scss */
+/* line 278, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul {
   list-style: disc outside;
   margin-left: 30px;
 }
-/* line 270, ../../app/assets/stylesheets/public.css.scss */
+/* line 279, ../../app/assets/stylesheets/public.css.scss */
 .html-text li {
   margin-bottom: 0px;
 }
-/* line 271, ../../app/assets/stylesheets/public.css.scss */
+/* line 280, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul, .html-text ol {
   margin-bottom: .8em;
 }
-/* line 272, ../../app/assets/stylesheets/public.css.scss */
+/* line 281, ../../app/assets/stylesheets/public.css.scss */
 .html-text p {
   margin-bottom: .8em;
   text-align: justify;
 }
-/* line 274, ../../app/assets/stylesheets/public.css.scss */
+/* line 283, ../../app/assets/stylesheets/public.css.scss */
 .html-text table {
   margin-bottom: 40px;
 }
-/* line 276, ../../app/assets/stylesheets/public.css.scss */
+/* line 285, ../../app/assets/stylesheets/public.css.scss */
 .html-text table td {
   border-color: #3b3831;
 }
-/* line 281, ../../app/assets/stylesheets/public.css.scss */
+/* line 290, ../../app/assets/stylesheets/public.css.scss */
 .html-text h1 {
   font-size: 26px;
   line-height: 36px;
 }
-/* line 286, ../../app/assets/stylesheets/public.css.scss */
+/* line 295, ../../app/assets/stylesheets/public.css.scss */
 .html-text h2 {
   line-height: 24px;
   font-size: 16px;
@@ -8964,7 +8975,7 @@ h1.page-title {
   border-bottom: 1px solid #B7B6B6;
   font-weight: normal;
 }
-/* line 296, ../../app/assets/stylesheets/public.css.scss */
+/* line 305, ../../app/assets/stylesheets/public.css.scss */
 .html-text h3 {
   line-height: 24px;
   font-size: 14px;
@@ -8975,17 +8986,17 @@ h1.page-title {
 }
 
 /* loading screen */
-/* line 307, ../../app/assets/stylesheets/public.css.scss */
+/* line 316, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading {
   overflow: hidden !important;
 }
 
-/* line 308, ../../app/assets/stylesheets/public.css.scss */
+/* line 317, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading .ui-loader {
   display: block;
 }
 
-/* line 309, ../../app/assets/stylesheets/public.css.scss */
+/* line 318, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader {
   display: none;
   position: absolute;
@@ -8998,7 +9009,7 @@ h1.page-title {
   padding: 10px 30px;
 }
 
-/* line 310, ../../app/assets/stylesheets/public.css.scss */
+/* line 319, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader .ui-icon {
   position: static;
   display: block;
@@ -9009,7 +9020,7 @@ h1.page-title {
   background: transparent url(/assets/gko-core/ajax-loader.gif) no-repeat;
 }
 
-/* line 315, ../../app/assets/stylesheets/public.css.scss */
+/* line 324, ../../app/assets/stylesheets/public.css.scss */
 .ui-icon-loading {
   position: static;
   display: block;
@@ -9027,14 +9038,14 @@ h1.page-title {
   background-size: 35px 35px;
 }
 
-/* line 332, ../../app/assets/stylesheets/public.css.scss */
+/* line 341, ../../app/assets/stylesheets/public.css.scss */
 .hotel_inquiry select,
 .table_inquiry select {
   width: auto;
   display: inline;
 }
 
-/* line 338, ../../app/assets/stylesheets/public.css.scss */
+/* line 347, ../../app/assets/stylesheets/public.css.scss */
 #newsletter_container,
 #diaporama_container,
 #webcam_container {
@@ -9048,13 +9059,13 @@ h1.page-title {
   display: none;
 }
 
-/* line 348, ../../app/assets/stylesheets/public.css.scss */
+/* line 357, ../../app/assets/stylesheets/public.css.scss */
 #newsletter_container label {
   text-align: left;
   color: #3B3831;
 }
 
-/* line 352, ../../app/assets/stylesheets/public.css.scss */
+/* line 361, ../../app/assets/stylesheets/public.css.scss */
 #newsletter_container a {
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
@@ -9083,7 +9094,7 @@ h1.page-title {
 
 /* =TICKER
 ----------------------------------------------------*/
-/* line 380, ../../app/assets/stylesheets/public.css.scss */
+/* line 389, ../../app/assets/stylesheets/public.css.scss */
 #ticker-wrapper {
   position: absolute;
   right: 30px;
@@ -9097,7 +9108,7 @@ h1.page-title {
   text-shadow: 0 1px 1px #fff;
 }
 
-/* line 393, ../../app/assets/stylesheets/public.css.scss */
+/* line 402, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker {
   width: 220px;
   height: 120px;
@@ -9106,7 +9117,7 @@ ul#ticker {
   margin: 0;
 }
 
-/* line 401, ../../app/assets/stylesheets/public.css.scss */
+/* line 410, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li {
   width: 200px;
   height: 99px;
@@ -9114,19 +9125,19 @@ ul#ticker li {
   display: block;
 }
 
-/* line 408, ../../app/assets/stylesheets/public.css.scss */
+/* line 417, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li a {
   color: white;
   display: block;
   text-decoration: none;
 }
-/* line 412, ../../app/assets/stylesheets/public.css.scss */
+/* line 421, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 418, ../../app/assets/stylesheets/public.css.scss */
+/* line 427, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li span {
   display: block;
   color: white;
@@ -10553,36 +10564,36 @@ ul#ticker li span {
   }
 }
 @media (max-width: 979px) {
-  /* line 429, ../../app/assets/stylesheets/public.css.scss */
+  /* line 438, ../../app/assets/stylesheets/public.css.scss */
   body {
     padding: 0;
   }
 
-  /* line 433, ../../app/assets/stylesheets/public.css.scss */
+  /* line 442, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     float: none;
     text-align: center;
     padding: 20px 0 20px;
   }
 
-  /* line 440, ../../app/assets/stylesheets/public.css.scss */
+  /* line 449, ../../app/assets/stylesheets/public.css.scss */
   #main-container {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 445, ../../app/assets/stylesheets/public.css.scss */
+  /* line 454, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav {
     margin: 0;
     width: 100%;
   }
-  /* line 449, ../../app/assets/stylesheets/public.css.scss */
+  /* line 458, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li {
     width: 33.33%;
     margin: 0;
     padding: 0;
   }
-  /* line 454, ../../app/assets/stylesheets/public.css.scss */
+  /* line 463, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li > a {
     background-color: #2e2c27;
     padding: 6px 10px 6px;
@@ -10590,7 +10601,7 @@ ul#ticker li span {
     text-align: center;
   }
 
-  /* line 461, ../../app/assets/stylesheets/public.css.scss */
+  /* line 470, ../../app/assets/stylesheets/public.css.scss */
   .navbar-inner {
     padding: 0;
     -webkit-border-radius: none;
@@ -10601,29 +10612,29 @@ ul#ticker li span {
     box-shadow: none;
   }
 
-  /* line 466, ../../app/assets/stylesheets/public.css.scss */
+  /* line 475, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse {
     background-color: #3e3c35;
   }
-  /* line 469, ../../app/assets/stylesheets/public.css.scss */
+  /* line 478, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li.dropdown {
     border-top: 1px dotted #dedad1;
   }
-  /* line 472, ../../app/assets/stylesheets/public.css.scss */
+  /* line 481, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li:first-child {
     border-top: none;
   }
-  /* line 477, ../../app/assets/stylesheets/public.css.scss */
+  /* line 486, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     text-align: center;
     font-weight: normal;
   }
-  /* line 481, ../../app/assets/stylesheets/public.css.scss */
+  /* line 490, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu {
     padding-bottom: 8px;
   }
-  /* line 483, ../../app/assets/stylesheets/public.css.scss */
+  /* line 492, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a {
     color: #dedad1;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -10633,12 +10644,12 @@ ul#ticker li span {
     border-radius: none;
     padding: 2px 0;
   }
-  /* line 489, ../../app/assets/stylesheets/public.css.scss */
+  /* line 498, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a:hover {
     color: white;
   }
 
-  /* line 495, ../../app/assets/stylesheets/public.css.scss */
+  /* line 504, ../../app/assets/stylesheets/public.css.scss */
   #locales-menu {
     position: absolute;
     top: 20px;
@@ -10646,7 +10657,7 @@ ul#ticker li span {
   }
 }
 @media (min-width: 980px) {
-  /* line 504, ../../app/assets/stylesheets/public.css.scss */
+  /* line 513, ../../app/assets/stylesheets/public.css.scss */
   #wrapper-wide-body {
     position: absolute;
     width: 100%;
@@ -10654,14 +10665,14 @@ ul#ticker li span {
     overflow: hidden;
   }
 
-  /* line 511, ../../app/assets/stylesheets/public.css.scss */
+  /* line 520, ../../app/assets/stylesheets/public.css.scss */
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
   }
 
-  /* line 516, ../../app/assets/stylesheets/public.css.scss */
+  /* line 525, ../../app/assets/stylesheets/public.css.scss */
   #content-container {
     position: absolute;
     bottom: 40px;
@@ -10675,7 +10686,7 @@ ul#ticker li span {
     filter: alpha(opacity=90);
   }
 
-  /* line 529, ../../app/assets/stylesheets/public.css.scss */
+  /* line 538, ../../app/assets/stylesheets/public.css.scss */
   #content {
     /*width:800px;*/
     width: 100%;
@@ -10687,7 +10698,7 @@ ul#ticker li span {
     display: block;
   }
 
-  /* line 539, ../../app/assets/stylesheets/public.css.scss */
+  /* line 548, ../../app/assets/stylesheets/public.css.scss */
   #main-column-tab {
     -webkit-border-radius: 6px 6px 0 0;
     -moz-border-radius: 6px 6px 0 0;
@@ -10709,12 +10720,12 @@ ul#ticker li span {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  /* line 558, ../../app/assets/stylesheets/public.css.scss */
+  /* line 567, ../../app/assets/stylesheets/public.css.scss */
   #main-column-tab.closed {
     background-image: url(/assets/icon_arrow_top_36_white.png);
   }
 
-  /* line 562, ../../app/assets/stylesheets/public.css.scss */
+  /* line 571, ../../app/assets/stylesheets/public.css.scss */
   #main-column {
     position: absolute;
     left: 340px;
@@ -10725,12 +10736,12 @@ ul#ticker li span {
     right: 0px;
   }
 
-  /* line 571, ../../app/assets/stylesheets/public.css.scss */
+  /* line 580, ../../app/assets/stylesheets/public.css.scss */
   #main-column.content-sidebar {
     position: absolute;
   }
 
-  /* line 575, ../../app/assets/stylesheets/public.css.scss */
+  /* line 584, ../../app/assets/stylesheets/public.css.scss */
   #footer-container {
     position: fixed;
     right: 0;
@@ -10739,7 +10750,7 @@ ul#ticker li span {
     z-index: 1030;
   }
 
-  /* line 579, ../../app/assets/stylesheets/public.css.scss */
+  /* line 588, ../../app/assets/stylesheets/public.css.scss */
   #sidebar {
     width: 290px;
     position: absolute;
@@ -10750,16 +10761,16 @@ ul#ticker li span {
     display: block;
   }
 
-  /* line 590, ../../app/assets/stylesheets/public.css.scss */
+  /* line 599, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li {
     float: none;
   }
-  /* line 593, ../../app/assets/stylesheets/public.css.scss */
+  /* line 602, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li > a:hover {
     background-color: transparent;
   }
 
-  /* line 600, ../../app/assets/stylesheets/public.css.scss */
+  /* line 609, ../../app/assets/stylesheets/public.css.scss */
   .navbar {
     position: absolute;
     top: 0px;
@@ -10767,7 +10778,7 @@ ul#ticker li span {
     right: 0;
     z-index: 910;
   }
-  /* line 607, ../../app/assets/stylesheets/public.css.scss */
+  /* line 616, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     padding: 0;
     margin: 0;
@@ -10776,13 +10787,13 @@ ul#ticker li span {
     width: 160px;
     height: 140px;
   }
-  /* line 615, ../../app/assets/stylesheets/public.css.scss */
+  /* line 624, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand a {
     text-align: center;
     margin-top: 32px;
   }
 
-  /* line 621, ../../app/assets/stylesheets/public.css.scss */
+  /* line 630, ../../app/assets/stylesheets/public.css.scss */
   .header-top {
     position: absolute;
     top: 0;
@@ -10790,22 +10801,22 @@ ul#ticker li span {
     right: 0;
     z-index: 910;
   }
-  /* line 627, ../../app/assets/stylesheets/public.css.scss */
+  /* line 636, ../../app/assets/stylesheets/public.css.scss */
   .header-top nav {
     float: right;
   }
-  /* line 630, ../../app/assets/stylesheets/public.css.scss */
+  /* line 639, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li {
     margin-left: 4px;
   }
-  /* line 633, ../../app/assets/stylesheets/public.css.scss */
+  /* line 642, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li > a {
     -webkit-border-radius: 0 0 8px 8px;
     -moz-border-radius: 0 0 8px 8px;
     border-radius: 0 0 8px 8px;
   }
 }
-/* line 639, ../../app/assets/stylesheets/public.css.scss */
+/* line 648, ../../app/assets/stylesheets/public.css.scss */
 #home #content-container {
   display: none;
 }
