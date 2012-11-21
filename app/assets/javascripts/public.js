@@ -114,7 +114,7 @@ var Site = {
 			
 			var modalBody = $(this).find('.modal-body');
 			modalBody.css({
-				'maxHeight': window.height() - headerHeight - footerHeight - 40
+				'maxHeight': $("window").height() - headerHeight - footerHeight - 40
 			})
 		})
 		
