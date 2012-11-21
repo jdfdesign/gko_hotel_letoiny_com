@@ -21,9 +21,11 @@
   <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png"> --> 
    
+    <script type='text/javascript' src='http://use.typekit.com/wjv3kuu.js'></script>
+    <script type='text/javascript'>try{Typekit.load();}catch(e){}</script>
   
   <meta content="authenticity_token" name="csrf-param" />
-<meta content="XuYOQ7uBcae8vBy4EWfo/Hy3FxgOfhh3cjvQBSdCt2k=" name="csrf-token" />
+<meta content="Bu5Dm382lzzHmcFjWdX7bVDZe6J+GZF06RHv//OrJB0=" name="csrf-token" />
 </head>
 <body id='page'>
 
@@ -39,20 +41,22 @@
 
       <div class="header-nav">
         <!-- Be sure to leave the brand out there if you want it shown -->
-        <h2 id="site-title" class="brand"><a href="http://gko-letoiny-com.local/">Hôtel Le Toiny</a></h2>
+        <h2 id="site-title" class="brand"><a href="http://letoiny.local/">Hôtel Le Toiny</a></h2>
 		
 		<div class="header-top">
 			    <nav id="locales-menu" class="locales-menu-container">
       <ul id='locales' class="nav">
-                <li><a href="http://gko-letoiny-com.local/en" class="en navbar-link">en</a></li>
+                <li><a href="http://letoiny.local/en" class="en navbar-link">en</a></li>
       </ul>
     </nav>
 
 			<nav class="tools-menu-container">	<ul class="nav nav-menu">
+		<li id="redirect_57">
+		<a href="#table-booking" id="table-booking"><div class='inner'><i></i><div class='text'>Table booking</div></div></a>		</li>
 		<li id="page_5">
 		<a href="/reserver-en-ligne" id="online-booking"><div class='inner'><i></i><div class='text'>Réservation en ligne</div></div></a>		</li>
 		<li id="page_37">
-		<a href="/nous-contacter" id="contact-us"><div class='inner'><i></i><div class='text'>Nous contacter</div></div></a>		</li>
+		<a href="/nous-contacter" id="inquiry"><div class='inner'><i></i><div class='text'>Nous contacter</div></div></a>		</li>
     </ul>
 
 </nav>
@@ -254,7 +258,8 @@
 			<div id='socials-container'>
 				<ul id='socials' class="nav">
 					<li><a href="#" id="toolfree" title="Appeler nous gratuitement depuis les US ou le Canada au (800) 680 0832" rel="tooltip"><i class="icon-phone"></i></a></li>
-					<li><a href="http://www.facebook.com/HOTELLETOINYSTBARTH?v=page_getting_started" id="facebook" title="Visiter notre page Facebook" rel="tooltip" target="_blank" data-html="true"><i class="icon-facebook"></i></a></li>
+					<li><a href="http://pinterest.com/letoiny/" id="pinterest" title="Visiter notre page Pinterest" rel="tooltip" target="_blank"><i class="icon-pinterest-sign"></i></a></li>
+					<li><a href="http://www.facebook.com/HOTELLETOINYSTBARTH?v=page_getting_started" id="facebook" title="Visiter notre page Facebook" rel="tooltip" target="_blank"><i class="icon-facebook"></i></a></li>
 					<li><a href="http://twitter.com/#!/letoiny" id="twitter" title="Suiver nous sur notre compte twitter" rel="tooltip" target="_blank"  data-html="true"><i class="icon-twitter"></i></a></li>
 					
 				</ul>
@@ -265,15 +270,18 @@
 </footer>
 
   </div>
-  
-  <div class="modal fade" id="booking_table_modal" style="display:none;">
+
+  <!-- Les modals
+  ================================================== -->
+
+  <div class="modal hide fade" id="booking-table-modal">
   <div class="modal-header">
     <a class="close" data-dismiss="modal">×</a>
 
-    <h3>Modal header</h3>
+    <h3>Réserver une table</h3>
   </div>
-  <form accept-charset="UTF-8" action="/table_inquiries" class="simple_form table_inquiry" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XuYOQ7uBcae8vBy4EWfo/Hy3FxgOfhh3cjvQBSdCt2k=" /></div>
-      <input id="return_to" name="return_to" type="hidden" value="http://gko-letoiny-com.local/pages/24" />
+  <form accept-charset="UTF-8" action="/table_inquiries" class="simple_form table_inquiry" data-remote="true" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Bu5Dm382lzzHmcFjWdX7bVDZe6J+GZF06RHv//OrJB0=" /></div>
+      <input id="return_to" name="return_to" type="hidden" value="http://letoiny.local/pages/24" />
       <input id="table_inquiry_site_id" name="table_inquiry[site_id]" type="hidden" />
       <div class="modal-body">
         <div class='row-fluid'>
@@ -304,8 +312,8 @@
 <option value="17">17</option>
 <option value="18">18</option>
 <option value="19">19</option>
-<option selected="selected" value="20">20</option>
-<option value="21">21</option>
+<option value="20">20</option>
+<option selected="selected" value="21">21</option>
 <option value="22">22</option>
 <option value="23">23</option>
 <option value="24">24</option>
@@ -343,18 +351,52 @@
             <div class="control-group text required"><label class="text required control-label" for="table_inquiry_message"><abbr title="obligatoire">*</abbr> Message</label><div class="controls"><textarea class="text required" cols="40" id="table_inquiry_message" name="table_inquiry[message]" rows="6">
 </textarea></div></div>
             <div class="control-group boolean optional"><label class="boolean optional control-label" for="table_inquiry_newsletter_registration">Recevoir la newsletter</label><div class="controls"><input name="table_inquiry[newsletter_registration]" type="hidden" value="0" /><label class="checkbox"><input class="boolean optional" id="table_inquiry_newsletter_registration" name="table_inquiry[newsletter_registration]" type="checkbox" value="1" /></label></div></div>
-                <div class='controls policy'><span class="translation_missing" title="translation missing: fr.table_inquiries.modal_form.privacy_policy">Privacy Policy</span></div>
           </div>
         </div>
       </div>
       <div class='row-fluid'>
         <div class='span12'>
           <div class='modal-footer'>
-            <input class="btn btn-primary" name="commit" type="submit" value="Envoyer la demande" />
+            <input class="btn btn btn-block btn-primary" data-disable-with="Saving..." name="commit" type="submit" value="Envoyer la demande" />
           </div>
         </div>
       </div>
 </form></div> 
+  <div class="modal hide fade" id="inquiry-modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+
+    <h3>Nous contacter</h3>
+  </div>
+  <form accept-charset="UTF-8" action="/inquiries" class="simple_form inquiry" data-remote="true" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Bu5Dm382lzzHmcFjWdX7bVDZe6J+GZF06RHv//OrJB0=" /></div>
+					<div class="modal-body">
+				        <div class='row-fluid'>
+				          <div class='span6'>
+      <input id="return_to" name="return_to" type="hidden" value="http://letoiny.local/pages/24" />
+      <input id="inquiry_site_id" name="inquiry[site_id]" type="hidden" />
+      <input id="return_to" name="return_to" type="hidden" value="http://letoiny.local/pages/24" />
+      <input id="inquiry_site_id" name="inquiry[site_id]" type="hidden" value="1" />
+      
+      <div class="control-group string required"><label class="string required control-label" for="inquiry_name"><abbr title="obligatoire">*</abbr> Nom</label><div class="controls"><input class="string required" id="inquiry_name" name="inquiry[name]" size="50" type="text" /><p class="help-block"></p></div></div>
+      <div class="control-group email required"><label class="email required control-label" for="inquiry_email"><abbr title="obligatoire">*</abbr> Email</label><div class="controls"><input class="string email required" id="inquiry_email" name="inquiry[email]" size="50" type="email" /></div></div>
+      <div class="control-group tel optional"><label class="tel optional control-label" for="inquiry_phone">Téléphone</label><div class="controls"><input class="string tel optional" id="inquiry_phone" name="inquiry[phone]" size="50" type="tel" /></div></div>
+      <div class="control-group text required"><label class="text required control-label" for="inquiry_message"><abbr title="obligatoire">*</abbr> Message</label><div class="controls"><textarea class="text required" cols="40" id="inquiry_message" name="inquiry[message]" rows="6">
+</textarea></div></div>
+      <div class="control-group string optional"><div class="controls"><input class="string optional ghost" id="inquiry_ghost" name="inquiry[ghost]" size="50" type="text" /></div></div>
+
+
+      </div>
+<div class="span6"><p><b>Appeler nous gratuitement depuis les U.S. ou le Canada au (800) 680 0832</b></p><p>Hotel Le Toiny<br/>Anse de Toiny<br/>97133 Saint-Barthélemy<br/>Guadeloupe<br/>T. (590)590278888<br/>F. (590)590278930<br/>Email. reservations@letoiny.com</p></div>
+</div>
+</div>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <div class='modal-footer'>
+            <input class="btn btn btn-block btn-primary" data-disable-with="Saving..." name="commit" type="submit" value="Envoyer la demande" />
+          </div>
+        </div>
+      </div>
+</form></div>
 
 	<!-- modal-webcam is the modal dialog used for the image gallery -->
 	<div id="modal-webcam" class="modal hide fade" tabindex="-1">
@@ -384,8 +426,14 @@
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
 	<script src="/assets/gko_public_all.js" type="text/javascript"></script>
-	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('input.ghost').hide();
+	});
+</script>
+
 	<script src="/assets/public.js" type="text/javascript"></script>
+	
 	<script type="text/javascript">
 		
 		jQuery(function($){
@@ -399,7 +447,6 @@
 	    });
 	    
 	</script>
-	
   <!-- Analytics
   ================================================== -->
   

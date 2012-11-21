@@ -12,7 +12,7 @@ group :assets do
 end
 
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.5.11"
+prod_version = "= 0.5.12"
 
 group :production do
  gem 'gko_core', prod_version, :git => prod_location
@@ -26,12 +26,12 @@ group :production do
 end
 
 #group :development do
-#  gem "gko_core", :path => File.expand_path('~/Github/gko_cms3/gko_core', __FILE__)
-#  gem "gko_auth", :path => File.expand_path('~/Github/gko_cms3/gko_auth', __FILE__)
-#  gem "gko_images", :path => File.expand_path('~/Github/gko_cms3/gko_images', __FILE__)
-#  gem "gko_documents", :path => File.expand_path('~/Github/gko_cms3/gko_documents', __FILE__)
-#  gem "gko_inquiries", :path => File.expand_path('~/Github/gko_cms3/gko_inquiries', __FILE__)
-#  gem "gko_newsletters", :path => File.expand_path('~/Github/gko_cms3/gko_newsletters', __FILE__)
-#  gem "gko_twits", :path => File.expand_path('~/Github/gko_cms3/gko_twits', __FILE__) 
-#  gem "gko_hotel", :path => File.expand_path('~/Github/gko_cms3/gko_hotel', __FILE__)
+#  gem "gko_core", :path => '~/Github/gko_cms3/gko_core'
+#  gem "gko_auth", :path => '~/Github/gko_cms3/gko_auth'
+#  gem "gko_images", :path => '~/Github/gko_cms3/gko_images'
+#  gem "gko_documents", :path => '~/Github/gko_cms3/gko_documents'
+#  gem "gko_inquiries", :path => '~/Github/gko_cms3/gko_inquiries'
+#  gem "gko_newsletters", :path => '~/Github/gko_cms3/gko_newsletters'
+#  gem "gko_twits", :path => '~/Github/gko_cms3/gko_twits' 
+#  gem "gko_hotel", :path => '~/Github/gko_cms3/gko_hotel'
 #end

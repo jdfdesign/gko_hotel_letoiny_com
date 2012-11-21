@@ -22,7 +22,7 @@ var available_size = {w: 896,h: 600},
 	$sliderTab = undefined,
 	$body = undefined,
 	$scrollpane = undefined,
-	colors = ["#b7e9fc","#96daf3","#e6feba"],
+	colors = ["#b7e9fc","#96daf3","#e6feba", "#EFEBE3"],
 	headerHeight = 0,
 	footerHeight = 0,
 	slide_open = true,
@@ -48,6 +48,7 @@ var Site = {
 		Site.rescale();
 		
 		$('a[rel="tooltip"], a[rel="tooltip nofollow"]').tooltip({html: true});
+		$('input.datepicker').datepicker();
 	},
 
     attachEvents : function() {
@@ -96,16 +97,34 @@ var Site = {
 		
 		// Enable ajax on form to send register user to bronto
 		//------------------------------------------------------- 
-		$("#new_table_inquiry").attr("data-remote", true);
-		$("#new_hotel_inquiry").attr("data-remote", true);
+		$('#table-booking').on('click', function(e) {
+			e.preventDefault();
+			$('#booking-table-modal').modal({});
+		});
+		
+		$('#inquiry').on('click', function(e) {
+			e.preventDefault();
+			$('#inquiry-modal').modal({});
+		});
+		
+		$('.modal').on('show', function() {
+			Util.getAvailableSize();
+			var headerHeight = $(this).find('.modal-header').height(),
+				footerHeight = $(this).find('.modal-footer').height();
+			
+			var modalBody = $(this).find('.modal-body');
+			modalBody.css({
+				'maxHeight': available_size.h - headerHeight - footerHeight - 40
+			})
+		})
 		
 		$("a[data-remote], form[data-remote]")
-		.on("ajax:beforeSend", function(event,xhr) {attachLoading("body")})
-		.on("ajax:complete", function(event, xhr, status){removeLoading("body")});
+		.on("ajax:beforeSend", function(event,xhr) {Util.attachLoading("body")})
+		.on("ajax:complete", function(event, xhr, status){Util.removeLoading("body")});
 		
 		// Handle window.resize or orientationchange event
+		//------------------------------------------------------- 
 		$(window).bind("throttledresize", Site.rescale);
-
     },
 
 	rescale: function() {
@@ -134,8 +153,6 @@ var Site = {
 				scrollpaneApi = undefined;
 			}
 			Slide.destroy();
-
-			
 		}
 	},
 
@@ -272,7 +289,54 @@ var Util = {
         var size = Util.getScreenSize();
         available_size.w = size.w;
         available_size.h = size.h - headerHeight - footerHeight;
-    }
+    },
+	attachLoading : function (cont, msg, dur, callback) {
+	    if (typeof(cont) == "undefined") {
+	        cont = "body";
+	    }
+	    container = $(cont);
+	    if (typeof(callback) == "undefined") {
+	        callback = function () {};
+	    }
+	    if (typeof(dur) == "undefined") {
+	        dur = 500;
+	    }
+	    if (typeof(msg) == "undefined") {
+	        msg = "Please wait...";
+	    }
+	    loader = $(cont + ' .gko-loader');
+	    if (loader.length > 0) {
+	        loader.fadeIn(callback);
+	    }
+	    else {
+	        container.append("<div class='gko-loader'><div class='progress progress-striped active'><div class='bar' style='width: 100%;'></div></div></div>");
+	        loader = $(cont + ' .loader');
+	        loader.css({
+	            'z-index':10000,
+	            'top':100
+	        });
+	        loader.hide().fadeIn(dur, callback);
+
+	    }
+	    $('html').addClass("loading");
+	},
+
+	removeLoading : function (cont, dur, callback) {
+	    if (typeof(cont) == "undefined") {
+	        cont = "body";
+	    }
+	    if (typeof(dur) == undefined) {
+	        dur = 500;
+	    }
+	    if (typeof(callback) == 'undefined') {
+	        callback = function () {
+	            $(this).remove();
+	        };
+	    }
+
+	    $(cont + ' .gko-loader').fadeOut(dur, callback);
+	    $('html').removeClass("loading");
+	}
 }
 $(document).ready(function() { 
     Site.init();

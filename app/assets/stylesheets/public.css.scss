@@ -1,4 +1,5 @@
 $brown: #44413A;
+$acidGreen: #98CB38;
 
 @import "variables";
 @import "twitter/bootstrap";
@@ -41,6 +42,23 @@ $zindexLogoRelais: 90;
 .accordion-group {
 	background-color: $white;
 }
+.modal {
+	background-color: $bodyBackground;
+	@include border-radius(10px 10px 0 0);
+}
+.modal-header {
+	@include border-radius(6px 6px 0 0);
+	background-color: $navbarBackgroundHighlight;
+	color: $white;
+	.close {
+		color: $white;
+		text-shadow: $black;
+	}
+}
+.modal-footer {
+  background-color: transparent;
+  border-top: 1px solid darken($bodyBackground, 8%);
+}
 
 /* =SPECIFIC
 ----------------------------------------------------*/  
@@ -65,6 +83,12 @@ h1.page-title{
 	font-size: 24px;
 	margin-top: 0;
 	margin-bottom:8px;
+}
+.nav > li > a {
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 /*-----------------------------------------
  HEADER
@@ -97,17 +121,13 @@ h1.page-title{
 	}
 	.header-top {
 		@include clearfix;
-		nav {
-			float:right;
-		}
-		.nav > li {
-			margin-left: 4px;
-		}
 		.nav > li > a {
 			background-color: darken($brown, 8%);
-			@include border-radius(0 0 8px 8px);
 			padding: 6px 10px 6px;
-			font-size: 11px;
+			font-size: 10px;
+			&:hover {
+				background-color: $acidGreen;
+			};
 		}
 	}
 	.header-nav {
@@ -138,10 +158,7 @@ h1.page-title{
 			}
 		}
 		.nav > li > a {
-			font-size: 12px;
-			font-weight: 300;
 			padding: 0 12px;
-			
 		}
 	}
 
@@ -231,9 +248,9 @@ h1.page-title{
 		};
 	}
 	.nav > li > a#toolfree {
-		background-color: #98cb38;
+		background-color: $acidGreen;
 		&:hover {
-			background-color: lighten(#98cb38, 8%);
+			background-color: lighten($acidGreen, 8%);
 		};
 	}
 } 
@@ -409,6 +426,9 @@ ul#ticker li span {
 @import "twitter/bootstrap/responsive";
 @import "gko/default_responsive";
 @media (max-width: 979px) {
+	body {
+		padding: 0
+	}
 	.navbar {
 		.brand {
 			//margin: $baseLineHeight 0 0 0;
@@ -417,7 +437,23 @@ ul#ticker li span {
 			padding: $baseLineHeight 0 $baseLineHeight;
 		}	
 	}
-	
+	.header-top {
+		.nav {
+			margin: 0;
+			width: 100%;
+		}
+		.nav > li {
+			width: 33.33%;
+			margin: 0;
+			padding: 0;
+		}
+		.nav > li > a {
+			background-color: darken($brown, 8%);
+			padding: 6px 10px 6px;
+			font-size: 11px;
+			text-align: center;
+		}
+	}
 	.navbar-inner {
 		padding: 0;
 		@include border-radius(none);
@@ -483,6 +519,7 @@ ul#ticker li span {
 		background: #49bce7;
 		
 		@include opacity(90);
+	//	@include container-fixed-footer();
 	}
 
 	#content {
@@ -530,13 +567,9 @@ ul#ticker li span {
 	#main-column.content-sidebar {
 		position: absolute;
 	}
+	
 	#footer-container {
-		height: $footerHeight;
-		position: absolute;
-		bottom: 0px;
-		z-index: 910;
-		text-shadow: 0 1px 1px #444;
-		width: 100%;
+		@include fixed-footer();
 	}
 
 	#sidebar {
@@ -557,7 +590,7 @@ ul#ticker li span {
 			background-color: transparent;
 		}
 		.dropdown-menu {
-			@include clear-dropdown();
+			//@include clear-dropdown();
 		}
 	}
 	.navbar {
@@ -587,6 +620,15 @@ ul#ticker li span {
 		right: 0;
 		right: 0;
 		z-index: 910;
+		nav {
+			float:right;
+		}
+		.nav > li {
+			margin-left: 4px;
+		}
+		.nav > li > a {
+			@include border-radius(0 0 8px 8px);
+		}
 	}
 	
 }

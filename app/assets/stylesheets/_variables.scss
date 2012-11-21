@@ -32,7 +32,7 @@ $purple:                #7a43b6;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        #e3dbd3;
+$bodyBackground:        #efe9e3;
 $textColor:             #3B3831;
 
 
@@ -44,7 +44,7 @@ $linkColorHover:        darken($linkColor, 15%);
 
 // Typography
 // -------------------------
-$sansFontFamily:        "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
+$sansFontFamily:        "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
@@ -94,10 +94,10 @@ $btnInverseBackgroundHighlight:     $grayDarker;
 // Forms
 // -------------------------
 $inputBackground:               $white;
-$inputBorder:                   #ccc;
+$inputBorder:                   $brown;
 $inputBorderRadius:             3px;
 $inputDisabledBackground:       $grayLighter;
-$formActionsBackground:         #f5f5f5;
+$formActionsBackground:         transparent;
 $inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 // Dropdowns
 // -------------------------

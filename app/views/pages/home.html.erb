@@ -1,4 +1,15 @@
 <% content_for :page_content do %> 
+<% if is_mobile_device? %>
+<div id="carousel" class="flexslider carousel" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="li.gallery-item">
+  <ul class="slides">
+	<% resource.images.each do |img| %>
+		<%= content_tag(:li, :class => "gallery-item", :rel => "gallery", :data => {:href => "#{img.thumbnail(:large).url}"}) do %>
+			<%= image_fu(img, "210x140#") %>
+		<% end %>
+	<% end %>
+  </ul>
+<% end %> 
+</div>
   <% if @twits.try(:any?) %>
   <div id="ticker-wrapper">
     <ul id="ticker">

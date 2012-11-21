@@ -6,8 +6,8 @@ RewriteCond %{SCRIPT_FILENAME} !-f
 
 
 #-Redirection www.domain.com => domain.com
-RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,NC,L]
+#RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,NC,L]
 
 #-Rewrite home to check for static 
 #RewriteRule ^$ home

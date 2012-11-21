@@ -72,8 +72,12 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
       <%= render 'footer' %>
 
   </div>
-  
+
+  <!-- Les modals
+  ================================================== -->
+
   <%= render(:partial => "table_inquiries/modal_form") %>
+  <%= render(:partial => "inquiries/modal_form") %>
 
 	<!-- modal-webcam is the modal dialog used for the image gallery -->
 	<div id="modal-webcam" class="modal hide fade" tabindex="-1">
@@ -105,6 +109,8 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
 	<%= javascript_include_tag "gko_public_all" %>
 	<%= yield :after_javascript_libraries %>
 	<%= javascript_include_tag "public" %>
+	
+	<% unless is_mobile_device? %>
 	<script type="text/javascript">
 		
 		jQuery(function($){
@@ -118,7 +124,7 @@ has_sidebar = content_for?(:sidebar_header) || content_for?(:sidebar)
 	    });
 	    
 	</script>
-	
+	<% end %>
   <!-- Analytics
   ================================================== -->
   <%= render 'google_analytics' %>
