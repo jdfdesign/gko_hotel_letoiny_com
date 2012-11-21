@@ -1,5 +1,7 @@
 $brown: #44413A;
 $acidGreen: #98CB38;
+$zindexPane: 100;
+$zindexLogoRelais: 90;
 
 @import "variables";
 @import "twitter/bootstrap";
@@ -10,8 +12,6 @@ $acidGreen: #98CB38;
 @import "supersized";
 @import "bootstrap-image-gallery";
 
-$zindexPane: 100;
-$zindexLogoRelais: 90;
 
 
 * {
@@ -28,9 +28,9 @@ $zindexLogoRelais: 90;
 	}
 }
 // Patch to resolve modal bootstrap bug in small devices
+/*
 .modal {
 	margin-left: -280px;
-	
 	position: fixed; 
 	top: 3%; 
 	right: 3%; 
@@ -47,7 +47,7 @@ max-height: 350px;
 padding: 15px; 
 overflow-y: auto; 
 -webkit-overflow-scrolling: touch; 
-}
+}*/
 
 
 /* =SPECIFIC
@@ -354,47 +354,6 @@ h1.page-title{
 .table_inquiry select {
   width: auto; 
 	display: inline;
-}
-#newsletter_container,
-#diaporama_container,
-#webcam_container {
--moz-border-radius: 6px;
-background: #EEF2F7;
--webkit-border-radius: 6px;
-border: 1px solid #536376;
--webkit-box-shadow: rgba(0,0,0,.6) 0px 2px 12px;
--moz-box-shadow: rgba(0,0,0,.6) 0px 2px 12px;
-position: relative;
-display: none;
-}  
-#newsletter_container label {
-	text-align: left;
-	color: #3B3831;
-}
-#newsletter_container a {
--webkit-border-radius: 0.5em;
--moz-border-radius: 0.5em;
-border-radius: 0.5em;
-background: #333;
-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#555555,endColorstr=#333333);
-background: -webkit-gradient(linear,left top,left bottom,from(#555),to(#333));
-background: -moz-linear-gradient(top,#555,#333) repeat scroll 0 0 #333;
--moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
--webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-margin: 0;
-font-size: 0.8em;
-line-height: 1.6em;
-border: 1px solid #222;
-color: white;
-font-weight: bold;
-text-decoration: none;
-text-shadow: 0 -1px 1px black;
-text-align: center;
-position: relative;
-display: inline;
-padding: 0 4px 0 4px;
-width: 28px;
-height: 28px;
 }
 
 /* =TICKER

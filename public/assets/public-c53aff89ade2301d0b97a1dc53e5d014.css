@@ -8612,31 +8612,26 @@ img {
   max-width: none;
 }
 
-/* line 31, ../../app/assets/stylesheets/public.css.scss */
+/*
 .modal {
-  margin-left: -280px;
-  position: fixed;
-  top: 3%;
-  right: 3%;
-  left: 3%;
-  bottom: 3%;
-  width: auto;
-  margin: 0;
+	margin-left: -280px;
+	position: fixed; 
+	top: 3%; 
+	right: 3%; 
+	left: 3%; 
+	bottom: 3%; 
+	width: auto; 
+	margin: 0;
 }
-
-/* line 42, ../../app/assets/stylesheets/public.css.scss */
 .modal.fade.in {
-  top: 3%;
+	top: 3%;
 }
-
-/* line 45, ../../app/assets/stylesheets/public.css.scss */
-.modal-body {
-  max-height: 350px;
-  padding: 15px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
+.modal-body { 
+max-height: 350px; 
+padding: 15px; 
+overflow-y: auto; 
+-webkit-overflow-scrolling: touch; 
+}*/
 /* =SPECIFIC
 ----------------------------------------------------*/
 /* line 55, ../../app/assets/stylesheets/public.css.scss */
@@ -9059,56 +9054,9 @@ h1.page-title {
   display: inline;
 }
 
-/* line 360, ../../app/assets/stylesheets/public.css.scss */
-#newsletter_container,
-#diaporama_container,
-#webcam_container {
-  -moz-border-radius: 6px;
-  background: #EEF2F7;
-  -webkit-border-radius: 6px;
-  border: 1px solid #536376;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 12px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 12px;
-  position: relative;
-  display: none;
-}
-
-/* line 370, ../../app/assets/stylesheets/public.css.scss */
-#newsletter_container label {
-  text-align: left;
-  color: #3B3831;
-}
-
-/* line 374, ../../app/assets/stylesheets/public.css.scss */
-#newsletter_container a {
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-  background: #333;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#555555,endColorstr=#333333);
-  background: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#333333));
-  background: -moz-linear-gradient(top, #555555, #333333) repeat scroll 0 0 #333333;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  margin: 0;
-  font-size: 0.8em;
-  line-height: 1.6em;
-  border: 1px solid #222;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 0 -1px 1px black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  padding: 0 4px 0 4px;
-  width: 28px;
-  height: 28px;
-}
-
 /* =TICKER
 ----------------------------------------------------*/
-/* line 402, ../../app/assets/stylesheets/public.css.scss */
+/* line 361, ../../app/assets/stylesheets/public.css.scss */
 #ticker-wrapper {
   position: absolute;
   right: 30px;
@@ -9122,7 +9070,7 @@ h1.page-title {
   text-shadow: 0 1px 1px #fff;
 }
 
-/* line 415, ../../app/assets/stylesheets/public.css.scss */
+/* line 374, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker {
   width: 220px;
   height: 120px;
@@ -9131,7 +9079,7 @@ ul#ticker {
   margin: 0;
 }
 
-/* line 423, ../../app/assets/stylesheets/public.css.scss */
+/* line 382, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li {
   width: 200px;
   height: 99px;
@@ -9139,19 +9087,19 @@ ul#ticker li {
   display: block;
 }
 
-/* line 430, ../../app/assets/stylesheets/public.css.scss */
+/* line 389, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li a {
   color: white;
   display: block;
   text-decoration: none;
 }
-/* line 434, ../../app/assets/stylesheets/public.css.scss */
+/* line 393, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 440, ../../app/assets/stylesheets/public.css.scss */
+/* line 399, ../../app/assets/stylesheets/public.css.scss */
 ul#ticker li span {
   display: block;
   color: white;
@@ -10578,36 +10526,36 @@ ul#ticker li span {
   }
 }
 @media (max-width: 979px) {
-  /* line 451, ../../app/assets/stylesheets/public.css.scss */
+  /* line 410, ../../app/assets/stylesheets/public.css.scss */
   body {
     padding: 0;
   }
 
-  /* line 455, ../../app/assets/stylesheets/public.css.scss */
+  /* line 414, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     float: none;
     text-align: center;
     padding: 20px 0 20px;
   }
 
-  /* line 462, ../../app/assets/stylesheets/public.css.scss */
+  /* line 421, ../../app/assets/stylesheets/public.css.scss */
   #main-container {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 467, ../../app/assets/stylesheets/public.css.scss */
+  /* line 426, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav {
     margin: 0;
     width: 100%;
   }
-  /* line 471, ../../app/assets/stylesheets/public.css.scss */
+  /* line 430, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li {
     width: 33.33%;
     margin: 0;
     padding: 0;
   }
-  /* line 476, ../../app/assets/stylesheets/public.css.scss */
+  /* line 435, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li > a {
     background-color: #2e2c27;
     padding: 6px 10px 6px;
@@ -10615,7 +10563,7 @@ ul#ticker li span {
     text-align: center;
   }
 
-  /* line 483, ../../app/assets/stylesheets/public.css.scss */
+  /* line 442, ../../app/assets/stylesheets/public.css.scss */
   .navbar-inner {
     padding: 0;
     -webkit-border-radius: none;
@@ -10626,29 +10574,29 @@ ul#ticker li span {
     box-shadow: none;
   }
 
-  /* line 488, ../../app/assets/stylesheets/public.css.scss */
+  /* line 447, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse {
     background-color: #3e3c35;
   }
-  /* line 491, ../../app/assets/stylesheets/public.css.scss */
+  /* line 450, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li.dropdown {
     border-top: 1px dotted #dedad1;
   }
-  /* line 494, ../../app/assets/stylesheets/public.css.scss */
+  /* line 453, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li:first-child {
     border-top: none;
   }
-  /* line 499, ../../app/assets/stylesheets/public.css.scss */
+  /* line 458, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     text-align: center;
     font-weight: normal;
   }
-  /* line 503, ../../app/assets/stylesheets/public.css.scss */
+  /* line 462, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu {
     padding-bottom: 8px;
   }
-  /* line 505, ../../app/assets/stylesheets/public.css.scss */
+  /* line 464, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a {
     color: #dedad1;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -10658,12 +10606,12 @@ ul#ticker li span {
     border-radius: none;
     padding: 2px 0;
   }
-  /* line 511, ../../app/assets/stylesheets/public.css.scss */
+  /* line 470, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a:hover {
     color: white;
   }
 
-  /* line 517, ../../app/assets/stylesheets/public.css.scss */
+  /* line 476, ../../app/assets/stylesheets/public.css.scss */
   #locales-menu {
     position: absolute;
     top: 20px;
@@ -10671,7 +10619,7 @@ ul#ticker li span {
   }
 }
 @media (min-width: 980px) {
-  /* line 526, ../../app/assets/stylesheets/public.css.scss */
+  /* line 485, ../../app/assets/stylesheets/public.css.scss */
   #wrapper-wide-body {
     position: absolute;
     width: 100%;
@@ -10679,14 +10627,14 @@ ul#ticker li span {
     overflow: hidden;
   }
 
-  /* line 533, ../../app/assets/stylesheets/public.css.scss */
+  /* line 492, ../../app/assets/stylesheets/public.css.scss */
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
   }
 
-  /* line 538, ../../app/assets/stylesheets/public.css.scss */
+  /* line 497, ../../app/assets/stylesheets/public.css.scss */
   #content-container {
     position: absolute;
     bottom: 40px;
@@ -10700,7 +10648,7 @@ ul#ticker li span {
     filter: alpha(opacity=90);
   }
 
-  /* line 551, ../../app/assets/stylesheets/public.css.scss */
+  /* line 510, ../../app/assets/stylesheets/public.css.scss */
   #content {
     /*width:800px;*/
     width: 100%;
@@ -10712,7 +10660,7 @@ ul#ticker li span {
     display: block;
   }
 
-  /* line 561, ../../app/assets/stylesheets/public.css.scss */
+  /* line 520, ../../app/assets/stylesheets/public.css.scss */
   #main-column-tab {
     -webkit-border-radius: 6px 6px 0 0;
     -moz-border-radius: 6px 6px 0 0;
@@ -10734,12 +10682,12 @@ ul#ticker li span {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  /* line 580, ../../app/assets/stylesheets/public.css.scss */
+  /* line 539, ../../app/assets/stylesheets/public.css.scss */
   #main-column-tab.closed {
     background-image: url(/assets/icon_arrow_top_36_white-e80a5f05ad92009e06dc3dff8996002b.png);
   }
 
-  /* line 584, ../../app/assets/stylesheets/public.css.scss */
+  /* line 543, ../../app/assets/stylesheets/public.css.scss */
   #main-column {
     position: absolute;
     left: 340px;
@@ -10750,12 +10698,12 @@ ul#ticker li span {
     right: 0px;
   }
 
-  /* line 593, ../../app/assets/stylesheets/public.css.scss */
+  /* line 552, ../../app/assets/stylesheets/public.css.scss */
   #main-column.content-sidebar {
     position: absolute;
   }
 
-  /* line 597, ../../app/assets/stylesheets/public.css.scss */
+  /* line 556, ../../app/assets/stylesheets/public.css.scss */
   #footer-container {
     position: fixed;
     right: 0;
@@ -10764,7 +10712,7 @@ ul#ticker li span {
     z-index: 1030;
   }
 
-  /* line 601, ../../app/assets/stylesheets/public.css.scss */
+  /* line 560, ../../app/assets/stylesheets/public.css.scss */
   #sidebar {
     width: 290px;
     position: absolute;
@@ -10775,16 +10723,16 @@ ul#ticker li span {
     display: block;
   }
 
-  /* line 612, ../../app/assets/stylesheets/public.css.scss */
+  /* line 571, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li {
     float: none;
   }
-  /* line 615, ../../app/assets/stylesheets/public.css.scss */
+  /* line 574, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li > a:hover {
     background-color: transparent;
   }
 
-  /* line 622, ../../app/assets/stylesheets/public.css.scss */
+  /* line 581, ../../app/assets/stylesheets/public.css.scss */
   .navbar {
     position: absolute;
     top: 0px;
@@ -10792,7 +10740,7 @@ ul#ticker li span {
     right: 0;
     z-index: 910;
   }
-  /* line 629, ../../app/assets/stylesheets/public.css.scss */
+  /* line 588, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     padding: 0;
     margin: 0;
@@ -10801,13 +10749,13 @@ ul#ticker li span {
     width: 160px;
     height: 140px;
   }
-  /* line 637, ../../app/assets/stylesheets/public.css.scss */
+  /* line 596, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand a {
     text-align: center;
     margin-top: 32px;
   }
 
-  /* line 643, ../../app/assets/stylesheets/public.css.scss */
+  /* line 602, ../../app/assets/stylesheets/public.css.scss */
   .header-top {
     position: absolute;
     top: 0;
@@ -10815,22 +10763,22 @@ ul#ticker li span {
     right: 0;
     z-index: 910;
   }
-  /* line 649, ../../app/assets/stylesheets/public.css.scss */
+  /* line 608, ../../app/assets/stylesheets/public.css.scss */
   .header-top nav {
     float: right;
   }
-  /* line 652, ../../app/assets/stylesheets/public.css.scss */
+  /* line 611, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li {
     margin-left: 4px;
   }
-  /* line 655, ../../app/assets/stylesheets/public.css.scss */
+  /* line 614, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li > a {
     -webkit-border-radius: 0 0 8px 8px;
     -moz-border-radius: 0 0 8px 8px;
     border-radius: 0 0 8px 8px;
   }
 }
-/* line 661, ../../app/assets/stylesheets/public.css.scss */
+/* line 620, ../../app/assets/stylesheets/public.css.scss */
 #home #content-container {
   display: none;
 }
