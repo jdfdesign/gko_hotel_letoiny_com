@@ -107,7 +107,7 @@ var Site = {
 			$('#inquiry-modal').modal({});
 		});
 		
-		$('.modal').on('show', function() {
+	/*	$('.modal').on('show', function() {
 			Util.getAvailableSize();
 			var headerHeight = $(this).find('.modal-header').height(),
 				footerHeight = $(this).find('.modal-footer').height();
@@ -116,7 +116,7 @@ var Site = {
 			modalBody.css({
 				'maxHeight': $("window").height() - headerHeight - footerHeight - 40
 			})
-		})
+		}) */
 		
 		$("a[data-remote], form[data-remote]")
 		.on("ajax:beforeSend", function(event,xhr) {Util.attachLoading("body")})
