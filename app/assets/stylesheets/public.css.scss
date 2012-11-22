@@ -404,8 +404,10 @@ ul#ticker li span {
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
+
 @import "twitter/bootstrap/responsive";
 @import "gko/default_responsive";
+
 @media (max-width: 979px) {
 	body {
 		padding: 0
@@ -418,7 +420,7 @@ ul#ticker li span {
 			padding: $baseLineHeight 0 $baseLineHeight;
 		}	
 	}
-	#main-container {
+	#content {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -478,6 +480,15 @@ ul#ticker li span {
 		top: $baseLineHeight;
 		right: $baseLineHeight / 2;
 	}
+
+	#socials-container {
+		clear: both;
+		float: none;
+		text-align: center;
+		@include center-block;
+		@include clearfix;
+	}
+
 }
 
 @media (min-width: 980px) {
@@ -617,6 +628,34 @@ ul#ticker li span {
 	}
 	
 }
-#home #content-container {
-	display:none;
-}
+
+// bootstrap 2.2.1 modal scroll fix on small devices
+
+@media (max-width: 480px) {
+
+      .modal {
+          height: 500px; /* Set a default max height of the modal (adjusted later)*/
+          position: fixed; /* Display modal in the centre of your screen */
+          overflow-y: scroll; /*  Ensure that the modal is scroll-able */
+          -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
+      }
+      .modal.fade.in{
+          top: 5px; /* Use more screen real estate */
+      }
+      .modal-body{
+          /* Increase the max height of the modal body to try & avoid both it,
+           * and the modal container having scroll bars which results in odd behavior */ 
+          max-height: 2400px; 
+      }   
+  }
+
+  /* Now adjust the height so it handles various screen sizes & orientations */
+  /* You could make this as granular as you like, or have it more granular at common screen sizes
+   * but it should start at the height we set on .modal (i.e. 500px) & work down */
+  @media (max-width: 480px) and (max-height: 500px){.modal{ height: 450px}}
+  @media (max-width: 480px) and (max-height: 450px){.modal{ height: 400px}}
+  @media (max-width: 480px) and (max-height: 400px){.modal{ height: 350px}}
+  @media (max-width: 480px) and (max-height: 350px){.modal{ height: 300px}}
+  @media (max-width: 480px) and (max-height: 300px){.modal{ height: 250px}}
+  @media (max-width: 480px) and (max-height: 250px){.modal{ height: 200px}}
+  @media (max-width: 480px) and (max-height: 200px){.modal{ height: 150px}}
