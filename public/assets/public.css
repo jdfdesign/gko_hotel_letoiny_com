@@ -10526,36 +10526,36 @@ ul#ticker li span {
   }
 }
 @media (max-width: 979px) {
-  /* line 410, ../../app/assets/stylesheets/public.css.scss */
+  /* line 412, ../../app/assets/stylesheets/public.css.scss */
   body {
     padding: 0;
   }
 
-  /* line 414, ../../app/assets/stylesheets/public.css.scss */
+  /* line 416, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     float: none;
     text-align: center;
     padding: 20px 0 20px;
   }
 
-  /* line 421, ../../app/assets/stylesheets/public.css.scss */
-  #main-container {
+  /* line 423, ../../app/assets/stylesheets/public.css.scss */
+  #content {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 426, ../../app/assets/stylesheets/public.css.scss */
+  /* line 428, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav {
     margin: 0;
     width: 100%;
   }
-  /* line 430, ../../app/assets/stylesheets/public.css.scss */
+  /* line 432, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li {
     width: 33.33%;
     margin: 0;
     padding: 0;
   }
-  /* line 435, ../../app/assets/stylesheets/public.css.scss */
+  /* line 437, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li > a {
     background-color: #2e2c27;
     padding: 6px 10px 6px;
@@ -10563,7 +10563,7 @@ ul#ticker li span {
     text-align: center;
   }
 
-  /* line 442, ../../app/assets/stylesheets/public.css.scss */
+  /* line 444, ../../app/assets/stylesheets/public.css.scss */
   .navbar-inner {
     padding: 0;
     -webkit-border-radius: none;
@@ -10574,29 +10574,29 @@ ul#ticker li span {
     box-shadow: none;
   }
 
-  /* line 447, ../../app/assets/stylesheets/public.css.scss */
+  /* line 449, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse {
     background-color: #3e3c35;
   }
-  /* line 450, ../../app/assets/stylesheets/public.css.scss */
+  /* line 452, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li.dropdown {
     border-top: 1px dotted #dedad1;
   }
-  /* line 453, ../../app/assets/stylesheets/public.css.scss */
+  /* line 455, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li:first-child {
     border-top: none;
   }
-  /* line 458, ../../app/assets/stylesheets/public.css.scss */
+  /* line 460, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     text-align: center;
     font-weight: normal;
   }
-  /* line 462, ../../app/assets/stylesheets/public.css.scss */
+  /* line 464, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu {
     padding-bottom: 8px;
   }
-  /* line 464, ../../app/assets/stylesheets/public.css.scss */
+  /* line 466, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a {
     color: #dedad1;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -10606,20 +10606,41 @@ ul#ticker li span {
     border-radius: none;
     padding: 2px 0;
   }
-  /* line 470, ../../app/assets/stylesheets/public.css.scss */
+  /* line 472, ../../app/assets/stylesheets/public.css.scss */
   .nav-collapse .dropdown-menu a:hover {
     color: white;
   }
 
-  /* line 476, ../../app/assets/stylesheets/public.css.scss */
+  /* line 478, ../../app/assets/stylesheets/public.css.scss */
   #locales-menu {
     position: absolute;
     top: 20px;
     right: 10px;
   }
+
+  /* line 484, ../../app/assets/stylesheets/public.css.scss */
+  #socials-container {
+    clear: both;
+    float: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    *zoom: 1;
+  }
+  /* line 16, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-e93519b62176/gko_core/vendor/assets/stylesheets/twitter/bootstrap/mixins.scss */
+  #socials-container:before, #socials-container:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 23, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-e93519b62176/gko_core/vendor/assets/stylesheets/twitter/bootstrap/mixins.scss */
+  #socials-container:after {
+    clear: both;
+  }
 }
 @media (min-width: 980px) {
-  /* line 485, ../../app/assets/stylesheets/public.css.scss */
+  /* line 496, ../../app/assets/stylesheets/public.css.scss */
   #wrapper-wide-body {
     position: absolute;
     width: 100%;
@@ -10627,14 +10648,14 @@ ul#ticker li span {
     overflow: hidden;
   }
 
-  /* line 492, ../../app/assets/stylesheets/public.css.scss */
+  /* line 503, ../../app/assets/stylesheets/public.css.scss */
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
   }
 
-  /* line 497, ../../app/assets/stylesheets/public.css.scss */
+  /* line 508, ../../app/assets/stylesheets/public.css.scss */
   #content-container {
     position: absolute;
     bottom: 40px;
@@ -10648,7 +10669,7 @@ ul#ticker li span {
     filter: alpha(opacity=90);
   }
 
-  /* line 510, ../../app/assets/stylesheets/public.css.scss */
+  /* line 521, ../../app/assets/stylesheets/public.css.scss */
   #content {
     /*width:800px;*/
     width: 100%;
@@ -10660,7 +10681,7 @@ ul#ticker li span {
     display: block;
   }
 
-  /* line 520, ../../app/assets/stylesheets/public.css.scss */
+  /* line 531, ../../app/assets/stylesheets/public.css.scss */
   #main-column-tab {
     -webkit-border-radius: 6px 6px 0 0;
     -moz-border-radius: 6px 6px 0 0;
@@ -10682,12 +10703,12 @@ ul#ticker li span {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  /* line 539, ../../app/assets/stylesheets/public.css.scss */
+  /* line 550, ../../app/assets/stylesheets/public.css.scss */
   #main-column-tab.closed {
     background-image: url(/assets/icon_arrow_top_36_white.png);
   }
 
-  /* line 543, ../../app/assets/stylesheets/public.css.scss */
+  /* line 554, ../../app/assets/stylesheets/public.css.scss */
   #main-column {
     position: absolute;
     left: 340px;
@@ -10698,12 +10719,12 @@ ul#ticker li span {
     right: 0px;
   }
 
-  /* line 552, ../../app/assets/stylesheets/public.css.scss */
+  /* line 563, ../../app/assets/stylesheets/public.css.scss */
   #main-column.content-sidebar {
     position: absolute;
   }
 
-  /* line 556, ../../app/assets/stylesheets/public.css.scss */
+  /* line 567, ../../app/assets/stylesheets/public.css.scss */
   #footer-container {
     position: fixed;
     right: 0;
@@ -10712,7 +10733,7 @@ ul#ticker li span {
     z-index: 1030;
   }
 
-  /* line 560, ../../app/assets/stylesheets/public.css.scss */
+  /* line 571, ../../app/assets/stylesheets/public.css.scss */
   #sidebar {
     width: 290px;
     position: absolute;
@@ -10723,16 +10744,16 @@ ul#ticker li span {
     display: block;
   }
 
-  /* line 571, ../../app/assets/stylesheets/public.css.scss */
+  /* line 582, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li {
     float: none;
   }
-  /* line 574, ../../app/assets/stylesheets/public.css.scss */
+  /* line 585, ../../app/assets/stylesheets/public.css.scss */
   #secondary-menu .nav > li > a:hover {
     background-color: transparent;
   }
 
-  /* line 581, ../../app/assets/stylesheets/public.css.scss */
+  /* line 592, ../../app/assets/stylesheets/public.css.scss */
   .navbar {
     position: absolute;
     top: 0px;
@@ -10740,7 +10761,7 @@ ul#ticker li span {
     right: 0;
     z-index: 910;
   }
-  /* line 588, ../../app/assets/stylesheets/public.css.scss */
+  /* line 599, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand {
     padding: 0;
     margin: 0;
@@ -10749,13 +10770,13 @@ ul#ticker li span {
     width: 160px;
     height: 140px;
   }
-  /* line 596, ../../app/assets/stylesheets/public.css.scss */
+  /* line 607, ../../app/assets/stylesheets/public.css.scss */
   .navbar .brand a {
     text-align: center;
     margin-top: 32px;
   }
 
-  /* line 602, ../../app/assets/stylesheets/public.css.scss */
+  /* line 613, ../../app/assets/stylesheets/public.css.scss */
   .header-top {
     position: absolute;
     top: 0;
@@ -10763,22 +10784,89 @@ ul#ticker li span {
     right: 0;
     z-index: 910;
   }
-  /* line 608, ../../app/assets/stylesheets/public.css.scss */
+  /* line 619, ../../app/assets/stylesheets/public.css.scss */
   .header-top nav {
     float: right;
   }
-  /* line 611, ../../app/assets/stylesheets/public.css.scss */
+  /* line 622, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li {
     margin-left: 4px;
   }
-  /* line 614, ../../app/assets/stylesheets/public.css.scss */
+  /* line 625, ../../app/assets/stylesheets/public.css.scss */
   .header-top .nav > li > a {
     -webkit-border-radius: 0 0 8px 8px;
     -moz-border-radius: 0 0 8px 8px;
     border-radius: 0 0 8px 8px;
   }
 }
-/* line 620, ../../app/assets/stylesheets/public.css.scss */
-#home #content-container {
-  display: none;
+@media (max-width: 480px) {
+  /* line 636, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 500px;
+    /* Set a default max height of the modal (adjusted later)*/
+    position: fixed;
+    /* Display modal in the centre of your screen */
+    overflow-y: scroll;
+    /*  Ensure that the modal is scroll-able */
+    -webkit-overflow-scrolling: touch;
+    /* Avoid having to use 2 finger scroll on iOS    */
+  }
+
+  /* line 642, ../../app/assets/stylesheets/public.css.scss */
+  .modal.fade.in {
+    top: 5px;
+    /* Use more screen real estate */
+  }
+
+  /* line 645, ../../app/assets/stylesheets/public.css.scss */
+  .modal-body {
+    /* Increase the max height of the modal body to try & avoid both it,
+     * and the modal container having scroll bars which results in odd behavior */
+    max-height: 2400px;
+  }
+}
+/* Now adjust the height so it handles various screen sizes & orientations */
+/* You could make this as granular as you like, or have it more granular at common screen sizes
+ * but it should start at the height we set on .modal (i.e. 500px) & work down */
+@media (max-width: 480px) and (max-height: 500px) {
+  /* line 655, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 450px;
+  }
+}
+@media (max-width: 480px) and (max-height: 450px) {
+  /* line 656, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 400px;
+  }
+}
+@media (max-width: 480px) and (max-height: 400px) {
+  /* line 657, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 350px;
+  }
+}
+@media (max-width: 480px) and (max-height: 350px) {
+  /* line 658, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 300px;
+  }
+}
+@media (max-width: 480px) and (max-height: 300px) {
+  /* line 659, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 250px;
+  }
+}
+@media (max-width: 480px) and (max-height: 250px) {
+  /* line 660, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 200px;
+  }
+}
+@media (max-width: 480px) and (max-height: 200px) {
+  /* line 661, ../../app/assets/stylesheets/public.css.scss */
+  .modal {
+    height: 150px;
+  }
 }
