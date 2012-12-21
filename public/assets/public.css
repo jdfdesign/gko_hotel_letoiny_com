@@ -8369,56 +8369,62 @@ img {
   box-sizing: border-box;
 }
 
+/* line 23, ../../app/assets/stylesheets/public.css.scss */
+a:focus,
+.btn:focus {
+  outline: 0;
+}
+
 /* =PATCH
 ----------------------------------------------------*/
-/* line 28, ../../app/assets/stylesheets/public.css.scss */
+/* line 31, ../../app/assets/stylesheets/public.css.scss */
 #supersized img {
   max-width: none;
 }
 
 /* =SPECIFIC
 ----------------------------------------------------*/
-/* line 35, ../../app/assets/stylesheets/public.css.scss */
+/* line 38, ../../app/assets/stylesheets/public.css.scss */
 .flexslider {
   margin-bottom: 10px;
 }
 
-/* line 39, ../../app/assets/stylesheets/public.css.scss */
+/* line 42, ../../app/assets/stylesheets/public.css.scss */
 .flex-direction-nav a {
   opacity: 1;
 }
 
-/* line 40, ../../app/assets/stylesheets/public.css.scss */
+/* line 43, ../../app/assets/stylesheets/public.css.scss */
 .flex-direction-nav .flex-next {
   right: 6px;
 }
 
-/* line 41, ../../app/assets/stylesheets/public.css.scss */
+/* line 44, ../../app/assets/stylesheets/public.css.scss */
 .flex-direction-nav .flex-prev {
   left: 6px;
 }
 
-/* line 42, ../../app/assets/stylesheets/public.css.scss */
+/* line 45, ../../app/assets/stylesheets/public.css.scss */
 .flexslider:hover .flex-next {
   opacity: 1;
 }
 
-/* line 43, ../../app/assets/stylesheets/public.css.scss */
+/* line 46, ../../app/assets/stylesheets/public.css.scss */
 .flexslider:hover .flex-prev {
   opacity: 1;
 }
 
-/* line 44, ../../app/assets/stylesheets/public.css.scss */
+/* line 47, ../../app/assets/stylesheets/public.css.scss */
 .main-content-inner {
   padding: 20px 0;
 }
 
-/* line 47, ../../app/assets/stylesheets/public.css.scss */
+/* line 50, ../../app/assets/stylesheets/public.css.scss */
 .accordion-group {
   background-color: white;
 }
 
-/* line 50, ../../app/assets/stylesheets/public.css.scss */
+/* line 53, ../../app/assets/stylesheets/public.css.scss */
 .modal {
   background-color: #efe9e3;
   -webkit-border-radius: 10px 10px 0 0;
@@ -8426,7 +8432,7 @@ img {
   border-radius: 10px 10px 0 0;
 }
 
-/* line 54, ../../app/assets/stylesheets/public.css.scss */
+/* line 57, ../../app/assets/stylesheets/public.css.scss */
 .modal-header {
   -webkit-border-radius: 6px 6px 0 0;
   -moz-border-radius: 6px 6px 0 0;
@@ -8434,19 +8440,19 @@ img {
   background-color: #44413a;
   color: white;
 }
-/* line 58, ../../app/assets/stylesheets/public.css.scss */
+/* line 61, ../../app/assets/stylesheets/public.css.scss */
 .modal-header .close {
   color: white;
   text-shadow: black;
 }
 
-/* line 63, ../../app/assets/stylesheets/public.css.scss */
+/* line 66, ../../app/assets/stylesheets/public.css.scss */
 .modal-footer {
   background-color: transparent;
   border-top: 1px solid #e0d5c9;
 }
 
-/* line 67, ../../app/assets/stylesheets/public.css.scss */
+/* line 70, ../../app/assets/stylesheets/public.css.scss */
 #logo_relais_chateaux {
   position: absolute;
   bottom: 140px;
@@ -8455,19 +8461,19 @@ img {
   opacity: .7;
 }
 
-/* line 74, ../../app/assets/stylesheets/public.css.scss */
+/* line 77, ../../app/assets/stylesheets/public.css.scss */
 #start-slideshow {
   text-align: right;
   margin-bottom: 20px;
   font-size: 10px;
   text-decoration: none;
 }
-/* line 79, ../../app/assets/stylesheets/public.css.scss */
+/* line 82, ../../app/assets/stylesheets/public.css.scss */
 #start-slideshow i {
   padding-left: 4px;
 }
 
-/* line 83, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
 h1.page-title {
   font-weight: normal;
   font-size: 24px;
@@ -8475,7 +8481,7 @@ h1.page-title {
   margin-bottom: 8px;
 }
 
-/* line 89, ../../app/assets/stylesheets/public.css.scss */
+/* line 92, ../../app/assets/stylesheets/public.css.scss */
 .nav > li > a {
   font-size: 11px;
   font-weight: 300;
@@ -8486,7 +8492,7 @@ h1.page-title {
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-/* line 100, ../../app/assets/stylesheets/public.css.scss */
+/* line 103, ../../app/assets/stylesheets/public.css.scss */
 .grid > li h2 {
   text-transform: uppercase;
   font-family: "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
@@ -8494,25 +8500,25 @@ h1.page-title {
   font-weight: bold;
   line-height: 20px;
 }
-/* line 107, ../../app/assets/stylesheets/public.css.scss */
+/* line 110, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 109, ../../app/assets/stylesheets/public.css.scss */
+/* line 112, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail:hover {
   background-color: white;
 }
 
-/* line 114, ../../app/assets/stylesheets/public.css.scss */
+/* line 117, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item {
   text-align: center;
 }
-/* line 120, ../../app/assets/stylesheets/public.css.scss */
+/* line 123, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item .thumbnail .country {
   clear: both;
   font-weight: bold;
 }
-/* line 124, ../../app/assets/stylesheets/public.css.scss */
+/* line 127, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item .thumbnail .links {
   display: none;
 }
@@ -8523,42 +8529,42 @@ h1.page-title {
 /*-----------------------------------------
  HOME
 ----------------------------------------- */
-/* line 139, ../../app/assets/stylesheets/public.css.scss */
+/* line 142, ../../app/assets/stylesheets/public.css.scss */
 .html-text {
   clear: both;
 }
-/* line 141, ../../app/assets/stylesheets/public.css.scss */
+/* line 144, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul {
   list-style: disc outside;
   margin-left: 30px;
 }
-/* line 142, ../../app/assets/stylesheets/public.css.scss */
+/* line 145, ../../app/assets/stylesheets/public.css.scss */
 .html-text li {
   margin-bottom: 0px;
 }
-/* line 143, ../../app/assets/stylesheets/public.css.scss */
+/* line 146, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul, .html-text ol {
   margin-bottom: .8em;
 }
-/* line 144, ../../app/assets/stylesheets/public.css.scss */
+/* line 147, ../../app/assets/stylesheets/public.css.scss */
 .html-text p {
   margin-bottom: .8em;
   text-align: justify;
 }
-/* line 146, ../../app/assets/stylesheets/public.css.scss */
+/* line 149, ../../app/assets/stylesheets/public.css.scss */
 .html-text table {
   margin-bottom: 40px;
 }
-/* line 148, ../../app/assets/stylesheets/public.css.scss */
+/* line 151, ../../app/assets/stylesheets/public.css.scss */
 .html-text table td {
   border-color: #3b3831;
 }
-/* line 153, ../../app/assets/stylesheets/public.css.scss */
+/* line 156, ../../app/assets/stylesheets/public.css.scss */
 .html-text h1 {
   font-size: 26px;
   line-height: 36px;
 }
-/* line 158, ../../app/assets/stylesheets/public.css.scss */
+/* line 161, ../../app/assets/stylesheets/public.css.scss */
 .html-text h2 {
   line-height: 24px;
   font-size: 16px;
@@ -8568,7 +8574,7 @@ h1.page-title {
   border-bottom: 1px solid #B7B6B6;
   font-weight: normal;
 }
-/* line 168, ../../app/assets/stylesheets/public.css.scss */
+/* line 171, ../../app/assets/stylesheets/public.css.scss */
 .html-text h3 {
   line-height: 24px;
   font-size: 14px;
@@ -8579,17 +8585,17 @@ h1.page-title {
 }
 
 /* loading screen */
-/* line 179, ../../app/assets/stylesheets/public.css.scss */
+/* line 182, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading {
   overflow: hidden !important;
 }
 
-/* line 180, ../../app/assets/stylesheets/public.css.scss */
+/* line 183, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading .ui-loader {
   display: block;
 }
 
-/* line 181, ../../app/assets/stylesheets/public.css.scss */
+/* line 184, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader {
   display: none;
   position: absolute;
@@ -8602,7 +8608,7 @@ h1.page-title {
   padding: 10px 30px;
 }
 
-/* line 182, ../../app/assets/stylesheets/public.css.scss */
+/* line 185, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader .ui-icon {
   position: static;
   display: block;
@@ -8613,7 +8619,7 @@ h1.page-title {
   background: transparent url(/assets/gko-core/ajax-loader.gif) no-repeat;
 }
 
-/* line 187, ../../app/assets/stylesheets/public.css.scss */
+/* line 190, ../../app/assets/stylesheets/public.css.scss */
 .ui-icon-loading {
   position: static;
   display: block;
@@ -8631,7 +8637,7 @@ h1.page-title {
   background-size: 35px 35px;
 }
 
-/* line 204, ../../app/assets/stylesheets/public.css.scss */
+/* line 207, ../../app/assets/stylesheets/public.css.scss */
 .hotel_inquiry select,
 .table_inquiry select {
   width: auto;
