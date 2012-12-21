@@ -15,6 +15,7 @@ RAILS_ENV=development bundle exec rake assets:precompile
 RAILS_ENV=production bundle exec rake assets:precompile
 bundle exec rake assets:precompile
 
+cd ~/Github/gko_letoiny_com
 bundle exec rake railties:install:migrations
 bundle exec rake db:migrate
 

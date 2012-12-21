@@ -12,17 +12,19 @@ group :assets do
 end
 
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.5.12"
+prod_version = "= 0.5.32"
 
 group :production do
  gem 'gko_core', prod_version, :git => prod_location
  gem 'gko_auth', prod_version, :git => prod_location
  gem 'gko_images', prod_version, :git => prod_location
- gem 'gko_inquiries', prod_version, :git => prod_location
  gem "gko_documents", prod_version, :git => prod_location
+ gem 'gko_inquiries', prod_version, :git => prod_location
  gem 'gko_newsletters', prod_version, :git => prod_location
  gem 'gko_twits', prod_version, :git => prod_location 
  gem 'gko_hotel', prod_version, :git => prod_location  
+ gem 'gko_categories', prod_version, :git => prod_location 
+ gem 'gko_image_bank', prod_version, :git => prod_location
 end
 
 #group :development do
@@ -34,4 +36,6 @@ end
 #  gem "gko_newsletters", :path => '~/Github/gko_cms3/gko_newsletters'
 #  gem "gko_twits", :path => '~/Github/gko_cms3/gko_twits' 
 #  gem "gko_hotel", :path => '~/Github/gko_cms3/gko_hotel'
+#  gem "gko_categories", :path => '~/Github/gko_cms3/gko_categories'
+#  gem "gko_image_bank", :path => '~/Github/gko_cms3/gko_image_bank'
 #end

@@ -1,3 +1,5 @@
+//= require jquery
+//= require jquery_ujs
 //= require gko/jquery.mobile.events.js
 //= require jquery.easing.min.js
 //= require jquery.mousewheel.js

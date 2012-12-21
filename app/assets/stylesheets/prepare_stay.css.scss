@@ -1,0 +1,67 @@
+$brown: #44413A;
+$acidGreen: #98CB38;
+$zindexPane: 100;
+$zindexLogoRelais: 90;
+
+@import "variables";
+@import "twitter/awesome-bootstrap";
+@import "gko/public/base";
+@import "datepicker";
+//@import "navbar";
+body {
+	background-color: $white;
+}
+.container-fluid,
+.row-fluid {
+	@include box-sizing(border-box);
+}
+a.accordion-toggle {
+	font-size: 24px;
+	font-weight: bold;
+}
+.accordion-group {
+	background-color: $white;
+}
+h1.page-title{
+	font-weight:normal;
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom:8px;
+}
+.affix {
+	position: relative;
+	@include box-sizing(border-box);
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+.affix > li:first-child > a {
+	@include border-radius(6px 6px 0 0);
+}
+.affix > li:last-child > a {
+	@include border-radius(0 0 6px 6px);
+}
+
+.affix > li > a {
+	@include box-sizing(border-box);
+	display: block;
+	width: 100%;
+	margin: 0 0 -1px;
+	padding: 8px 14px;
+	border: 1px solid #E5E5E5;
+	i {
+		float:right;
+	}
+}
+.accordion-group {
+	background-color: transparent;
+}
+
+.form-horizontal table .controls {
+	margin-left: 0;
+}
+
+.btn-link {
+	border: 1px solid;
+}
+//@import "responsive";

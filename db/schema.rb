@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112224084) do
+ActiveRecord::Schema.define(:version => 20121220162400) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -36,6 +36,51 @@ ActiveRecord::Schema.define(:version => 20121112224084) do
   end
 
   add_index "assets", ["site_id"], :name => "index_assets_on_site_id"
+
+  create_table "categories", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "section_id"
+    t.integer  "parent_id"
+    t.integer  "lft",              :default => 0, :null => false
+    t.integer  "rgt",              :default => 0, :null => false
+    t.string   "name"
+    t.string   "slug"
+    t.string   "path"
+    t.string   "title"
+    t.text     "body"
+    t.string   "meta_title"
+    t.text     "meta_description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["parent_id"], :name => "index_categories_on_parent_id"
+  add_index "categories", ["section_id"], :name => "index_categories_on_section_id"
+
+  create_table "categorizations", :force => true do |t|
+    t.integer "categorizable_id"
+    t.string  "categorizable_type"
+    t.integer "category_id"
+  end
+
+  add_index "categorizations", ["categorizable_id", "categorizable_type"], :name => "index_categorizations_on_categorizable_id_and_categorizable_type"
+  add_index "categorizations", ["category_id"], :name => "index_categorizations_on_category_id"
+
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.text     "meta_description"
+    t.string   "path"
+    t.string   "meta_title"
+    t.string   "slug"
+    t.text     "body"
+    t.string   "title"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
 
   create_table "configurations", :force => true do |t|
     t.integer  "site_id"
@@ -208,6 +253,43 @@ ActiveRecord::Schema.define(:version => 20121112224084) do
   add_index "field_values", ["customizable_id", "customizable_type"], :name => "index_field_values_on_customizable_id_and_customizable_type"
   add_index "field_values", ["field_type_id"], :name => "index_field_values_on_field_type_id"
 
+  create_table "hotel_reservations", :force => true do |t|
+    t.integer  "site_id"
+    t.string   "reference"
+    t.string   "email"
+    t.string   "name"
+    t.string   "language"
+    t.date     "checkin"
+    t.date     "checkout"
+    t.string   "address"
+    t.string   "address2"
+    t.string   "city"
+    t.integer  "state_id"
+    t.string   "zip"
+    t.integer  "country_id"
+    t.string   "phone"
+    t.integer  "guest_count"
+    t.integer  "child_count"
+    t.string   "arrival_airline"
+    t.integer  "arrival_flight"
+    t.string   "arrival_airport"
+    t.datetime "arrival_time"
+    t.string   "departure_airport"
+    t.datetime "departure_time"
+    t.string   "departure_airline"
+    t.integer  "departure_flight"
+    t.text     "options"
+    t.text     "suite_preferences_comments"
+    t.text     "about_comments"
+    t.text     "transport_comments"
+    t.text     "activity_comments"
+    t.text     "additional_service_comments"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
+  add_index "hotel_reservations", ["site_id"], :name => "index_hotel_reservations_on_site_id"
+
   create_table "image_assignments", :force => true do |t|
     t.integer  "position",                      :default => 1, :null => false
     t.integer  "image_id",                                     :null => false
@@ -219,6 +301,26 @@ ActiveRecord::Schema.define(:version => 20121112224084) do
 
   add_index "image_assignments", ["attachable_id", "attachable_type"], :name => "index_image_assignments_on_attachable_id_and_attachable_type"
   add_index "image_assignments", ["image_id"], :name => "index_image_assignments_on_image_id"
+
+  create_table "image_bank_photos", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "section_id"
+    t.string   "title"
+    t.string   "caption"
+    t.string   "content_type"
+    t.integer  "width"
+    t.integer  "height"
+    t.integer  "size"
+    t.string   "source"
+    t.string   "source_filename"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.string   "author"
+    t.integer  "position",        :default => 1
+  end
+
+  add_index "image_bank_photos", ["section_id"], :name => "index_image_bank_photos_on_section_id"
+  add_index "image_bank_photos", ["site_id"], :name => "index_image_bank_photos_on_site_id"
 
   create_table "image_folders", :force => true do |t|
     t.string   "name"
@@ -467,6 +569,19 @@ ActiveRecord::Schema.define(:version => 20121112224084) do
   add_index "sites", ["account_id"], :name => "index_sites_on_account_id"
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
 
+  create_table "spa_reservations", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "hotel_reservation_id"
+    t.date     "book_date"
+    t.integer  "guests"
+    t.string   "service_name"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  add_index "spa_reservations", ["hotel_reservation_id"], :name => "index_spa_reservations_on_hotel_reservation_id"
+  add_index "spa_reservations", ["site_id"], :name => "index_spa_reservations_on_site_id"
+
   create_table "states", :force => true do |t|
     t.string  "name"
     t.string  "abbr"
@@ -482,6 +597,20 @@ ActiveRecord::Schema.define(:version => 20121112224084) do
   end
 
   add_index "supports", ["owner_id", "owner_type"], :name => "index_supports_on_owner_id_and_owner_type", :unique => true
+
+  create_table "table_reservations", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "hotel_reservation_id"
+    t.date     "book_date"
+    t.integer  "guests"
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
+    t.string   "restaurant_name"
+    t.boolean  "lunch",                :default => false
+  end
+
+  add_index "table_reservations", ["hotel_reservation_id"], :name => "index_table_reservations_on_hotel_reservation_id"
+  add_index "table_reservations", ["site_id"], :name => "index_table_reservations_on_site_id"
 
   create_table "tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"
