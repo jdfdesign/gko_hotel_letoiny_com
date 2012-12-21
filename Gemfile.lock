@@ -53,6 +53,7 @@ GIT
     gko_hotel (0.5.32)
       gko_core (= 0.5.32)
       gko_inquiries (= 0.5.32)
+    gko_image_bank (0.5.32)
     gko_images (0.5.32)
     gko_inquiries (0.5.32)
       filters_spam (~> 0.2)
@@ -308,6 +309,7 @@ DEPENDENCIES
   gko_core (= 0.5.32)!
   gko_documents (= 0.5.32)!
   gko_hotel (= 0.5.32)!
+  gko_image_bank (= 0.5.32)!
   gko_images (= 0.5.32)!
   gko_inquiries (= 0.5.32)!
   gko_newsletters (= 0.5.32)!

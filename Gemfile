@@ -24,7 +24,7 @@ group :production do
  gem 'gko_twits', prod_version, :git => prod_location 
  gem 'gko_hotel', prod_version, :git => prod_location  
  gem 'gko_categories', prod_version, :git => prod_location 
- gem 'gko_categories', prod_version, :git => prod_location
+ gem 'gko_image_bank', prod_version, :git => prod_location
 end
 
 #group :development do
