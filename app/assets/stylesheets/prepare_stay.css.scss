@@ -7,20 +7,101 @@ $zindexLogoRelais: 90;
 @import "twitter/awesome-bootstrap";
 @import "gko/public/base";
 @import "datepicker";
-//@import "navbar";
+
+html, body {
+	height: 100%;
+}
 body {
-	background-color: $white;
+	background: $white asset-url("gray_jean.png", image) top left repeat;
+	
 }
 .container-fluid,
 .row-fluid {
-	@include box-sizing(border-box);
+//	@include box-sizing(border-box);
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	@include box-shadow(inset -2px 0px 7px 0px #ABABAB);
+}
+.main {
+	position: relative;
+	
+}
+
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+// TABS
+// ----
+
+// Give the tabs something to sit on
+.nav-tabs {
+  margin-bottom: 0;	
+  border-bottom: 1px solid #ddd;
+}
+// Make the list-items overlay the bottom border
+.nav-tabs > li {
+  margin-bottom: -1px;
+}
+// Actual tabs (as links)
+.nav-tabs > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: $baseLineHeight;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  &:hover {
+    border-color: $grayDark $grayDark #ddd;
+	color: $grayLighter;
+	background-color: $gray;
+  }
+}
+// Active state, and it's :hover to override normal :hover
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+ background: $black;
+	background-color: rgba(0,0,0,.8);
+	color: $white;
+  border: 1px solid $black;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.tab-content {
+	background: $black;
+	background-color: rgba(0,0,0,.8);
+	color: $grayLight;
+	padding: $baseLineHeight;
+	//border: 1px solid darken($black, 7%);
+    @include border-radius($baseBorderRadius);
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.5));
+
+	h4 {
+		color: $grayLighter;
+	}
+	a {
+		color: $grayLight;
+		&:hover {
+			color: $grayLighter;
+		};
+	}
 }
 a.accordion-toggle {
 	font-size: 24px;
 	font-weight: bold;
 }
 .accordion-group {
-	background-color: $white;
+	background-color: transparent;
 }
 h1.page-title{
 	font-weight:normal;
@@ -53,9 +134,7 @@ h1.page-title{
 		float:right;
 	}
 }
-.accordion-group {
-	background-color: transparent;
-}
+
 
 .form-horizontal table .controls {
 	margin-left: 0;
@@ -63,5 +142,17 @@ h1.page-title{
 
 .btn-link {
 	border: 1px solid;
+}
+input[type="number"] {
+	max-width: 5em;
+}
+hr.big {
+	margin-top: 32px;
+   border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 //@import "responsive";

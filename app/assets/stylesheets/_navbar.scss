@@ -31,6 +31,20 @@
 			height: 59px;
 			@include hide-text;
 		}
+		
+		
+	}
+	 
+	li.dropdown > .dropdown-toggle .caret,
+	li.dropdown.open > .dropdown-menu,
+	li.dropdown.open > .dropdown-toggle .caret, 
+	li.dropdown.active > .dropdown-toggle .caret, 
+	li.dropdown.open.active > .dropdown-toggle .caret {
+		display:none;
+	}
+	.nav > li > .dropdown-menu:before,
+	.nav > li > .dropdown-menu:after{
+		display:none;
 	}
 	.header-top {
 		@include clearfix;

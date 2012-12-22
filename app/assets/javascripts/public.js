@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require gko/public/jquery.grid.responsive.js
 //= require gko/jquery.mobile.events.js
 //= require jquery.easing.min.js
 //= require jquery.mousewheel.js
@@ -50,11 +51,19 @@ var Site = {
 		Site.rescale();
 		
 		$('a[rel="tooltip"], a[rel="tooltip nofollow"]').tooltip({html: true});
-		$('input.datepicker').datepicker();
+		$('input.date, input.datetime').datepicker();
 	},
 
     attachEvents : function() {
-		
+		$('.nav li.dropdown').on('click.dropdown.data-api', function (e) {
+			if ($(window).width() > breakpoint) {
+				e.preventDefault();
+				e.stopPropagation();
+				var url = $(this).find('a:first').attr("href");
+				window.location = "http://" + window.location.hostname + url;
+				return false;
+			}
+		})
 	/*	$("#main-column .carousel").on('click', ' img',  function(e) {
 			e.preventDefault();
 			Carousel.modal();

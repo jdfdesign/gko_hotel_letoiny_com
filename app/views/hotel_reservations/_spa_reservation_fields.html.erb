@@ -1,5 +1,5 @@
 <tr>
 	<td><%= f.input :service_name, :label => false, :placeholder => "service name" %></td>
-	<td><%= f.input :book_date, :input_html => {:class => 'datetime'}, :as => :string, :label => false %></td>
-	<td><%= f.input :guests, :label => false %></td>
+	<td><%= f.input :book_date, :input_html => {:class => 'date'}, :as => :string, :label => false %></td>
+	<td><%= f.input :guests, :label => false, :input_html => {:maxlength => 2, :min => 1, :max => 99} %></td>
 </tr>

@@ -93,6 +93,7 @@
 
 }
 
+
 @media (min-width: 980px) {
 	
 	#wrapper-wide-body {
@@ -119,7 +120,9 @@
 		@include opacity(90);
 	//	@include container-fixed-footer();
 	}
-
+	.nav li.dropdown > .dropdown-toggle .caret {
+		display:none;
+	}
 	#content {
 		/*width:800px;*/
 		width:100%;

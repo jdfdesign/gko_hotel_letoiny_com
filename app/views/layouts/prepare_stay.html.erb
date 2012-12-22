@@ -40,7 +40,15 @@
     ================================================== -->  
       <div id='content-container' class='container-fluid'>
 		<%= render "flash" %> 
-		<%= yield %>
+		<div class="row-fluid main">
+			<div class="span3 sidebar">
+				<%= render 'hotel_reservations/sidebar'%>
+			</div>
+			<div class="span9 offset3">
+				<%= yield %>
+			</div>
+		</div>
+		
       </div>
 
       

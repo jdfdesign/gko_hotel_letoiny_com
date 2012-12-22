@@ -1,14 +1,8 @@
-<div class="row-fluid" style="position:relative;">
-	<div class="span3" style="position:fixed;">
-		<%= render 'sidebar'%>
-	</div>
-	<div class="span9 offset3">
-		<%= simple_form_for(resources, :url => hotel_reservations_path, :html => {:class => [:"form-horizontal", :inquiry]}) do |f| -%>
-			<%= f.input :reference %>
-			<%= f.input :email %>
-			<%= f.input :name %>
-			<%= f.input :language %>
-			<%= render 'fields', :f => f %>
-		<% end %>
-	</div>
-</div>
+<%= simple_form_for(resources, :url => hotel_reservations_path, :html => {:class => [:"form-horizontal"]}) do |f| -%>
+	<%= f.input :reference %>
+	<%= f.input :email %>
+	<%= f.input :name %>
+	<%= f.input :language %>
+	<%= render 'fields', :f => f %>
+<% end %>
+

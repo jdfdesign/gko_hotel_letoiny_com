@@ -7539,7 +7539,20 @@ footer .nav > li > a:hover {
   background-color: transparent;
   border: 0;
 }
-/* line 35, ../../app/assets/stylesheets/_navbar.scss */
+/* line 42, ../../app/assets/stylesheets/_navbar.scss */
+.navbar li.dropdown > .dropdown-toggle .caret,
+.navbar li.dropdown.open > .dropdown-menu,
+.navbar li.dropdown.open > .dropdown-toggle .caret,
+.navbar li.dropdown.active > .dropdown-toggle .caret,
+.navbar li.dropdown.open.active > .dropdown-toggle .caret {
+  display: none;
+}
+/* line 46, ../../app/assets/stylesheets/_navbar.scss */
+.navbar .nav > li > .dropdown-menu:before,
+.navbar .nav > li > .dropdown-menu:after {
+  display: none;
+}
+/* line 49, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .header-top {
   *zoom: 1;
 }
@@ -7553,17 +7566,17 @@ footer .nav > li > a:hover {
 .navbar .header-top:after {
   clear: both;
 }
-/* line 37, ../../app/assets/stylesheets/_navbar.scss */
+/* line 51, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .header-top .nav > li > a {
   background-color: #2e2c27;
   padding: 6px 10px 6px;
   font-size: 10px;
 }
-/* line 41, ../../app/assets/stylesheets/_navbar.scss */
+/* line 55, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .header-top .nav > li > a:hover {
   background-color: #98cb38;
 }
-/* line 46, ../../app/assets/stylesheets/_navbar.scss */
+/* line 60, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .header-nav {
   *zoom: 1;
 }
@@ -7577,25 +7590,25 @@ footer .nav > li > a:hover {
 .navbar .header-nav:after {
   clear: both;
 }
-/* line 51, ../../app/assets/stylesheets/_navbar.scss */
+/* line 65, ../../app/assets/stylesheets/_navbar.scss */
 .navbar #locales-menu li > a {
   line-height: 12px;
   padding-left: 56px;
   background: transparent url(/assets/locale_icons-fc7df9960dbba32a2f01b95cc5ccb54e.png) no-repeat top center;
 }
-/* line 62, ../../app/assets/stylesheets/_navbar.scss */
+/* line 76, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .nav-collapse .nav {
   margin-top: 16px;
 }
-/* line 65, ../../app/assets/stylesheets/_navbar.scss */
+/* line 79, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .nav-collapse .nav > li {
   float: none;
 }
-/* line 69, ../../app/assets/stylesheets/_navbar.scss */
+/* line 83, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .nav-collapse .nav > li:last-child {
   border-bottom: none;
 }
-/* line 73, ../../app/assets/stylesheets/_navbar.scss */
+/* line 87, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .nav-collapse .nav > li > a {
   padding: 0 12px;
 }
@@ -10222,7 +10235,7 @@ h1.page-title {
   }
 }
 @media (min-width: 980px) {
-  /* line 98, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 99, ../../app/assets/stylesheets/_responsive.scss */
   #wrapper-wide-body {
     position: absolute;
     width: 100%;
@@ -10230,14 +10243,14 @@ h1.page-title {
     overflow: hidden;
   }
 
-  /* line 105, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 106, ../../app/assets/stylesheets/_responsive.scss */
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
   }
 
-  /* line 110, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 111, ../../app/assets/stylesheets/_responsive.scss */
   #content-container {
     position: absolute;
     bottom: 40px;
@@ -10252,6 +10265,11 @@ h1.page-title {
   }
 
   /* line 123, ../../app/assets/stylesheets/_responsive.scss */
+  .nav li.dropdown > .dropdown-toggle .caret {
+    display: none;
+  }
+
+  /* line 126, ../../app/assets/stylesheets/_responsive.scss */
   #content {
     /*width:800px;*/
     width: 100%;
@@ -10263,7 +10281,7 @@ h1.page-title {
     display: block;
   }
 
-  /* line 133, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 136, ../../app/assets/stylesheets/_responsive.scss */
   #main-column-tab {
     -webkit-border-radius: 6px 6px 0 0;
     -moz-border-radius: 6px 6px 0 0;
@@ -10285,12 +10303,12 @@ h1.page-title {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  /* line 152, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 155, ../../app/assets/stylesheets/_responsive.scss */
   #main-column-tab.closed {
     background-image: url(/assets/icon_arrow_top_36_white-e80a5f05ad92009e06dc3dff8996002b.png);
   }
 
-  /* line 156, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 159, ../../app/assets/stylesheets/_responsive.scss */
   #main-column {
     position: absolute;
     left: 340px;
@@ -10301,12 +10319,12 @@ h1.page-title {
     right: 0px;
   }
 
-  /* line 165, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 168, ../../app/assets/stylesheets/_responsive.scss */
   #main-column.content-sidebar {
     position: absolute;
   }
 
-  /* line 169, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 172, ../../app/assets/stylesheets/_responsive.scss */
   #footer-container {
     position: fixed;
     right: 0;
@@ -10315,7 +10333,7 @@ h1.page-title {
     z-index: 1030;
   }
 
-  /* line 173, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 176, ../../app/assets/stylesheets/_responsive.scss */
   #sidebar {
     width: 290px;
     position: absolute;
@@ -10326,16 +10344,16 @@ h1.page-title {
     display: block;
   }
 
-  /* line 184, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 187, ../../app/assets/stylesheets/_responsive.scss */
   #secondary-menu .nav > li {
     float: none;
   }
-  /* line 187, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 190, ../../app/assets/stylesheets/_responsive.scss */
   #secondary-menu .nav > li > a:hover {
     background-color: transparent;
   }
 
-  /* line 194, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 197, ../../app/assets/stylesheets/_responsive.scss */
   .navbar {
     position: absolute;
     top: 0px;
@@ -10343,7 +10361,7 @@ h1.page-title {
     right: 0;
     z-index: 910;
   }
-  /* line 201, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 204, ../../app/assets/stylesheets/_responsive.scss */
   .navbar .brand {
     padding: 0;
     margin: 0;
@@ -10352,13 +10370,13 @@ h1.page-title {
     width: 160px;
     height: 140px;
   }
-  /* line 209, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 212, ../../app/assets/stylesheets/_responsive.scss */
   .navbar .brand a {
     text-align: center;
     margin-top: 32px;
   }
 
-  /* line 215, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 218, ../../app/assets/stylesheets/_responsive.scss */
   .header-top {
     position: absolute;
     top: 0;
@@ -10366,15 +10384,15 @@ h1.page-title {
     right: 0;
     z-index: 910;
   }
-  /* line 221, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 224, ../../app/assets/stylesheets/_responsive.scss */
   .header-top nav {
     float: right;
   }
-  /* line 224, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 227, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav > li {
     margin-left: 4px;
   }
-  /* line 227, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 230, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav > li > a {
     -webkit-border-radius: 0 0 8px 8px;
     -moz-border-radius: 0 0 8px 8px;
@@ -10382,13 +10400,13 @@ h1.page-title {
   }
 }
 @media (max-width: 480px) {
-  /* line 235, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 238, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav.tools > li > a {
     min-height: 52px;
   }
 }
 @media (max-width: 480px) {
-  /* line 244, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 247, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 500px;
     /* Set a default max height of the modal (adjusted later)*/
@@ -10400,13 +10418,13 @@ h1.page-title {
     /* Avoid having to use 2 finger scroll on iOS    */
   }
 
-  /* line 250, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 253, ../../app/assets/stylesheets/_responsive.scss */
   .modal.fade.in {
     top: 5px;
     /* Use more screen real estate */
   }
 
-  /* line 253, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 256, ../../app/assets/stylesheets/_responsive.scss */
   .modal-body {
     /* Increase the max height of the modal body to try & avoid both it,
      * and the modal container having scroll bars which results in odd behavior */
@@ -10417,43 +10435,43 @@ h1.page-title {
 /* You could make this as granular as you like, or have it more granular at common screen sizes
  * but it should start at the height we set on .modal (i.e. 500px) & work down */
 @media (max-width: 480px) and (max-height: 500px) {
-  /* line 263, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 266, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 450px;
   }
 }
 @media (max-width: 480px) and (max-height: 450px) {
-  /* line 264, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 267, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 400px;
   }
 }
 @media (max-width: 480px) and (max-height: 400px) {
-  /* line 265, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 268, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 350px;
   }
 }
 @media (max-width: 480px) and (max-height: 350px) {
-  /* line 266, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 269, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 300px;
   }
 }
 @media (max-width: 480px) and (max-height: 300px) {
-  /* line 267, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 270, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 250px;
   }
 }
 @media (max-width: 480px) and (max-height: 250px) {
-  /* line 268, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 271, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 200px;
   }
 }
 @media (max-width: 480px) and (max-height: 200px) {
-  /* line 269, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 272, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 150px;
   }
