@@ -1,6 +1,5 @@
 class SpaReservation < ActiveRecord::Base
-  
-  belongs_to :site
+
   belongs_to :hotel_reservation
   
   attr_accessible(
@@ -12,7 +11,6 @@ class SpaReservation < ActiveRecord::Base
   validates :book_date, :presence => true
   validates :service_name, :presence => true
   validates :guests, :presence => true
-  validates :site_id, :presence => true
   validates :hotel_reservation_id, :presence => true
 
 end

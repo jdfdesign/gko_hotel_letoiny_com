@@ -1,5 +1,6 @@
 //= require jquery_ujs
-//= require datepicker.js
+//= require twitter_ext/bootstrap-datepicker.js
+//= require twitter_ext/bootstrap-timepicker.js
 $(document).ready(function() { 
 	// Possible defunct
 	add_fields = function (target, association, content) {
@@ -12,7 +13,7 @@ $(document).ready(function() {
 		});
 
 		$('input.datetime').datepicker({
-			format: 'hh:ii:ss'
+			format: 'mm/dd/yyyy hh:ii'
 		});
 	}
 
@@ -28,5 +29,9 @@ $(document).ready(function() {
 	
 	$('input.datetime').datepicker({
 		format: 'hh:ii:ss'
+	});
+	
+	$('input.timepicker').timepicker({
+
 	});
 });

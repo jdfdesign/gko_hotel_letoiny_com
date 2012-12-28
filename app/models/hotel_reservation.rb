@@ -2,11 +2,14 @@ class HotelReservation < ActiveRecord::Base
   
   belongs_to :site
   
-  has_many :table_reservations, :dependent => :destroy
+  has_many :table_reservations, :order => :book_date, :dependent => :destroy
   accepts_nested_attributes_for :table_reservations
   
-  has_many :spa_reservations, :dependent => :destroy
+  has_many :spa_reservations, :order => :book_date, :dependent => :destroy
   accepts_nested_attributes_for :spa_reservations
+  
+  has_many :baby_sitter_reservations, :order => :book_date, :dependent => :destroy
+  accepts_nested_attributes_for :baby_sitter_reservations
   
   attr_accessible(
    :reference,
@@ -22,33 +25,33 @@ class HotelReservation < ActiveRecord::Base
    :zip,
    :country_id,
    :phone,
-   :guest_count,
-   :child_count,
-   :airline,
-   :flight,
-   :arrival_airport,
-   :arrival_time,
-   :departure_airport,
-   :departure_time,
+
    :activity_comments, 
-   :arrival_airline, 
-   :departure_flight, 
-   :departure_airline, 
+
    :suite_preferences_comments, 
    :additional_service_comments, 
    :about_comments, 
-   :arrival_flight, 
-   :transport_comments
+   :guest_count,
+   :child_count,
+   :arrival_airport,
+   :arrival_time, 
+   :arrival_flight,
+   :arrival_airline,
+   :departure_airport,
+   :departure_time,
+   :departure_flight, 
+   :departure_airline,
+   :transport_comments,
+   :food_comments,
+   :spa_reservations_attributes,
+   :table_reservations_attributes,
+   :baby_sitter_reservations_attributes
   )
   
   ## options ##
-  has_option :transfer_option , :default => false, :type => :boolean   
-    
-  #has_option :car_rental, :default => false, :type => :boolean
-  #has_option :transport_to_hotel, :default => false, :type => :boolean
-  #has_option :car_seat, :default => false, :type => :boolean
-
   has_option :sxm_personal_escort, :default => false, :type => :boolean
+
+
   
   # In Villa Preferences
   #allergies
@@ -71,7 +74,7 @@ class HotelReservation < ActiveRecord::Base
   has_option :island_tour, :default => false, :type => :boolean
   has_option :tennis, :default => false, :type => :boolean	 
   has_option :tennis_with_pro, :default => false, :type => :boolean  
-  has_option :boating_half_ay_outing, :default => false, :type => :boolean 
+  has_option :boating_half_day_outing, :default => false, :type => :boolean 
   has_option :boating_full_day_outing, :default => false, :type => :boolean 
   has_option :sunset_cruise, :default => false, :type => :boolean
   has_option :diving, :default => false, :type => :boolean

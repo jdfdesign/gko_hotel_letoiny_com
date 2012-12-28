@@ -4,8 +4,7 @@
 	<title><%= @meta_title || site.title %></title>
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="<%= @meta_description %>" />
-  <meta name="keywords" content="<%= @meta_keywords %>" />
+	<meta name="robots" content="NOINDEX, NOFOLLOW">
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
@@ -37,25 +36,21 @@
     ================================================== -->
     
     <!-- Content
-    ================================================== -->  
-      <div id='content-container' class='container-fluid'>
-		<%= render "flash" %> 
-		<div class="row-fluid main">
-			<div class="span3 sidebar">
-				<%= render 'hotel_reservations/sidebar'%>
-			</div>
-			<div class="span9 offset3">
-				<%= yield %>
+    ================================================== --> 
+	<div class="sidebar">
+		<%= render 'hotel_reservations/sidebar'%>
+	</div>
+	<div class="main-container">
+		<div class="hero"><h1>Planning your stay</h1></div>
+		<div id='content-container' class='container-fluid'>
+			<%= render "flash" %> 
+			<div class="row-fluid main">
+				<div class="span12">
+					<%= yield %>
+				</div>
 			</div>
 		</div>
-		
-      </div>
-
-      
-      <!-- Footer
-      ================================================== -->
-
-  </div>
+	</div>
 
   <!-- Le javascript
   ================================================== -->

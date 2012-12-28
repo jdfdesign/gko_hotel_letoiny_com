@@ -6,12 +6,12 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 <%= render 'modals' %>
 
 <p class="lead">Dear, <%= %><br>We look forward to welcoming you to Hotel Le Toiny and making your stay on St. Barths the most enjoyable and relaxing as possible . In an effort to better look after you during your visit, we're offering you two ways to help you plan your stay ahead of time, and to connect with the hotel while you're here.</p>
-<h1>Planning your stay</h1>
+
 <p>Privacy and exclusivity have always been the defining characteristics of l'Hôtel Le Toiny. Situated in the area of the island referred to as Côte Sauvage, the 15 pastel-colored bungalows, called Villa Suites, are set on a gentle slope overlooking the bay of Toiny and the Caribbean Sea. Each is surrounded by tropical vegetation, has its own gated entrance and a red mailbox flag that serves as a "Do Not Disturb" sign. It is this emphasis on privacy that has always seduced our Guests who are looking for a unique and privileged place.</p>
 
 <!-- ABOUT
 ================================================== -->
-<div id="form-about" data-spy="affix" data-offset-top="200">
+<section id="about">
 	<h2>Guest Information - Arrival/Departure</h2>
 	<div class="row-fluid">
 		<fieldset class="span6">
@@ -33,31 +33,52 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 	<div class="row-fluid">
 		<fieldset class="span6">
 		<legend>Arrival Flight</legend>
-			<%= f.input :checkin, :input_html => {:class => 'date'}, :as => :string %>
+			<%= f.input :checkin, :wrapper => :append, :hint => false  do %>
+				<%= f.text_field :checkin, :class => 'date', :maxLength => 10, :value => f.object.checkin.strftime("%m/%d/%Y") %>
+			    <%= content_tag :span, :class => "add-on" do %>
+					<i class="icon-calendar"></i>
+				<% end %>
+			<% end %>
 			<%= f.input :arrival_airline, :collection => airlines %>
 			<%= f.input :arrival_flight %>
 			<%= f.input :arrival_airport, :collection => airports %>
-			<%= f.input :arrival_time, :input_html => {:class => 'datetime'}, :as => :string %>
+			<%= f.input :arrival_time, :wrapper => :append, :hint => false, :wrapper_html => { :class => 'bootstrap-timepicker-component' } do %>
+				<%= f.text_field :arrival_time, :class => 'timepicker', :maxLength => 10 %>
+			    <%= content_tag :span, :class => "add-on" do %>
+					<i class="icon-time"></i>
+				<% end %>
+			<% end %>
+
 		</fieldset>
 		<fieldset class="span6">
 			<legend>Departure Flight</legend>
-			<%= f.input :checkout, :input_html => {:class => 'date'}, :as => :string %>
+			<%= f.input :checkout, :wrapper => :append, :hint => false do %>
+				<%= f.text_field :checkout, :class => 'date', :maxLength => 10, :value => f.object.checkin.strftime("%m/%d/%Y") %>
+			    <%= content_tag :span, :class => "add-on" do %>
+					<i class="icon-calendar"></i>
+				<% end %>
+			<% end %>
 			<%= f.input :departure_airline, :collection => airlines %>
 			<%= f.input :departure_flight %>
 			<%= f.input :departure_airport, :collection => airports %>
-			<%= f.input :departure_time, :input_html => {:class => 'datetime'}, :as => :string %>
+			<%= f.input :departure_time, :wrapper => :append, :hint => false, :wrapper_html => { :class => 'bootstrap-timepicker-component' } do %>
+				<%= f.text_field :arrival_time, :class => 'timepicker', :maxLength => 10 %>
+			    <%= content_tag :span, :class => "add-on" do %>
+					<i class="icon-time"></i>
+				<% end %>
+			<% end %>
 		</fieldset>
 	</div>
 	<hr>
 	<fieldset>
 		<%= f.input :about_comments, :input_html => {:rows => 4} %>
 	</fieldset>
-</div><!-- form-about -->
+</section><!-- form-about -->
 
 <hr class="big">
 <!-- GETTING THERE
 ================================================== -->
-<div id="form-getting-there" data-spy="affix" data-offset-top="200">
+<section id="getting-there" >
 	<h2>Getting to the Hotel (Transportation Options)</h2>
 	<p class="lead">You can reach St. Barths either by flying or by boat.<br>The following tabs will provide you with general information on both of these options.<br>In order to facilitate your travels, we will be happy to take care of reserving your inter-island transportation with any VIP Service.</p>
 	<p><small><em>Once you arrive at the St. Barths airport, Gustave III (SBH), you will pass through Customs. Our Driver holding a hotel sign will welcome you off the arrival hall and drive you to the hotel.<br>
@@ -158,18 +179,12 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 		</p>
 	  </div><!-- by_boat -->
 	</div><!-- transport -->
-
-	<legend>Transfer Options to StBarth</legend>
-	<p>Please select one of the options to transfer to/from St. Maarten airport.</p>
-
-	<%= f.input :transfer_option, :collection => ['Private Boat', 'Shared Sea Shuttle', 'Public Ferry', 'Private Air Charters', 'Shared Air Charters'], :as => :radio_buttons %>
-
-</div><!-- Getting there -->
+</section><!-- Getting there -->
 			
 <hr class="big">			
 <!-- VILLA PREFERENCES
 ================================================== -->
-<div id="form-suite-preferences" data-spy="affix" data-offset-top="200">
+<section id="suite-preferences" >
 	<h2>Suite Preferences</h2>
 	<fieldset>
 		Allergies : 
@@ -177,32 +192,94 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 		Child under 12yo amenities (additional bed):	___
 		Additional bed for person aged over 12yo: 100 EUR/nt on B&B___
 	</fieldset>
-</div><!-- villa preferences -->
+</section><!-- villa preferences -->
 
 <hr class="big">
 <!-- WELCOME PREFERENCES
 ================================================== -->
-<div id="form-suite-preferences" data-spy="affix" data-offset-top="200">
+<section id="welcome-preferences" >
 	<h2>Special welcomes Preferences</h2>
-	<fieldset>
-		<%= f.input :welcome_champagne_moet_chanfon %>
-		<%= f.input :welcome_champagne_perrier_rose %>
-		<%= f.input :welcome_european_bouquet %>
-		<%= f.input :welcome_european_bouquet_price, :collection => ['50', '70', '90', '110', '150'], :as => :select, :label => "Price per Bouquet (in Euros)" %>
-		<%= f.input :welcome_exotic_bouquet %>
-		<%= f.input :welcome_exotic_bouquet_price, :collection => ['50', '70', '90', '110', '150'], :as => :select, :label => "Price per Bouquet (in Euros)" %>
-		<%= f.input :welcome_colorful_fruit_plate, :label => "Colorful plate of fruits (35 EUR/2 pers)" %>
-		<%= f.input :welcome_cheese_cracker_plate, :label => "Colorful plate of fruits (25 EUR/2 pers)" %>
-	</fieldset>
-</div><!-- welcome preferences -->
+	<h4>Champagne</h4>
+	<div class="row-fluid">
+		<div class="span6">
+			<%= f.input :welcome_champagne_moet_chanfon %>
+		</div>
+		<div class="span6">
+			<%= f.input :welcome_champagne_perrier_rose %>
+		</div>
+	</div>
+	<h4>Flowers</h4>
+	<div class="row-fluid">
+		<div class="span6">
+			<%= f.input :welcome_european_bouquet %>
+		</div>
+		<div class="span6">
+			<%= f.input :welcome_european_bouquet_price, :collection => ['50', '70', '90', '110', '150'], :as => :select %>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6">
+			<%= f.input :welcome_exotic_bouquet %>
+		</div>
+		<div class="span6">
+			<%= f.input :welcome_exotic_bouquet_price, :collection => ['50', '70', '90', '110', '150'], :as => :select %>
+		</div>
+	</div>
+	<h4>Plates</h4>	
+	<div class="row-fluid">
+		<div class="span6">
+			<%= f.input :welcome_colorful_fruit_plate, :hint => "35 EUR/2 pers" %>
+		</div>
+		<div class="span6">
+			<%= f.input :welcome_cheese_cracker_plate, :hint => "25 EUR/2 pers" %>
+		</div>
+	</div>
+</section><!-- welcome preferences -->
 
 <hr class="big">
+
 <!-- PLANNING ACTIVITIES
 ================================================== -->
-<div id="form-activities" data-spy="affix" data-offset-top="200">
+<section id="activities" >
 	<h2>Planning Activities</h2>
 		<p class="lead">We are here to make your stay on St. Barths as enjoyable as possible - from planning your culinary adventures to arranging your activities - nothing is beyond reach. Please don't hesitate to call upon any of our colleagues for advice and assistance on making your stay memorable.</p>
+		<!-- Activities -->		
+		<h3>Activities</h3>
+		<p>Please check the following activities that you would be interested to experience and our Reception team will gladly provide additional information and arrange your specific requests.</p>
+		<div class="row-fluid">
+			<div class="span4">
+				<%= f.input :yoga_personal_trainer, :as => :boolean %>
+				<%= f.input :pilates_personal_trainer, :as => :boolean %>
+				<%= f.input :fitness_personal_trainer, :as => :boolean %>
+				<%= f.input :natural_hike, :as => :boolean %>
+				<%= f.input :island_tour, :as => :boolean %>
+			
+			</div>
+			<div class="span4">
+				<%= f.input :tennis, :as => :boolean %>	 
+				<%= f.input :tennis_with_pro, :as => :boolean %>  
+				<%= f.input :boating_half_day_outing, :as => :boolean %>
+				<%= f.input :boating_full_day_outing, :as => :boolean %>
+				<%= f.input :sunset_cruise, :as => :boolean %>
+			</div>
+			<div class="span4">
+				<%= f.input :diving, :as => :boolean %>
+				<%= f.input :deep_sea_fishing, :as => :boolean %>
+				<%= f.input :jet_skiing, :as => :boolean %> 
+				<%= f.input :surfing, :as => :boolean %>
+				<%= f.input :windsurfing, :as => :boolean %>
+			</div>
+		</div>
+		<h3>Other activities to do on the island and beaches</h3>
+		<h5>Enjoy the diversity of Saint Bart’s beaches</h5>
+		<p>Of course, one of the reasons why you have chosen to stay in the Caribbean and St. Barts are the beaches, with their white sands, the turquoise water and the tropical flora surroundings.<br><a href="#modal-beaches" role="button" class="btn btn-link" data-toggle="modal">Please find here after some information which will help you to choose the beach for every day!</a></p>
+		<h5>Other Activities while on the Island</h5>
+		<p><a href="#modal-other-activities" role="button" class="btn btn-link" data-toggle="modal">Following this link</a> you will find a list we have put together for you of “Things to do while on the island…” and we do hope it will cover some of your interests.</p>
+</section><!-- activities -->
 
+<hr class="big">
+
+<section id="table_booking" >
 		<!-- Restaurant reservations -->
 		<h3>Restaurant reservations</h3>
 		<p>We will be happy to take care of your restaurant reservations 10 days in advance: please note that for most of the restaurants there are 2 seating (7:00 to 7:30 pm and 9:00 to 9:30 pm).Since many restaurants close for a couple of weeks during the summer period, our reception and reservations team will be happy to assist and guide you for your lunch and dinner arrangements.<br>Please have a look at our non-exhaustive list of restaurants to help you make your choice by clicking on the following links:<ul><li><a href="#modal-dining" role="button" class="btn btn-link" data-toggle="modal">Our Selection For Dinner</a></li><li><a href="#modal-lunch" role="button" class="btn btn-link" data-toggle="modal">Our Selection For Lunch</a></li></ul><br><small>(Discover the island restaurant menus on the website <a href="http://www.alacarte.com" target="_blank">www.alacarte.com</a>)</small></p>
@@ -213,10 +290,10 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 				<thead>
 					<tr>
 						<th>Restaurant name</th>
-						<th>Lunch</th>
-						<th>Dinner</th>
+						<th>Lunch/Dinner</th>
 						<th>Date</th>
 						<th>Guest</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody id="table-reservations-body">
@@ -228,40 +305,16 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 			<%= link_to_add_fields(t("add_reservation"),"#table-reservations-body", f, :table_reservations, :class => "btn btn-primary btn-large btn-block" ) %>
 			</p>
 		</div>		
-		<%= f.input :activity_comments, :input_html => {:rows => 4} %>
+		<%= f.input :food_comments, :input_html => {:rows => 4} %>
 		<%= f.input :food_preference, :collection => ['Vegetarian', 'Gluten free', 'Vegan'], :as => :select, :label => "Food preferences" %>
 		<%= f.input :food_allergies %>
+</section><!-- table_booking -->
+
+<hr class="big">
+
+<section id="spa_booking" >				
 				
-				
-		<!-- Activities -->		
-		<h3>Activities</h3>
-		<p>Please check the following activities that you would be interested to experience and our Reception team will gladly provide additional information and arrange your specific requests.</p>
-		<div class="well">
-			<div class="row-fluid">
-				<div class="span4">
-					<%= f.input :yoga_personal_trainer, :as => :boolean %>
-					<%= f.input :pilates_personal_trainer, :as => :boolean %>
-					<%= f.input :fitness_personal_trainer, :as => :boolean %>
-					<%= f.input :natural_hike, :as => :boolean %>
-					<%= f.input :island_tour, :as => :boolean %>
-				
-				</div>
-				<div class="span4">
-					<%= f.input :tennis, :as => :boolean %>	 
-					<%= f.input :tennis_with_pro, :as => :boolean %>  
-					<%= f.input :boating_half_ay_outing, :as => :boolean %>
-					<%= f.input :boating_full_day_outing, :as => :boolean %>
-					<%= f.input :sunset_cruise, :as => :boolean %>
-				</div>
-				<div class="span4">
-					<%= f.input :diving, :as => :boolean %>
-					<%= f.input :deep_sea_fishing, :as => :boolean %>
-					<%= f.input :jet_skiing, :as => :boolean %> 
-					<%= f.input :surfing, :as => :boolean %>
-					<%= f.input :windsurfing, :as => :boolean %>
-				</div>
-			</div>
-		</div>
+
 		<!-- Spa / Wellness -->	                                  
 		<h3>Spa / Wellness</h3>
 		<p>Join us at the Serenity Spa Cottage, a delightful respite for pampering treatments to whisk you away to a world of Caribbean relaxation. The Spa features an exquisite local product line called Ligne St. Barth made from exotic oils and fragrances which include extracts of melon, passion fruit and mango along with freshly blended papaya and pineapple.</p>  
@@ -302,16 +355,14 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 			Cancellation within 12 hours or failure to show for appointments will result in 100% charge for reserved services!<br>For treatment appointments of less than 1 hour there is a short service supplement of 15 Euros added.
 			</em></small></p>
 		</div>
-		<h3>Other activities to do on the island and beaches</h3>
-		<h5>Enjoy the diversity of Saint Bart’s beaches</h5>
-		<p>Of course, one of the reasons why you have chosen to stay in the Caribbean and St. Barts are the beaches, with their white sands, the turquoise water and the tropical flora surroundings.<br><a href="#modal-beaches" role="button" class="btn btn-link" data-toggle="modal">Please find here after some information which will help you to choose the beach for every day!</a></p>
-		<h5>Other Activities while on the Island</h5>
-		<p><a href="#modal-other-activities" role="button" class="btn btn-link" data-toggle="modal">Following this link</a> you will find a list we have put together for you of “Things to do while on the island…” and we do hope it will cover some of your interests.</p>
-
-</div><!-- activities -->
 
 
-<div id="form-others">
+</section><!-- spa_booking -->
+
+<hr class="big">
+
+<section id="additional-services">
+	<h2>Additional Services</h2>
 	<fieldset>
 		<legend>Rental car requirements</legend>
 		<p>We will be delighted to arrange for a rental car for your use on the island, which would be delivered to the hotel prior to your arrival. All cars are automatic. Rates depend on seasons.</p>
@@ -341,6 +392,6 @@ airlines = ['Air France', 'American Airlines', 'Varigs']
 		<legend>Please note any special request, comments or questions:</legend>
 		<%= f.input :additional_service_comments, :input_html => {:rows => 4} %>
 	</fieldset>
-</div><!-- Others -->
+</section><!-- Others -->
 
 <%= f.button :submit, t("send_inquiry"), :disable_with => "Saving...", :class => "btn btn-block btn-large btn-primary" %>

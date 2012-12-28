@@ -5,6 +5,8 @@ $zindexLogoRelais: 90;
 
 @import "variables";
 @import "twitter/awesome-bootstrap";
+@import "twitter_ext/bootstrap-datepicker";
+@import "twitter_ext/bootstrap-image-gallery";
 @import "gko/public/base";
 @import "layout";
 @import "navbar";
@@ -12,7 +14,7 @@ $zindexLogoRelais: 90;
 @import "scrollpane";
 @import "flexslider/flexslider";
 @import "supersized";
-@import "bootstrap-image-gallery";
+
 
 
 

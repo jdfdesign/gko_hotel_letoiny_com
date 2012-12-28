@@ -17,7 +17,7 @@
 //= require twitter/bootstrap/modal.js
 //= require twitter/bootstrap/tooltip.js
 //= require twitter_ext/bootstrap-datepicker.js
-//= require bootstrap-image-gallery.js
+//= require twitter_ext/bootstrap-image-gallery.js
 
 var available_size = {w: 896,h: 600}, 
 	breakpoint = 979;
