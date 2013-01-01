@@ -1,12 +1,12 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: c8cc4b6186cd55229a7a5d2da03fdb23f48b8361
+  revision: 1c20f373c7853d394e9fc59dfd9ff13abe2b8419
   specs:
-    gko_auth (0.5.35)
+    gko_auth (0.5.36)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-    gko_categories (0.5.35)
-    gko_core (0.5.35)
+    gko_categories (0.5.36)
+    gko_core (0.5.36)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -47,19 +47,19 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.5.35)
+    gko_documents (0.5.36)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.5.35)
-      gko_core (= 0.5.35)
-      gko_inquiries (= 0.5.35)
-    gko_image_bank (0.5.35)
-    gko_images (0.5.35)
-    gko_inquiries (0.5.35)
+    gko_hotel (0.5.36)
+      gko_core (= 0.5.36)
+      gko_inquiries (= 0.5.36)
+    gko_image_bank (0.5.36)
+    gko_images (0.5.36)
+    gko_inquiries (0.5.36)
       filters_spam (~> 0.2)
-    gko_newsletters (0.5.35)
+    gko_newsletters (0.5.36)
       createsend (~> 1.0.4)
-    gko_twits (0.5.35)
+    gko_twits (0.5.36)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
@@ -310,17 +310,17 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth (= 0.5.35)!
-  gko_categories (= 0.5.35)!
+  gko_auth (= 0.5.36)!
+  gko_categories (= 0.5.36)!
   gko_concierge (= 0.0.01)!
-  gko_core (= 0.5.35)!
-  gko_documents (= 0.5.35)!
-  gko_hotel (= 0.5.35)!
-  gko_image_bank (= 0.5.35)!
-  gko_images (= 0.5.35)!
-  gko_inquiries (= 0.5.35)!
-  gko_newsletters (= 0.5.35)!
-  gko_twits (= 0.5.35)!
+  gko_core (= 0.5.36)!
+  gko_documents (= 0.5.36)!
+  gko_hotel (= 0.5.36)!
+  gko_image_bank (= 0.5.36)!
+  gko_images (= 0.5.36)!
+  gko_inquiries (= 0.5.36)!
+  gko_newsletters (= 0.5.36)!
+  gko_twits (= 0.5.36)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.0.3)
