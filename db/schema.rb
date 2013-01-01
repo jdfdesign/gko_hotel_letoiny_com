@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230074200) do
+ActiveRecord::Schema.define(:version => 20121230171247) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -525,6 +525,7 @@ ActiveRecord::Schema.define(:version => 20121230074200) do
     t.boolean  "robot_index",       :default => true
     t.boolean  "robot_follow",      :default => true
     t.boolean  "restricted",        :default => false
+    t.string   "template"
   end
 
   add_index "sections", ["link_id", "link_type"], :name => "index_sections_on_link_id_and_link_type"
