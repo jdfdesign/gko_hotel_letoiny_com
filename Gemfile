@@ -1,7 +1,4 @@
 source :rubygems
-source 'http://rubygems.org'
-
-gem 'iconv'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -12,8 +9,9 @@ group :assets do
 end
 
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.5.37"
+prod_version = "= 0.6.04"
 
+<<<<<<< HEAD
 #group :production do
 # gem 'gko_core', prod_version, :git => prod_location
 # gem 'gko_auth', prod_version, :git => prod_location
@@ -27,6 +25,21 @@ prod_version = "= 0.5.37"
 # gem 'gko_image_bank', prod_version, :git => prod_location
 # gem 'gko_concierge', '0.0.01', :git => 'git@github.com:jdfdesign/gko_concierge.git'
 #end
+=======
+group :production do
+ gem 'gko_core', prod_version, :git => prod_location
+ gem 'gko_auth', prod_version, :git => prod_location
+ gem 'gko_images', prod_version, :git => prod_location
+ gem "gko_documents", prod_version, :git => prod_location
+ gem 'gko_inquiries', prod_version, :git => prod_location
+ gem 'gko_newsletters', prod_version, :git => prod_location
+ gem 'gko_twits', prod_version, :git => prod_location 
+ gem 'gko_hotel', prod_version, :git => prod_location  
+ gem 'gko_categories', prod_version, :git => prod_location 
+ gem 'gko_image_bank', prod_version, :git => prod_location
+ gem 'gko_concierge', '0.0.03', :git => 'git@github.com:jdfdesign/gko_concierge.git'
+end
+>>>>>>> bump
 
 group :development do
   gem "gko_core", :path => '~/Github/gko_cms3/gko_core'

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130103104102) do
+=======
+ActiveRecord::Schema.define(:version => 20130115094051) do
+>>>>>>> bump
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -42,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
     t.datetime "book_date"
     t.integer  "children",             :default => 1
     t.string   "duration"
+    t.time     "start_time"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
-    t.time     "start_time"
   end
 
   add_index "baby_sitter_bookings", ["hotel_reservation_id"], :name => "index_baby_sitter_bookings_on_hotel_reservation_id"
@@ -81,12 +85,12 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
   create_table "category_translations", :force => true do |t|
     t.integer  "category_id"
     t.string   "locale"
-    t.text     "meta_description"
-    t.string   "path"
     t.string   "meta_title"
-    t.string   "slug"
     t.text     "body"
     t.string   "title"
+    t.string   "slug"
+    t.string   "path"
+    t.text     "meta_description"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
@@ -282,6 +286,14 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
     t.string   "phone"
     t.integer  "guest_count"
     t.integer  "child_count"
+    t.string   "arrival_airline"
+    t.integer  "arrival_flight"
+    t.string   "arrival_airport"
+    t.datetime "arrival_time"
+    t.string   "departure_airport"
+    t.datetime "departure_time"
+    t.string   "departure_airline"
+    t.integer  "departure_flight"
     t.text     "options"
     t.text     "suite_preferences_comments"
     t.text     "about_comments"
@@ -291,14 +303,6 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.text     "food_comments"
-    t.string   "arrival_airport"
-    t.time     "arrival_time"
-    t.string   "arrival_flight"
-    t.string   "arrival_airline"
-    t.string   "departure_airport"
-    t.time     "departure_time"
-    t.string   "departure_flight"
-    t.string   "departure_airline"
   end
 
   add_index "hotel_reservations", ["site_id"], :name => "index_hotel_reservations_on_site_id"
@@ -603,6 +607,7 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
 
   create_table "spa_reservations", :force => true do |t|
+    t.integer  "site_id"
     t.integer  "hotel_reservation_id"
     t.date     "book_date"
     t.integer  "guests",               :default => 1
@@ -613,6 +618,7 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
   end
 
   add_index "spa_reservations", ["hotel_reservation_id"], :name => "index_spa_reservations_on_hotel_reservation_id"
+  add_index "spa_reservations", ["site_id"], :name => "index_spa_reservations_on_site_id"
 
   create_table "states", :force => true do |t|
     t.string  "name"
@@ -631,6 +637,7 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
   add_index "supports", ["owner_id", "owner_type"], :name => "index_supports_on_owner_id_and_owner_type", :unique => true
 
   create_table "table_reservations", :force => true do |t|
+    t.integer  "site_id"
     t.integer  "hotel_reservation_id"
     t.date     "book_date"
     t.integer  "guests",               :default => 2
@@ -641,6 +648,7 @@ ActiveRecord::Schema.define(:version => 20130103104102) do
   end
 
   add_index "table_reservations", ["hotel_reservation_id"], :name => "index_table_reservations_on_hotel_reservation_id"
+  add_index "table_reservations", ["site_id"], :name => "index_table_reservations_on_site_id"
 
   create_table "tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"

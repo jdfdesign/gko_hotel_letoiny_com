@@ -42,7 +42,7 @@ class CreateHotelReservations < ActiveRecord::Migration
         t.integer :hotel_reservation_id
         t.date :book_date
         t.integer :guests, :default => 2 
-        t.string :restaurant_name, :string
+        t.string :restaurant_name
         t.boolean :lunch, :default => false
         t.timestamps
       end
