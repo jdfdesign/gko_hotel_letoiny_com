@@ -22,7 +22,7 @@ group :production do
  gem 'gko_hotel', prod_version, :git => prod_location  
  gem 'gko_categories', prod_version, :git => prod_location 
  gem 'gko_image_bank', prod_version, :git => prod_location
- gem 'gko_concierge', '0.0.03', :git => 'git@github.com:jdfdesign/gko_concierge.git'
+ gem 'gko_concierge', '0.0.04', :git => 'git@github.com:jdfdesign/gko_concierge.git'
 end
 
 #group :development do
