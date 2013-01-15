@@ -15,11 +15,11 @@ fr:
       hotel_reservation:
         welcome_champagne_moet_chanfon: "Moet Chanfon"
         welcome_champagne_perrier_rose: "Perrier Rose"
-        welcome_european_bouquet: "Bouquet européen"
-        welcome_european_bouquet_price: "Prix"  
-        welcome_exotic_bouquet: "Bouquet exotique"
-        welcome_exotic_bouquet_price: "Prix"                        
-        welcome_colorful_fruit_plate: "Plateau de fruit"
-        welcome_cheese_cracker_plate: "Plateau crackers"
+        welcome_european_bouquet: "European bouquet"
+        welcome_european_bouquet_price: "Price"  
+        welcome_exotic_bouquet: "Exotic bouquet"
+        welcome_exotic_bouquet_price: "Price"                        
+        welcome_colorful_fruit_plate: "Fruit plate"
+        welcome_cheese_cracker_plate: "Cracker plate"
 
 

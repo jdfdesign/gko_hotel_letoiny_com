@@ -3,10 +3,10 @@
 ----------------------------------------- */
 #footer-container {
 	text-shadow: 0 1px 1px #444;
-	
+	@include box-sizing(border-box);
 }
 #footer {
-	//padding: 0 8px 0px 14px;
+	
 	position:relative;
 	height: $footerHeight;
 	iframe {

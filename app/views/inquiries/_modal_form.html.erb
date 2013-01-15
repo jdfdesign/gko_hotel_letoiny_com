@@ -1,26 +1,17 @@
-<%
-   privacy_text = t('inquiries.form.privacy_policy')
-%>
 <div class="modal hide fade" id="inquiry-modal">
   <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-
+    <a href="#" class="close" data-dismiss="modal">&times;</a>
     <h3><%= t("form.inquiry.title")%></h3>
   </div>
   <%= simple_form_for(:inquiry, :url => inquiries_path,
-                      :html => {:remote => true, :method => :post, :class => [:inquiry]}) do |form| %>
+                      :html => {:data => { :remote => true, :type => :json }, :method => :post, :class => [:inquiry]}) do |form| %>
 					<div class="modal-body">
 				        <div class='row-fluid'>
 				          <div class='span6'>
-      <%= hidden_field_tag(:return_to, request.url) %>
-      <%= form.hidden_field :site_id %>
-      <%= hidden_field_tag(:return_to, request.url) %>
-      <%= form.hidden_field :site_id, :value => site.id %>
-      <%= form.error_notification %>
-      <%= form.input :name, :hint => '' %>
-      <%= form.input :email, :hint => false %>
-      <%= form.input :phone, :hint => false, :required => false %>
-      <%= form.input :message, :as => :text, :hint => false, :input_html => {:rows => 6} %>
+      <%= form.input :name, :hint => '', :input_html => { :class => 'span12' } %>
+      <%= form.input :email, :hint => false, :input_html => { :class => 'span12' } %>
+      <%= form.input :phone, :hint => false, :required => false, :input_html => { :class => 'span12' } %>
+      <%= form.input :message, :as => :text, :hint => false, :input_html => {:class => 'span12', :rows => 6} %>
       <%= render 'anti_spam_field', :f => form %>
       </div>
 <div class="span6"><p><b><%= t("tollfree_address").html_safe %></b></p><p><%= t("full_hotel_address").html_safe %></p></div>

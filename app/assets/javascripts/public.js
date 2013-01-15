@@ -130,8 +130,27 @@ var Site = {
 		}) */
 		
 		$("a[data-remote], form[data-remote]")
-		.on("ajax:beforeSend", function(event,xhr) {Util.attachLoading("body")})
-		.on("ajax:complete", function(event, xhr, status){Util.removeLoading("body")});
+		.on("ajax:beforeSend", function(evt, xhr, settings) {Util.attachLoading("body")})
+		.on("ajax:error", function(evt, xhr, status, error) {
+			var that = $(this),
+				flash = $.parseJSON(xhr.getResponseHeader('X-Flash-Messages')),
+				errors = $.parseJSON(xhr.responseText).errors;
+			
+			that.find('.control-group').removeClass('error');
+			that.find('.help-inline').remove();
+			
+			if(flash.error) {
+				
+			}
+			for ( error in errors ) {
+				var input = that.find('input[name*="'+ error + '"]');
+				if(input.length) {
+					input.closest('.control-group').addClass('error');
+					input.after('<span class="help-inline">' + errors[error] + "</span>");
+				}
+			}
+		})
+		.on("ajax:complete", function(evt, xhr, status){Util.removeLoading("body")});
 		
 		// Handle window.resize or orientationchange event
 		//------------------------------------------------------- 
