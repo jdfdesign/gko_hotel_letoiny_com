@@ -3,13 +3,13 @@ source :rubygems
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.5'
+  gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
 end
 
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.6.04"
+prod_version = "= 0.6.11"
 
 group :production do
  gem 'gko_core', prod_version, :git => prod_location

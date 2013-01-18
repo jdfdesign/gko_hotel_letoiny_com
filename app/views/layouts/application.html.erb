@@ -33,20 +33,22 @@
   <!-- Placed at the end of the document so the pages load faster -->
 	<%= javascript_include_tag "public" %>
 	<%= yield :after_javascript_libraries %>
-	<% if site.home.images.order(:position).any? && !is_mobile_device? %>
-	<script type="text/javascript">
+	<% cache [I18n.locale, site, site.home] do %>
+		<% if site.home.images.order(:position).any? && !is_mobile_device? %>
+		<script type="text/javascript">
 		
-		jQuery(function($){
+			jQuery(function($){
 			
-			$.supersized({
-				slide_interval : 3000, // Length between transitions
-				transition : 3, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-				transition_speed : 800, // Speed of transition
-				slides : [<%= raw site.home.images.order(:position).map{|c| "{image: '#{c.url}'}" }.join(",").to_s %>]
-			});
-	    });
+				$.supersized({
+					slide_interval : 3000, // Length between transitions
+					transition : 3, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed : 800, // Speed of transition
+					slides : [<%= raw site.home.images.order(:position).map{|c| "{image: '#{c.url}'}" }.join(",").to_s %>]
+				});
+		    });
 	    
-	</script>
+		</script>
+		<% end %>
 	<% end %>
 	<%= render 'google_analytics' %>
 <body>
