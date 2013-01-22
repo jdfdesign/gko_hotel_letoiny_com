@@ -66,7 +66,7 @@ a:focus,
 	}
 }
 .modal-footer {
-  background-color: transparent;
+  background-color: $bodyBackground;
   border-top: 1px solid darken($bodyBackground, 8%);
 }
 #logo_relais_chateaux {
