@@ -1,24 +1,12 @@
-PATH
-  remote: ~/Github/gko/gko_concierge
+GIT
+  remote: git@github.com:jdfdesign/gko_cms3.git
+  revision: 15262f45dd3a628e1d6315b9523b87765b228535
   specs:
-    gko_concierge (0.0.04)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_auth
-  specs:
-    gko_auth (0.6.15)
+    gko_auth (0.6.16)
       cancan (>= 1.6.8)
       devise (>= 2.1.2)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_categories
-  specs:
-    gko_categories (0.6.15)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_core
-  specs:
-    gko_core (0.6.15)
+    gko_categories (0.6.16)
+    gko_core (0.6.16)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -59,47 +47,25 @@ PATH
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_documents
-  specs:
-    gko_documents (0.6.15)
+    gko_documents (0.6.16)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_hotel
-  specs:
-    gko_hotel (0.6.15)
-      gko_core (= 0.6.15)
-      gko_inquiries (= 0.6.15)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_image_bank
-  specs:
-    gko_image_bank (0.6.15)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_images
-  specs:
-    gko_images (0.6.15)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_inquiries
-  specs:
-    gko_inquiries (0.6.15)
+    gko_hotel (0.6.16)
+      gko_core (= 0.6.16)
+      gko_inquiries (= 0.6.16)
+    gko_image_bank (0.6.16)
+    gko_images (0.6.16)
+    gko_inquiries (0.6.16)
       filters_spam (~> 0.2)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_newsletters
-  specs:
-    gko_newsletters (0.6.15)
+    gko_newsletters (0.6.16)
       createsend
+    gko_twits (0.6.16)
 
-PATH
-  remote: ~/Github/gko_cms3/gko_twits
+GIT
+  remote: git@github.com:jdfdesign/gko_concierge.git
+  revision: edef06387d28a874144777d0bbf1e66a147a8ab3
   specs:
-    gko_twits (0.6.15)
+    gko_concierge (0.0.04)
 
 GEM
   remote: http://rubygems.org/
@@ -344,16 +310,16 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_auth!
-  gko_categories!
-  gko_concierge!
-  gko_core!
-  gko_documents!
-  gko_hotel!
-  gko_image_bank!
-  gko_images!
-  gko_inquiries!
-  gko_newsletters!
-  gko_twits!
+  gko_auth (= 0.6.16)!
+  gko_categories (= 0.6.16)!
+  gko_concierge (= 0.0.04)!
+  gko_core (= 0.6.16)!
+  gko_documents (= 0.6.16)!
+  gko_hotel (= 0.6.16)!
+  gko_image_bank (= 0.6.16)!
+  gko_images (= 0.6.16)!
+  gko_inquiries (= 0.6.16)!
+  gko_newsletters (= 0.6.16)!
+  gko_twits (= 0.6.16)!
   sass-rails (~> 3.2.6)
   uglifier (>= 1.0.3)
