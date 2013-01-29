@@ -8,21 +8,20 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.6.17"
-
 group :production do
- gem 'gko_core', prod_version, :git => prod_location
- gem 'gko_auth', prod_version, :git => prod_location
- gem 'gko_images', prod_version, :git => prod_location
- gem "gko_documents", prod_version, :git => prod_location
- gem 'gko_inquiries', prod_version, :git => prod_location
- gem 'gko_newsletters', prod_version, :git => prod_location
- gem 'gko_twits', prod_version, :git => prod_location 
- gem 'gko_hotel', prod_version, :git => prod_location  
- gem 'gko_categories', prod_version, :git => prod_location 
- gem 'gko_image_bank', prod_version, :git => prod_location
- gem 'gko_concierge', '0.0.04', :git => 'git@github.com:jdfdesign/gko_concierge.git'
+  git "git@github.com:jdfdesign/gko_cms3.git", :branch => "0.6.24-stable" do
+   gem 'gko_core'
+   gem 'gko_auth'
+   gem 'gko_images'
+   gem "gko_documents"
+   gem 'gko_inquiries'
+   gem 'gko_newsletters'
+   gem 'gko_twits' 
+   gem 'gko_hotel'  
+   gem 'gko_categories' 
+   gem 'gko_image_bank'
+  end
+  gem 'gko_concierge', '0.0.04', :git => 'git@github.com:jdfdesign/gko_concierge.git'
 end
 
 #group :development do
