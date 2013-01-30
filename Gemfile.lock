@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 160a9a2e14cf2ac802d8a2c91695211933bac040
+  revision: fd44bb75bf396c7b577e4d7bd5535fcf79279385
   branch: 0.6.24-stable
   specs:
-    gko_auth (0.6.24.RC1)
+    gko_auth (0.6.24.RC2)
       cancan (>= 1.6.8)
       devise (>= 2.1.2)
-    gko_categories (0.6.24.RC1)
-    gko_core (0.6.24.RC1)
+    gko_categories (0.6.24.RC2)
+    gko_core (0.6.24.RC2)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -18,7 +18,7 @@ GIT
       codemirror-rails (>= 2.3)
       coffee-rails (~> 3.2.2)
       cucumber (~> 1.1.4)
-      dragonfly (~> 0.9.12)
+      dragonfly (~> 0.9.13)
       dropbox-sdk (~> 1.2.0)
       exception_notification (~> 3.0.0)
       faker (= 1.0.0)
@@ -50,19 +50,19 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.24.RC1)
+    gko_documents (0.6.24.RC2)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.6.24.RC1)
-      gko_core (= 0.6.24.RC1)
-      gko_inquiries (= 0.6.24.RC1)
-    gko_image_bank (0.6.24.RC1)
-    gko_images (0.6.24.RC1)
-    gko_inquiries (0.6.24.RC1)
+    gko_hotel (0.6.24.RC2)
+      gko_core (= 0.6.24.RC2)
+      gko_inquiries (= 0.6.24.RC2)
+    gko_image_bank (0.6.24.RC2)
+    gko_images (0.6.24.RC2)
+    gko_inquiries (0.6.24.RC2)
       filters_spam (~> 0.2)
-    gko_newsletters (0.6.24.RC1)
+    gko_newsletters (0.6.24.RC2)
       createsend
-    gko_twits (0.6.24.RC1)
+    gko_twits (0.6.24.RC2)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
@@ -146,7 +146,8 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.2.0)
-    dragonfly (0.9.12)
+    dragonfly (0.9.13)
+      multi_json (~> 1.0)
       rack
     dropbox-sdk (1.2)
       json
@@ -190,12 +191,12 @@ GEM
     jquery-rails (2.0.3)
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
-    json (1.7.5)
+    json (1.7.6)
     launchy (2.1.2)
       addressable (~> 2.3)
     letter_opener (1.0.0)
       launchy (>= 2.0.4)
-    lol_dba (1.4.1)
+    lol_dba (1.4.2)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       railties (>= 3.0)
@@ -230,14 +231,14 @@ GEM
       activerecord (~> 3.0)
       railties (~> 3.0)
     polyglot (0.3.3)
-    rack (1.4.1)
+    rack (1.4.4)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-mobile-detect (0.4.0)
       rack
     rack-mount (0.8.3)
       rack (>= 1.0.0)
-    rack-ssl (1.3.2)
+    rack-ssl (1.3.3)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)

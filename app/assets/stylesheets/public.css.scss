@@ -71,11 +71,19 @@ a:focus,
 }
 #logo_relais_chateaux {
 	position:absolute; 
-	bottom:140px;
+	bottom:160px;
 	right:20px;
 	z-index: $zindexLogoRelais;
 	opacity: .7;
 }
+#logo_gold_cntraveller_2013 {
+	position:absolute; 
+	bottom:80px;
+	right:10px;
+	z-index: $zindexLogoRelais;
+	opacity: .7;
+}
+
 #start-slideshow {
 	text-align: right;
 	margin-bottom: $baseLineHeight;
