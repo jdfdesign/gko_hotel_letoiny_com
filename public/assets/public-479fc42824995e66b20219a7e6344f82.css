@@ -2302,8 +2302,8 @@ table th[class*="span"],
     */
 @font-face {
   font-family: "FontAwesome";
-  src: url(/assets/fontawesome-webfont.eot);
-  src: url(/assets/fontawesome-webfont.eot?#iefix) format("eot"), url(/assets/fontawesome-webfont.woff) format("woff"), url(/assets/fontawesome-webfont.ttf) format("truetype"), url(/assets/fontawesome-webfont.svg#FontAwesome) format("svg");
+  src: url(/assets/fontawesome-webfont-0a06b37f71480a3be992c5d605eb5e7e.eot);
+  src: url(/assets/fontawesome-webfont.eot?#iefix) format("eot"), url(/assets/fontawesome-webfont-e1869ae8d587ad0add8c890361f5dea8.woff) format("woff"), url(/assets/fontawesome-webfont-c8e024f6753e5e429ca6e66a998e3df7.ttf) format("truetype"), url(/assets/fontawesome-webfont.svg#FontAwesome) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -7537,7 +7537,7 @@ a.label:hover, a.badge:hover {
 
 /* line 66, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-1ca52550f50d/gko_core/vendor/assets/stylesheets/twitter_ext/_bootstrap-image-gallery.scss */
 .modal-loading .modal-image {
-  background: url(/assets/twitter_ext/loading.gif) center no-repeat;
+  background: url(/assets/twitter_ext/loading-c811d47aa4e029305c67d71fe56dff4e.gif) center no-repeat;
 }
 
 /* line 69, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-1ca52550f50d/gko_core/vendor/assets/stylesheets/twitter_ext/_bootstrap-image-gallery.scss */
@@ -7731,7 +7731,7 @@ aside > section {
 
 /* line 68, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-1ca52550f50d/gko_core/app/assets/stylesheets/gko/public/_default.scss */
 .missing-document-preview {
-  background: transparent url(/assets/gko/icon_pdf_grey_light_x110.png) left center no-repeat;
+  background: transparent url(/assets/gko/icon_pdf_grey_light_x110-aa942955ac89ec6a8cfc236c40b42cc3.png) left center no-repeat;
   min-height: 110px;
 }
 
@@ -8071,7 +8071,7 @@ footer .nav > li > a:hover {
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
-  background: transparent url(/assets/logo.png) center center no-repeat;
+  background: transparent url(/assets/logo-16a9cf2396a8d951d36e13720186ce76.png) center center no-repeat;
   background-size: contain;
   cursor: pointer;
   text-decoration: none;
@@ -8139,7 +8139,7 @@ footer .nav > li > a:hover {
 .navbar #locales-menu li > a {
   line-height: 12px;
   padding-left: 56px;
-  background: transparent url(/assets/locale_icons.png) no-repeat top center;
+  background: transparent url(/assets/locale_icons-fc7df9960dbba32a2f01b95cc5ccb54e.png) no-repeat top center;
 }
 /* line 76, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .nav-collapse .nav {
@@ -8309,14 +8309,14 @@ ul#ticker li span {
 
 /* line 71, ../../app/assets/stylesheets/_scrollpane.scss */
 .jspArrow.jspArrowDown {
-  background-image: url(/assets/d.gif);
+  background-image: url(/assets/d-4afccf626f4b6ed487a940fc91d0642b.gif);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 /* line 77, ../../app/assets/stylesheets/_scrollpane.scss */
 .jspArrow.jspArrowUp {
-  background-image: url(/assets/u.gif);
+  background-image: url(/assets/u-7e17a4c2f0715268664e54dc86088b54.gif);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -8476,7 +8476,7 @@ html[xmlns] .slides {
   height: 30px;
   margin: -20px 0 0;
   display: block;
-  background: url(/assets/flexslider/bg_direction_nav.png) no-repeat 0 0;
+  background: url(/assets/flexslider/bg_direction_nav-fa6970e05e0f02aa13c5ce3a45dadef9.png) no-repeat 0 0;
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -8649,7 +8649,7 @@ img {
   height: 60px;
   margin: -30px 0 0 -30px;
   text-indent: -999em;
-  background: url(/assets/progress.gif) no-repeat center center;
+  background: url(/assets/progress-26322360231cfecd74fb03d5d11a3f03.gif) no-repeat center center;
 }
 
 /* line 19, ../../app/assets/stylesheets/_supersized.scss */
@@ -8721,7 +8721,7 @@ img {
 
 /* line 28, ../../app/assets/stylesheets/_supersized.scss */
 #supersized li.image-loading {
-  background: #111111 url(/assets/progress.gif) no-repeat center center;
+  background: #111111 url(/assets/progress-26322360231cfecd74fb03d5d11a3f03.gif) no-repeat center center;
   width: 100%;
   height: 100%;
 }
@@ -10665,13 +10665,13 @@ h1.page-title {
     font-weight: bold;
     color: #d8d8d8;
     text-shadow: 0 1px 1px #444444;
-    background-image: url(/assets/icon_arrow_bottom_36_white.png);
+    background-image: url(/assets/icon_arrow_bottom_36_white-95a2d8bdd99e486113b5b492ad6087a3.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   /* line 155, ../../app/assets/stylesheets/_responsive.scss */
   #main-column-tab.closed {
-    background-image: url(/assets/icon_arrow_top_36_white.png);
+    background-image: url(/assets/icon_arrow_top_36_white-e80a5f05ad92009e06dc3dff8996002b.png);
   }
 
   /* line 159, ../../app/assets/stylesheets/_responsive.scss */

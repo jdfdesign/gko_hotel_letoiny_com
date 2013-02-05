@@ -38,16 +38,18 @@ ActiveRecord::Schema.define(:version => 20130129095812) do
   add_index "assets", ["site_id"], :name => "index_assets_on_site_id"
 
   create_table "baby_sitter_bookings", :force => true do |t|
+    t.integer  "site_id"
     t.integer  "hotel_reservation_id"
     t.datetime "book_date"
-    t.integer  "children",             :default => 1
-    t.string   "duration"
-    t.time     "start_time"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.integer  "children"
+    t.decimal  "duration",             :precision => 10, :scale => 0
+    t.datetime "created_at",                                                                             :null => false
+    t.datetime "updated_at",                                                                             :null => false
+    t.time     "start_time",                                          :default => '2000-01-01 00:00:00'
   end
 
   add_index "baby_sitter_bookings", ["hotel_reservation_id"], :name => "index_baby_sitter_bookings_on_hotel_reservation_id"
+  add_index "baby_sitter_bookings", ["site_id"], :name => "index_baby_sitter_bookings_on_site_id"
 
   create_table "categories", :force => true do |t|
     t.integer  "site_id"
