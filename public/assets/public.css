@@ -8825,34 +8825,36 @@ a:focus,
 /* line 72, ../../app/assets/stylesheets/public.css.scss */
 #logo_relais_chateaux {
   position: absolute;
-  bottom: 160px;
-  right: 20px;
+  top: 54px;
+  right: 110px;
   z-index: 90;
   opacity: .7;
+  z-index: 911;
 }
 
-/* line 79, ../../app/assets/stylesheets/public.css.scss */
+/* line 80, ../../app/assets/stylesheets/public.css.scss */
 #logo_gold_cntraveller_2013 {
   position: absolute;
-  bottom: 70px;
+  top: 44px;
   right: 8px;
   z-index: 90;
   opacity: .7;
+  z-index: 911;
 }
 
-/* line 87, ../../app/assets/stylesheets/public.css.scss */
+/* line 89, ../../app/assets/stylesheets/public.css.scss */
 #start-slideshow {
   text-align: right;
   margin-bottom: 20px;
   font-size: 10px;
   text-decoration: none;
 }
-/* line 92, ../../app/assets/stylesheets/public.css.scss */
+/* line 94, ../../app/assets/stylesheets/public.css.scss */
 #start-slideshow i {
   padding-left: 4px;
 }
 
-/* line 96, ../../app/assets/stylesheets/public.css.scss */
+/* line 98, ../../app/assets/stylesheets/public.css.scss */
 h1.page-title {
   font-weight: normal;
   font-size: 24px;
@@ -8860,7 +8862,7 @@ h1.page-title {
   margin-bottom: 8px;
 }
 
-/* line 102, ../../app/assets/stylesheets/public.css.scss */
+/* line 104, ../../app/assets/stylesheets/public.css.scss */
 .nav > li > a {
   font-size: 11px;
   font-weight: 300;
@@ -8871,7 +8873,7 @@ h1.page-title {
 /*-----------------------------------------
  GRID
 ----------------------------------------- */
-/* line 113, ../../app/assets/stylesheets/public.css.scss */
+/* line 115, ../../app/assets/stylesheets/public.css.scss */
 .grid > li h2 {
   text-transform: uppercase;
   font-family: "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
@@ -8879,25 +8881,25 @@ h1.page-title {
   font-weight: bold;
   line-height: 20px;
 }
-/* line 120, ../../app/assets/stylesheets/public.css.scss */
+/* line 122, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail {
   background-color: rgba(255, 255, 255, 0.7);
 }
-/* line 122, ../../app/assets/stylesheets/public.css.scss */
+/* line 124, ../../app/assets/stylesheets/public.css.scss */
 .grid > li .thumbnail:hover {
   background-color: white;
 }
 
-/* line 127, ../../app/assets/stylesheets/public.css.scss */
+/* line 129, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item {
   text-align: center;
 }
-/* line 133, ../../app/assets/stylesheets/public.css.scss */
+/* line 135, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item .thumbnail .country {
   clear: both;
   font-weight: bold;
 }
-/* line 137, ../../app/assets/stylesheets/public.css.scss */
+/* line 139, ../../app/assets/stylesheets/public.css.scss */
 .grid > li.document_item .thumbnail .links {
   display: none;
 }
@@ -8908,42 +8910,42 @@ h1.page-title {
 /*-----------------------------------------
  HOME
 ----------------------------------------- */
-/* line 152, ../../app/assets/stylesheets/public.css.scss */
+/* line 154, ../../app/assets/stylesheets/public.css.scss */
 .html-text {
   clear: both;
 }
-/* line 154, ../../app/assets/stylesheets/public.css.scss */
+/* line 156, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul {
   list-style: disc outside;
   margin-left: 30px;
 }
-/* line 155, ../../app/assets/stylesheets/public.css.scss */
+/* line 157, ../../app/assets/stylesheets/public.css.scss */
 .html-text li {
   margin-bottom: 0px;
 }
-/* line 156, ../../app/assets/stylesheets/public.css.scss */
+/* line 158, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul, .html-text ol {
   margin-bottom: .8em;
 }
-/* line 157, ../../app/assets/stylesheets/public.css.scss */
+/* line 159, ../../app/assets/stylesheets/public.css.scss */
 .html-text p {
   margin-bottom: .8em;
   text-align: justify;
 }
-/* line 159, ../../app/assets/stylesheets/public.css.scss */
+/* line 161, ../../app/assets/stylesheets/public.css.scss */
 .html-text table {
   margin-bottom: 40px;
 }
-/* line 161, ../../app/assets/stylesheets/public.css.scss */
+/* line 163, ../../app/assets/stylesheets/public.css.scss */
 .html-text table td {
   border-color: #3b3831;
 }
-/* line 166, ../../app/assets/stylesheets/public.css.scss */
+/* line 168, ../../app/assets/stylesheets/public.css.scss */
 .html-text h1 {
   font-size: 26px;
   line-height: 36px;
 }
-/* line 171, ../../app/assets/stylesheets/public.css.scss */
+/* line 173, ../../app/assets/stylesheets/public.css.scss */
 .html-text h2 {
   line-height: 24px;
   font-size: 16px;
@@ -8953,7 +8955,7 @@ h1.page-title {
   border-bottom: 1px solid #b7b6b6;
   font-weight: normal;
 }
-/* line 181, ../../app/assets/stylesheets/public.css.scss */
+/* line 183, ../../app/assets/stylesheets/public.css.scss */
 .html-text h3 {
   line-height: 24px;
   font-size: 14px;
@@ -8964,17 +8966,17 @@ h1.page-title {
 }
 
 /* loading screen */
-/* line 192, ../../app/assets/stylesheets/public.css.scss */
+/* line 194, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading {
   overflow: hidden !important;
 }
 
-/* line 193, ../../app/assets/stylesheets/public.css.scss */
+/* line 195, ../../app/assets/stylesheets/public.css.scss */
 .ui-loading .ui-loader {
   display: block;
 }
 
-/* line 194, ../../app/assets/stylesheets/public.css.scss */
+/* line 196, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader {
   display: none;
   position: absolute;
@@ -8987,7 +8989,7 @@ h1.page-title {
   padding: 10px 30px;
 }
 
-/* line 195, ../../app/assets/stylesheets/public.css.scss */
+/* line 197, ../../app/assets/stylesheets/public.css.scss */
 .ui-loader .ui-icon {
   position: static;
   display: block;
@@ -8998,7 +9000,7 @@ h1.page-title {
   background: transparent url(/assets/gko-core/ajax-loader.gif) no-repeat;
 }
 
-/* line 200, ../../app/assets/stylesheets/public.css.scss */
+/* line 202, ../../app/assets/stylesheets/public.css.scss */
 .ui-icon-loading {
   position: static;
   display: block;
@@ -9016,7 +9018,7 @@ h1.page-title {
   background-size: 35px 35px;
 }
 
-/* line 217, ../../app/assets/stylesheets/public.css.scss */
+/* line 219, ../../app/assets/stylesheets/public.css.scss */
 .hotel_inquiry select,
 .table_inquiry select {
   width: auto;
