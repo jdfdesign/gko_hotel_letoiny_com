@@ -60,7 +60,13 @@ var Site = {
 				e.preventDefault();
 				e.stopPropagation();
 				var url = $(this).find('a:first').attr("href");
-				window.location = "http://" + window.location.hostname + url;
+				if(window.document.location.host) {
+				window.location = "http://" + window.document.location.host + url;	
+				}
+				else {
+					window.location = "http://" + window.location.hostname + url;
+				}
+				
 				return false;
 			}
 		})

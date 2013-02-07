@@ -16,7 +16,11 @@
 			float: none;
 			text-align: center;
 			padding: $baseLineHeight 0 $baseLineHeight;
-		}	
+		}
+		li.dropdown.open > .dropdown-menu,	
+		li.dropdown > .dropdown-menu {
+			display: block;
+		}
 	}
 	#content {
 		padding-left: 20px;

@@ -1,5 +1,5 @@
 <% content_for :page_content do %> 
-<% cache [action_name, I18n.locale, resource.site, resource] do %>
+<% cache [request.format, action_name, I18n.locale, resource.site, resource] do %>
 	<% if is_mobile_device? %>
 	<div id="carousel" class="flexslider carousel" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="li.gallery-item">
 	  <ul class="slides">

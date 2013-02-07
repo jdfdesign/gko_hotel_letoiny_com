@@ -10495,25 +10495,30 @@ h1.page-title {
     text-align: center;
     padding: 20px 0 20px;
   }
-
   /* line 21, ../../app/assets/stylesheets/_responsive.scss */
+  .navbar li.dropdown.open > .dropdown-menu,
+  .navbar li.dropdown > .dropdown-menu {
+    display: block;
+  }
+
+  /* line 25, ../../app/assets/stylesheets/_responsive.scss */
   #content {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 26, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 30, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav {
     margin: 0;
     width: 100%;
   }
-  /* line 30, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 34, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav > li {
     width: 33.33%;
     margin: 0;
     padding: 0;
   }
-  /* line 35, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 39, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav > li > a {
     background-color: #2e2c27;
     padding: 6px 10px 6px;
@@ -10521,12 +10526,12 @@ h1.page-title {
     text-align: center;
   }
 
-  /* line 42, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 46, ../../app/assets/stylesheets/_responsive.scss */
   .nav.tools > li > a {
     border-left: 1px solid #5a564d;
   }
 
-  /* line 45, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 49, ../../app/assets/stylesheets/_responsive.scss */
   .navbar-inner {
     padding: 0;
     -webkit-border-radius: none;
@@ -10537,29 +10542,29 @@ h1.page-title {
     box-shadow: none;
   }
 
-  /* line 50, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 54, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse {
     background-color: #3e3c35;
   }
-  /* line 53, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 57, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse .nav > li.dropdown {
     border-top: 1px dotted #dedad1;
   }
-  /* line 56, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 60, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse .nav > li:first-child {
     border-top: none;
   }
-  /* line 61, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 65, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     text-align: center;
     font-weight: normal;
   }
-  /* line 65, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 69, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse .dropdown-menu {
     padding-bottom: 8px;
   }
-  /* line 67, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 71, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse .dropdown-menu a {
     color: #dedad1;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -10569,19 +10574,19 @@ h1.page-title {
     border-radius: none;
     padding: 2px 0;
   }
-  /* line 73, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 77, ../../app/assets/stylesheets/_responsive.scss */
   .nav-collapse .dropdown-menu a:hover {
     color: white;
   }
 
-  /* line 79, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 83, ../../app/assets/stylesheets/_responsive.scss */
   #locales-menu {
     position: absolute;
     top: 20px;
     right: 10px;
   }
 
-  /* line 85, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 89, ../../app/assets/stylesheets/_responsive.scss */
   #socials-container {
     clear: both;
     float: none;
@@ -10603,7 +10608,7 @@ h1.page-title {
   }
 }
 @media (min-width: 980px) {
-  /* line 99, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 103, ../../app/assets/stylesheets/_responsive.scss */
   #wrapper-wide-body {
     position: absolute;
     width: 100%;
@@ -10611,14 +10616,14 @@ h1.page-title {
     overflow: hidden;
   }
 
-  /* line 106, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 110, ../../app/assets/stylesheets/_responsive.scss */
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
   }
 
-  /* line 111, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 115, ../../app/assets/stylesheets/_responsive.scss */
   #content-container {
     position: absolute;
     bottom: 40px;
@@ -10632,12 +10637,12 @@ h1.page-title {
     filter: alpha(opacity=90);
   }
 
-  /* line 123, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 127, ../../app/assets/stylesheets/_responsive.scss */
   .nav li.dropdown > .dropdown-toggle .caret {
     display: none;
   }
 
-  /* line 126, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 130, ../../app/assets/stylesheets/_responsive.scss */
   #content {
     /*width:800px;*/
     width: 100%;
@@ -10649,7 +10654,7 @@ h1.page-title {
     display: block;
   }
 
-  /* line 136, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 140, ../../app/assets/stylesheets/_responsive.scss */
   #main-column-tab {
     -webkit-border-radius: 6px 6px 0 0;
     -moz-border-radius: 6px 6px 0 0;
@@ -10671,12 +10676,12 @@ h1.page-title {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  /* line 155, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 159, ../../app/assets/stylesheets/_responsive.scss */
   #main-column-tab.closed {
     background-image: url(/assets/icon_arrow_top_36_white-e80a5f05ad92009e06dc3dff8996002b.png);
   }
 
-  /* line 159, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 163, ../../app/assets/stylesheets/_responsive.scss */
   #main-column {
     position: absolute;
     left: 340px;
@@ -10687,12 +10692,12 @@ h1.page-title {
     right: 0px;
   }
 
-  /* line 168, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 172, ../../app/assets/stylesheets/_responsive.scss */
   #main-column.content-sidebar {
     position: absolute;
   }
 
-  /* line 172, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 176, ../../app/assets/stylesheets/_responsive.scss */
   #footer-container {
     position: fixed;
     right: 0;
@@ -10701,7 +10706,7 @@ h1.page-title {
     z-index: 1030;
   }
 
-  /* line 176, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 180, ../../app/assets/stylesheets/_responsive.scss */
   #sidebar {
     width: 290px;
     position: absolute;
@@ -10712,16 +10717,16 @@ h1.page-title {
     display: block;
   }
 
-  /* line 187, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 191, ../../app/assets/stylesheets/_responsive.scss */
   #secondary-menu .nav > li {
     float: none;
   }
-  /* line 190, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 194, ../../app/assets/stylesheets/_responsive.scss */
   #secondary-menu .nav > li > a:hover {
     background-color: transparent;
   }
 
-  /* line 197, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 201, ../../app/assets/stylesheets/_responsive.scss */
   .navbar {
     position: absolute;
     top: 0px;
@@ -10729,7 +10734,7 @@ h1.page-title {
     right: 0;
     z-index: 910;
   }
-  /* line 204, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 208, ../../app/assets/stylesheets/_responsive.scss */
   .navbar .brand {
     padding: 0;
     margin: 0;
@@ -10738,13 +10743,13 @@ h1.page-title {
     width: 160px;
     height: 140px;
   }
-  /* line 212, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 216, ../../app/assets/stylesheets/_responsive.scss */
   .navbar .brand a {
     text-align: center;
     margin-top: 32px;
   }
 
-  /* line 218, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 222, ../../app/assets/stylesheets/_responsive.scss */
   .header-top {
     position: absolute;
     top: 0;
@@ -10752,15 +10757,15 @@ h1.page-title {
     right: 0;
     z-index: 910;
   }
-  /* line 224, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 228, ../../app/assets/stylesheets/_responsive.scss */
   .header-top nav {
     float: right;
   }
-  /* line 227, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 231, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav > li {
     margin-left: 4px;
   }
-  /* line 230, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 234, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav > li > a {
     -webkit-border-radius: 0 0 8px 8px;
     -moz-border-radius: 0 0 8px 8px;
@@ -10768,13 +10773,13 @@ h1.page-title {
   }
 }
 @media (max-width: 480px) {
-  /* line 238, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 242, ../../app/assets/stylesheets/_responsive.scss */
   .header-top .nav.tools > li > a {
     min-height: 52px;
   }
 }
 @media (max-width: 480px) {
-  /* line 247, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 251, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 500px;
     /* Set a default max height of the modal (adjusted later)*/
@@ -10786,13 +10791,13 @@ h1.page-title {
     /* Avoid having to use 2 finger scroll on iOS    */
   }
 
-  /* line 253, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 257, ../../app/assets/stylesheets/_responsive.scss */
   .modal.fade.in {
     top: 5px;
     /* Use more screen real estate */
   }
 
-  /* line 256, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 260, ../../app/assets/stylesheets/_responsive.scss */
   .modal-body {
     /* Increase the max height of the modal body to try & avoid both it,
      * and the modal container having scroll bars which results in odd behavior */
@@ -10803,43 +10808,43 @@ h1.page-title {
 /* You could make this as granular as you like, or have it more granular at common screen sizes
  * but it should start at the height we set on .modal (i.e. 500px) & work down */
 @media (max-width: 480px) and (max-height: 500px) {
-  /* line 266, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 270, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 450px;
   }
 }
 @media (max-width: 480px) and (max-height: 450px) {
-  /* line 267, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 271, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 400px;
   }
 }
 @media (max-width: 480px) and (max-height: 400px) {
-  /* line 268, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 272, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 350px;
   }
 }
 @media (max-width: 480px) and (max-height: 350px) {
-  /* line 269, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 273, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 300px;
   }
 }
 @media (max-width: 480px) and (max-height: 300px) {
-  /* line 270, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 274, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 250px;
   }
 }
 @media (max-width: 480px) and (max-height: 250px) {
-  /* line 271, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 275, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 200px;
   }
 }
 @media (max-width: 480px) and (max-height: 200px) {
-  /* line 272, ../../app/assets/stylesheets/_responsive.scss */
+  /* line 276, ../../app/assets/stylesheets/_responsive.scss */
   .modal {
     height: 150px;
   }

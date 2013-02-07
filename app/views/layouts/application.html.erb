@@ -35,7 +35,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
 	<%= javascript_include_tag "public" %>
 	<%= yield :after_javascript_libraries %>
-	<% cache [I18n.locale, site, site.home] do %>
+	<% cache [request.format, I18n.locale, site, site.home] do %>
 		<% if site.home.images.order(:position).any? && !is_mobile_device? %>
 		<script type="text/javascript">
 		
