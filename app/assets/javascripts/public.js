@@ -5,7 +5,6 @@
 //= require jquery.easing.min.js
 //= require jquery.mousewheel.js
 //= require jquery.jscrollpane.min.js
-//= require webcam.js 
 //= require flexslider/jquery.flexslider.js
 //= require supersized.3.2.7.js
 //= require load-image.min.js

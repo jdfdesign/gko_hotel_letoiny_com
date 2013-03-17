@@ -1,5 +1,5 @@
 <% content_for :page_content do %> 
-<% cache [request.format, action_name, I18n.locale, resource.site, resource] do %>
+<%# cache [is_mobile_device?.to_s, action_name, I18n.locale, resource.site, resource] do %>
 	<% if is_mobile_device? %>
 	<div id="carousel" class="flexslider carousel" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="li.gallery-item">
 	  <ul class="slides">
@@ -8,10 +8,10 @@
 				<%= image_fu(img, "210x140#") %>
 			<% end %>
 		<% end %>
-	  </ul>
-	<% end %> 
+	  </ul> 
 	</div>
 	<% end %> 
+    <%# end %> 
 	<% if @twits.try(:any?) %>
 	<div id="ticker-wrapper">
 		<ul id="ticker">
@@ -21,4 +21,6 @@
 		</ul>
 	</div>
 	<% end %>
+	<p></p>
+
 <% end %>   
