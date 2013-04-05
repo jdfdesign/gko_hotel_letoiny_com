@@ -9,9 +9,14 @@
 	
 	position:relative;
 	height: $footerHeight;
-	iframe {
+	iframe#fcb {
 		position: relative;
 		float: right;
+	}
+	.IN-widget {
+		position: relative;
+		float: right;
+		margin-top: 8px;
 	}
 	.nav > li > a {
 		padding: 0 10px 0;
