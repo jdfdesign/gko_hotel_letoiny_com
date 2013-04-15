@@ -8,15 +8,16 @@
 //= require flexslider/jquery.flexslider.js
 //= require supersized.3.2.7.js
 //= require load-image.min.js
-//= require twitter/bootstrap/transition.js
-//= require twitter/bootstrap/alert.js
-//= require twitter/bootstrap/button.js
-//= require twitter/bootstrap/collapse.js
-//= require twitter/bootstrap/dropdown.js
-//= require twitter/bootstrap/modal.js
-//= require twitter/bootstrap/tooltip.js
-//= require twitter_ext/bootstrap-datepicker.js
-//= require twitter_ext/bootstrap-image-gallery.js
+//= require twitter.bootstrap.2.2.1/bootstrap/transition.js
+//= require twitter.bootstrap.2.2.1/bootstrap/alert.js
+//= require twitter.bootstrap.2.2.1/bootstrap/button.js
+//= require twitter.bootstrap.2.2.1/bootstrap/collapse.js
+//= require twitter.bootstrap.2.2.1/bootstrap/dropdown.js
+//= require twitter.bootstrap.2.2.1/bootstrap/modal.js
+//= require twitter.bootstrap.2.2.1/bootstrap/tooltip.js
+//= require twitter.bootstrap.2.2.1/bootstrap-datepicker.js
+//= require twitter.bootstrap.2.2.1/bootstrap-timepicker.js
+//= require twitter.bootstrap.2.2.1/bootstrap-image-gallery.js
 
 var available_size = {w: 896,h: 600}, 
 	breakpoint = 979;
@@ -135,12 +136,15 @@ var Site = {
 		}) */
 		
 		$("a[data-remote], form[data-remote]")
-		.on("ajax:beforeSend", function(evt, xhr, settings) {Util.attachLoading("body")})
+		.on("ajax:beforeSend", function(evt, xhr, settings) {
+		  Util.attachLoading("body")
+		})
 		.on("ajax:error", function(evt, xhr, status, error) {
 			var that = $(this),
 				flash = $.parseJSON(xhr.getResponseHeader('X-Flash-Messages')),
 				errors = $.parseJSON(xhr.responseText).errors;
 			
+      // Remove any previous errors messages
 			that.find('.control-group').removeClass('error');
 			that.find('.help-inline').remove();
 			
@@ -150,12 +154,28 @@ var Site = {
 			for ( error in errors ) {
 				var input = that.find('input[name*="'+ error + '"]');
 				if(input.length) {
+				  // Bootstrap includes validation styles for error, warning, info, and success messages. 
+				  // To use, add the appropriate class to the surrounding
 					input.closest('.control-group').addClass('error');
 					input.after('<span class="help-inline">' + errors[error] + "</span>");
 				}
 			}
 		})
-		.on("ajax:complete", function(evt, xhr, status){Util.removeLoading("body")});
+		.on("ajax:success", function(evt, data, status, xhr) {
+		  var that = $(this),
+          flash = $.parseJSON(xhr.getResponseHeader('X-Flash-Messages'));
+      
+      // Remove any previous errors messages
+      that.find('.control-group').removeClass('error');
+      that.find('.help-inline').remove(); 
+
+		  if(flash.success) {
+        that.prepend('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button>' + flash.success + '</div>')
+			}
+    })
+		.on("ajax:complete", function(evt, xhr, status){
+		  Util.removeLoading("body")
+		 });
 		
 		// Handle window.resize or orientationchange event
 		//------------------------------------------------------- 
