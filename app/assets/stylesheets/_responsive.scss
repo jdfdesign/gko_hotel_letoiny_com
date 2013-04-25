@@ -239,7 +239,13 @@
 			@include border-radius(0 0 8px 8px);
 		}
 	}
-	
+	#footer {
+	  height: $footerHeight;
+	}  
+  #socials-container {
+  	float:right;
+   } 
+	 
 }
 @media (max-width: 480px) {
 	.header-top {

@@ -4,11 +4,10 @@
 #footer-container {
 	text-shadow: 0 1px 1px #444;
 	@include box-sizing(border-box);
+	background-color: $footerBackground;
 }
 #footer {
-	
 	position:relative;
-	height: $footerHeight;
 	iframe#fcb {
 		position: relative;
 		float: right;
@@ -30,7 +29,6 @@
 	} 
 } 
 #socials-container {
-	float:right; 
 	margin-right: $footerHeight;
 	.nav > li > a {
 		cursor:pointer;
