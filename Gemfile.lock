@@ -59,7 +59,6 @@ GIT
       gko_core (= 0.6.30.rc8)
       gko_inquiries (= 0.6.30.rc8)
     gko_image_bank (0.6.30.rc8)
-    gko_images (0.6.30.rc8)
     gko_inquiries (0.6.30.rc8)
       filters_spam (~> 0.2)
     gko_newsletters (0.6.30.rc8)
@@ -313,7 +312,6 @@ DEPENDENCIES
   gko_documents!
   gko_hotel!
   gko_image_bank!
-  gko_images!
   gko_inquiries!
   gko_newsletters!
   gko_twits!
