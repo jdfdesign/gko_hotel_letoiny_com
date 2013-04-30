@@ -1,4 +1,6 @@
-<% content_for :sidebar do %>
+<%= render_secondary_menu %>
+<% content_for :sidebar do %> 
+  <hr\>
 	<%= render_parent_categories(:title => '') %>
 <% end %>
 <%# cache [action_name, I18n.locale, site, "photos", "page", params[:page] || 1, parent.photos_cached_key] do %>
