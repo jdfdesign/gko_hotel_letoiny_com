@@ -9,16 +9,13 @@
 }
 
 .navbar-inner {
-
 	text-shadow: 0 1px 1px #444;
 	@include reset-filter;
 	@include border-radius(0);
 }
 
-
 .navbar {
 	.brand {
-
 		a {
 			padding: 0;
 			margin: 0 auto;
@@ -31,8 +28,6 @@
 			height: 59px;
 			@include hide-text;
 		}
-		
-		
 	}
 	 
 	li.dropdown > .dropdown-toggle .caret,
@@ -54,32 +49,26 @@
 			font-size: 10px;
 			&:hover {
 				background-color: $acidGreen;
-			};
+			}
 		}
+		.btn-group {
+     margin-top: 0;
+     float: right;
+     .btn-group > .btn:first-child {
+
+     } 
+    }
 	}
 	.header-nav {
 		@include clearfix;
-
-	}
-	#locales-menu {
-		li > a {
-			line-height: 12px;
-			padding-left:56px;
-			background:transparent asset-url("locale_icons.png", image) no-repeat top center; 
-		}
 	}
 
 	.nav-collapse {
-		nav {
-			//border-right: 1px solid lighten($brown, 8%);
-		}
 		.nav {
 			margin-top: 16px;
 		}
 		.nav > li {
-			//line-height: 14px;
 			float: none;
-			//border-bottom: 1px solid lighten($brown, 8%);
 			&:last-child {
 				border-bottom: none;
 			}
@@ -88,5 +77,4 @@
 			padding: 0 12px;
 		}
 	}
-
 }

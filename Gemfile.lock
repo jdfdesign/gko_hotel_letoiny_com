@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 037db09e692b6bd6e2740779d28fc902d18a355d
-  tag: v0.6.30.rc10
+  revision: 03c80cef8319d1648dcf6005f2c58951725213ac
+  tag: v0.6.30.rc14
   specs:
-    gko_auth (0.6.30.rc10)
+    gko_auth (0.6.30.rc14)
       cancan (>= 1.6.8)
       devise (>= 2.1.2)
-    gko_categories (0.6.30.rc10)
-    gko_core (0.6.30.rc10)
+    gko_categories (0.6.30.rc14)
+    gko_core (0.6.30.rc14)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -18,7 +18,7 @@ GIT
       codemirror-rails (>= 2.3)
       coffee-rails (~> 3.2.2)
       cucumber (~> 1.1.4)
-      dragonfly (~> 0.9.13)
+      dragonfly (~> 0.9.15)
       dropbox-sdk (~> 1.2.0)
       exception_notification (~> 3.0.0)
       execjs
@@ -52,18 +52,18 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.30.rc10)
+    gko_documents (0.6.30.rc14)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.6.30.rc10)
-      gko_core (= 0.6.30.rc10)
-      gko_inquiries (= 0.6.30.rc10)
-    gko_image_bank (0.6.30.rc10)
-    gko_inquiries (0.6.30.rc10)
+    gko_hotel (0.6.30.rc14)
+      gko_core (= 0.6.30.rc14)
+      gko_inquiries (= 0.6.30.rc14)
+    gko_image_bank (0.6.30.rc14)
+    gko_inquiries (0.6.30.rc14)
       filters_spam (~> 0.2)
-    gko_newsletters (0.6.30.rc10)
+    gko_newsletters (0.6.30.rc14)
       createsend
-    gko_twits (0.6.30.rc10)
+    gko_twits (0.6.30.rc14)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
@@ -147,7 +147,7 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.2.4)
-    dragonfly (0.9.14)
+    dragonfly (0.9.15)
       multi_json (~> 1.0)
       rack
     dropbox-sdk (1.2)

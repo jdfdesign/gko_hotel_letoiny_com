@@ -1,6 +1,3 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en: 
   book_table_title: Book a table at Le Gaiac
   click_to_enlarge: Click to enlarge
@@ -14,3 +11,4 @@ en:
   linkedin_btn: "Visit our LinkedIn page"
   twitter_btn: "Follow us on Twitter"
   r_and_c: "<b>Who We Are?</b><br>Established over half a century ago, Relais & Châteaux is an association of the world’s finest hoteliers, chefs and restaurateurs that has set the standard for excellence in hospitality. Relais & Châteaux has redefined luxury hospitality by emphasizing holistic experiences that transport its guests, taking them on a sensual journey and introducing them to a deeper, truer understanding of the Art of Living."
+  locale_select_title: Languages
