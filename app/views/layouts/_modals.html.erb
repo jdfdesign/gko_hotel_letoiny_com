@@ -45,20 +45,20 @@
             <div class="controls">
               <select class="select required span12" id="table_inquiry_service" name="table_inquiry[service]">
                 <optgroup label="<%= t(:"simple_form.labels.table_inquiry.lunch")  %>">
-                  <option value="12"><%= Time.zone.local(2011,4,12,12,0).strftime("%H:%M") %></option>
-                  <option value="12.30"><%= Time.zone.local(2011,4,12,12,30).strftime("%H:%M") %></option>
-                  <option value="13"><%= Time.zone.local(2011,4,12,13,0).strftime("%H:%M") %></option>
-                  <option value="13.30"><%= Time.zone.local(2011,4,12,13,30).strftime("%H:%M") %></option>
-                  <option value="14"><%= Time.zone.local(2011,4,12,14,0).strftime("%H:%M") %></option>
-                  <option value="14.30"><%= Time.zone.local(2011,4,12,14,30).strftime("%H:%M") %></option>
+                  <option value="12"><%= l(Time.zone.local(2011,4,12,12,0), :format => "%I.%M %p") %></option>
+                  <option value="12"><%= l(Time.zone.local(2011,4,12,12,30), :format => "%I.%M %p") %></option>
+                  <option value="13"><%= l(Time.zone.local(2011,4,12,13,0), :format => "%I.%M") %></option>
+                  <option value="13.30"><%= l(Time.zone.local(2011,4,12,13,30), :format => "%I.%M %p") %></option>
+                  <option value="14"><%= l(Time.zone.local(2011,4,12,14,0), :format => "%I.%M %p") %></option>
+                  <option value="14.30"><%= l(Time.zone.local(2011,4,12,14,30), :format => "%I.%M %p") %></option>
                 </optgroup>
                 <optgroup label="<%= t(:"simple_form.labels.table_inquiry.dinner")  %>">
-                  <option value="19"><%= Time.zone.local(2011,4,12,19,0).strftime("%H:%M") %></option>
-                  <option value="19.30"><%= Time.zone.local(2011,4,12,19,30).strftime("%H:%M") %></option>
-                  <option value="20"><%= Time.zone.local(2011,4,12,20,0).strftime("%H:%M") %></option>
-                  <option value="20.30"><%= Time.zone.local(2011,4,12,20,30).strftime("%H:%M") %></option>
-                  <option value="21"><%= Time.zone.local(2011,4,12,21,0).strftime("%H:%M") %></option>
-                  <option value="21.30"><%= Time.zone.local(2011,4,12,21,30).strftime("%H:%M") %></option>
+                  <option value="19"><%= l(Time.zone.local(2011,4,12,19,0), :format => "%I.%M %p") %></option>
+                  <option value="19.30"><%= l(Time.zone.local(2011,4,12,19,30), :format => "%I.%M %p") %></option>
+                  <option value="20"><%= l(Time.zone.local(2011,4,12,20,0), :format => "%I.%M %p") %></option>
+                  <option value="20.30"><%= l(Time.zone.local(2011,4,12,20,30), :format => "%I.%M %p") %></option>
+                  <option value="21"><%= l(Time.zone.local(2011,4,12,21,0), :format => "%I.%M %p") %></option>
+                  <option value="21.30"><%= l(Time.zone.local(2011,4,12,21,30), :format => "%I.%M %p") %></option>
                 </optgroup> 
               </select>
             </div>

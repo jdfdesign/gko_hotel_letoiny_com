@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 03c80cef8319d1648dcf6005f2c58951725213ac
-  tag: v0.6.30.rc14
+  revision: ca81be718331a11d0c8a544ac81da5b61e7d0092
+  tag: v0.6.30.rc15
   specs:
-    gko_auth (0.6.30.rc14)
+    gko_auth (0.6.30.rc15)
       cancan (>= 1.6.8)
       devise (>= 2.1.2)
-    gko_categories (0.6.30.rc14)
-    gko_core (0.6.30.rc14)
+    gko_categories (0.6.30.rc15)
+    gko_core (0.6.30.rc15)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -52,18 +52,18 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.30.rc14)
+    gko_documents (0.6.30.rc15)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.6.30.rc14)
-      gko_core (= 0.6.30.rc14)
-      gko_inquiries (= 0.6.30.rc14)
-    gko_image_bank (0.6.30.rc14)
-    gko_inquiries (0.6.30.rc14)
+    gko_hotel (0.6.30.rc15)
+      gko_core (= 0.6.30.rc15)
+      gko_inquiries (= 0.6.30.rc15)
+    gko_image_bank (0.6.30.rc15)
+    gko_inquiries (0.6.30.rc15)
       filters_spam (~> 0.2)
-    gko_newsletters (0.6.30.rc14)
+    gko_newsletters (0.6.30.rc15)
       createsend
-    gko_twits (0.6.30.rc14)
+    gko_twits (0.6.30.rc15)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
@@ -112,7 +112,7 @@ GEM
       thor (>= 0.15.4, < 2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
-    cancan (1.6.9)
+    cancan (1.6.10)
     capistrano (2.15.4)
       highline
       net-scp (>= 1.0.0)
@@ -122,7 +122,7 @@ GEM
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
-    codemirror-rails (3.02)
+    codemirror-rails (3.12)
       railties (~> 3.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -141,7 +141,7 @@ GEM
       gherkin (~> 2.9.0)
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.6)
-    devise (2.2.3)
+    devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -214,7 +214,7 @@ GEM
       railties (>= 3.0.0)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
-    net-sftp (2.1.1)
+    net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)

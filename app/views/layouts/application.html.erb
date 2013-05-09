@@ -6,25 +6,25 @@
   <div id="wrapper-wide-body">
 	<%= render 'header' %>
 	<% if content_for?(:page_content) %>
-      <%= yield :page_content %>
-    <% else %>  
-      <div id='content-container' class='container-fluid'>
-        <!--<div class='wrapper-content'>-->
-          <div id="content" class='row-fluid'>
-            <div id='main-column' class='content-sidebar'>
-              <div class="main-content-inner">
-                <%= render 'layouts/messages' %> 
-                <%= yield %>
-              </div>
-            </div>
-            <aside id='sidebar' class='right'>
-              <div id='sidebar-header'><%= yield :left_sidebar %></div>
-              <div id='sidebar-content'><%= yield :sidebar %></div>
-            </aside>
+    <%= yield :page_content %>
+  <% else %>  
+    <div id='content-container' class='container-fluid'>
+    <!--<div class='wrapper-content'>-->
+      <div id="content" class='row-fluid'>
+        <div id='main-column' class='content-sidebar'>
+          <div class="main-content-inner">
+            <%= render 'layouts/messages' %> 
+            <%= yield %>
+          </div>
         </div>
+        <aside id='sidebar' class='right'>
+          <div id='sidebar-header'><%= yield :left_sidebar %></div>
+          <div id='sidebar-content'><%= yield :sidebar %></div>
+        </aside>
       </div>
-      <% end %>  
-      <%= render 'footer' %>
+    </div>
+    <% end %>  
+    <%= render 'footer' %>
   </div>
   <%= render 'layouts/modals' %> 
   <!-- Le javascript
