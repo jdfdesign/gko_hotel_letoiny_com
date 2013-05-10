@@ -54,9 +54,6 @@
 		.btn-group {
      margin-top: 0;
      float: right;
-     .btn-group > .btn:first-child {
-
-     } 
     }
 	}
 	.header-nav {
@@ -77,4 +74,41 @@
 			padding: 0 12px;
 		}
 	}
+} 
+
+
+#locales-btn {
+  @include button-background(#2e2c27, #2e2c27, #2e2c27, 0 1px 1px rgba(255,255,255,.75));
+  border: 1px solid #2e2c27;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  border-bottom-color: #2e2c27; 
+  color: #dedad1; 
+  text-shadow: none;
+  font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px; 
+	@include border-radius(0 0 8px 8px);
+  &:hover { 
+    @include button-background($acidGreen, $acidGreen, $acidGreen, 0 1px 1px rgba(255,255,255,.75));
+    border: 1px solid $acidGreen;
+    *border: 0; // Remove the border to prevent IE7's black border on input:focus
+    border-bottom-color: $acidGreen;
+    color: $white;
+    text-shadow: 0 1px 0 #44413a; 
+  }
+} 
+ #locales-btn:hover:hover, #locales-btn:hover:active, #locales-btn:hover.active, #locales-btn:hover.disabled, #locales-btn:hover[disabled] {
+color: $white;
+
+}
+.dropdown .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top:   4px solid #2e2c27;
+  border-right: 4px solid transparent;
+  border-left:  4px solid transparent;
+  content: "";
 }
