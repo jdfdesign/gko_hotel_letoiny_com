@@ -171,7 +171,7 @@ GEM
       actionpack (>= 2.3.0)
       json
     has_scope (0.5.1)
-    hashie (2.0.4)
+    hashie (2.0.5)
     highline (1.6.8)
     hike (1.2.1)
     httparty (0.11.0)

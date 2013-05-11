@@ -45,6 +45,12 @@
 			font-size: 11px;
 			text-align: center;
 		}
+		.btn-group {
+     position: fixed;
+     top: 0;
+     right: 0;
+     z-index: 1;
+    }
 	}
 	.nav.tools > li > a {
 		border-left: 1px solid lighten($brown, 8%);
@@ -82,11 +88,6 @@
 				}
 			}
 		}
-	}
-	#locales-menu {
-		position: absolute;
-		top: $baseLineHeight;
-		right: $baseLineHeight / 2;
 	}
 
 	#socials-container {
@@ -231,12 +232,13 @@
 			@include border-radius(0 0 8px 8px);
 		}
 	}
+	
 	#footer {
 	  height: $footerHeight;
 	}  
   #socials-container {
   	float:right;
-   } 
+  } 
 	 
 }
 @media (max-width: 480px) {

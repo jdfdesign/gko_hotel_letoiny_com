@@ -98,9 +98,12 @@
     text-shadow: 0 1px 0 #44413a; 
   }
 } 
- #locales-btn:hover:hover, #locales-btn:hover:active, #locales-btn:hover.active, #locales-btn:hover.disabled, #locales-btn:hover[disabled] {
-color: $white;
-
+#locales-btn:hover:hover, 
+#locales-btn:hover:active, 
+#locales-btn:hover.active, 
+#locales-btn:hover.disabled, 
+#locales-btn:hover[disabled] {
+   color: $white;
 }
 .dropdown .caret {
   display: inline-block;
