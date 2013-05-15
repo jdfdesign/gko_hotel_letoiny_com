@@ -12,3 +12,14 @@ en:
   twitter_btn: "Follow us on Twitter"
   r_and_c: "<b>Who We Are?</b><br>Established over half a century ago, Relais & Châteaux is an association of the world’s finest hoteliers, chefs and restaurateurs that has set the standard for excellence in hospitality. Relais & Châteaux has redefined luxury hospitality by emphasizing holistic experiences that transport its guests, taking them on a sensual journey and introducing them to a deeper, truer understanding of the Art of Living."
   locale_select_title: Languages
+  simple_form:
+    labels:
+      hotel_reservation:
+        welcome_champagne_moet_chanfon: "Moet Chanfon"
+        welcome_champagne_perrier_rose: "Perrier Rose"
+        welcome_european_bouquet: "European bouquet"
+        welcome_european_bouquet_price: "Price"  
+        welcome_exotic_bouquet: "Exotic bouquet"
+        welcome_exotic_bouquet_price: "Price"                        
+        welcome_colorful_fruit_plate: "Fruit plate"
+        welcome_cheese_cracker_plate: "Cracker plate"
