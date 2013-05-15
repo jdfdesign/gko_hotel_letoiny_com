@@ -67,9 +67,9 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
-  revision: 38fa01cc944eb246ab70f4e0adde3c22ca5e218c
+  revision: 9209ff123aa9ec6c16c1019c7444cb7688c402b6
   specs:
-    gko_concierge (0.0.07)
+    gko_concierge (0.0.08)
 
 GEM
   remote: http://rubygems.org/
@@ -306,7 +306,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.2)
   gko_auth!
   gko_categories!
-  gko_concierge (= 0.0.07)!
+  gko_concierge (= 0.0.08)!
   gko_core!
   gko_documents!
   gko_hotel!

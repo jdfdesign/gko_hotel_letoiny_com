@@ -18,7 +18,7 @@ group :production do
    gem 'gko_categories' 
    gem 'gko_image_bank'
   end
-  gem 'gko_concierge', '0.0.07', :git => 'git@github.com:jdfdesign/gko_concierge.git'
+  gem 'gko_concierge', '0.0.08', :git => 'git@github.com:jdfdesign/gko_concierge.git'
 end
 
 #group :development do
