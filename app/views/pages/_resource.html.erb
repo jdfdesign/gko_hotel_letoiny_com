@@ -1,4 +1,4 @@
-<% cache [action_name, I18n.locale, resource.site, resource] do %>
+<% resource_cache resource do %>
 	<%= render_page_title(resource.title) %>
 	<% if resource.images.any? %>
 		<div id="carousel" class="flexslider carousel" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="li.gallery-item">

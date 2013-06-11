@@ -1,11 +1,9 @@
 <%# Render submenu on sidebar if site does not use dropdown menu %>
 <%
    #if !site.drop_down_menu 
-	unless is_mobile_device?
-     if resource.is_a?(Section)
-       current_section = resource
-     elsif parent and parent.is_a?(Section)
-       current_section = parent
+	if !(is_mobile_device?)
+     if @section 
+       current_section = @section
      end
 
      return unless current_section

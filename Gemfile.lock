@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 0086fca6684aa7dda1c30d4fd5814e8a1d8018db
-  tag: v0.6.40.rc3
+  revision: 4494287a22f7961a535b77045d289478123115e4
+  tag: v0.6.40.rc4
   specs:
-    gko_auth (0.6.40.rc3)
+    gko_auth (0.6.40.rc4)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_categories (0.6.40.rc3)
-    gko_core (0.6.40.rc3)
+    gko_categories (0.6.40.rc4)
+    gko_core (0.6.40.rc4)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -50,18 +50,18 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.40.rc3)
+    gko_documents (0.6.40.rc4)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.6.40.rc3)
-      gko_core (= 0.6.40.rc3)
-      gko_inquiries (= 0.6.40.rc3)
-    gko_image_bank (0.6.40.rc3)
-    gko_inquiries (0.6.40.rc3)
+    gko_hotel (0.6.40.rc4)
+      gko_core (= 0.6.40.rc4)
+      gko_inquiries (= 0.6.40.rc4)
+    gko_image_bank (0.6.40.rc4)
+    gko_inquiries (0.6.40.rc4)
       filters_spam (~> 0.2)
-    gko_newsletters (0.6.40.rc3)
+    gko_newsletters (0.6.40.rc4)
       createsend
-    gko_twits (0.6.40.rc3)
+    gko_twits (0.6.40.rc4)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
