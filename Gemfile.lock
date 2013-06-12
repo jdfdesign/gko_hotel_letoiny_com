@@ -1,12 +1,28 @@
-GIT
-  remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 4494287a22f7961a535b77045d289478123115e4
-  tag: v0.6.40.rc4
+PATH
+  remote: ~/Github/gko/gko_concierge
+  specs:
+    gko_concierge (0.0.08)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_auth
   specs:
     gko_auth (0.6.40.rc4)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_blog
+  specs:
+    gko_blog (0.6.40.rc4)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_categories
+  specs:
     gko_categories (0.6.40.rc4)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_core
+  specs:
     gko_core (0.6.40.rc4)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
@@ -50,24 +66,47 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_documents
+  specs:
     gko_documents (0.6.40.rc4)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_hotel
+  specs:
     gko_hotel (0.6.40.rc4)
       gko_core (= 0.6.40.rc4)
       gko_inquiries (= 0.6.40.rc4)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_image_bank
+  specs:
     gko_image_bank (0.6.40.rc4)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_inquiries
+  specs:
     gko_inquiries (0.6.40.rc4)
       filters_spam (~> 0.2)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_newsletters
+  specs:
     gko_newsletters (0.6.40.rc4)
       createsend
-    gko_twits (0.6.40.rc4)
 
-GIT
-  remote: git@github.com:jdfdesign/gko_concierge.git
-  revision: 9209ff123aa9ec6c16c1019c7444cb7688c402b6
+PATH
+  remote: ~/Github/gko_cms3/gko_stickers
   specs:
-    gko_concierge (0.0.08)
+    gko_stickers (0.6.40.rc4)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_twits
+  specs:
+    gko_twits (0.6.40.rc4)
 
 GEM
   remote: http://rubygems.org/
@@ -299,14 +338,16 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
   gko_auth!
+  gko_blog!
   gko_categories!
-  gko_concierge (= 0.0.08)!
+  gko_concierge!
   gko_core!
   gko_documents!
   gko_hotel!
   gko_image_bank!
   gko_inquiries!
   gko_newsletters!
+  gko_stickers!
   gko_twits!
   sass-rails (~> 3.2.6)
   uglifier (>= 1.0.3)

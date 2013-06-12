@@ -13,7 +13,7 @@
           <%= form.input :email, :hint => false, :input_html => { :class => 'span12' } %>
           <%= form.input :phone, :hint => false, :required => false, :input_html => { :class => 'span12' } %>
           <%= form.input :message, :as => :text, :hint => false, :input_html => {:class => 'span12', :rows => 6} %>
-          <%= render 'anti_spam_field', :f => form %>
+          <%= form.input :ghost, :label => false, :hint => false, :required => false, :wrapper_html => {:class => 'hide'} %>
         </div>
         <div class="span6">
           <p><b><%= t("tollfree_address").html_safe %></b></p>
