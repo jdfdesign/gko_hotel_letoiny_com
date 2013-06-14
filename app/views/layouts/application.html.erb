@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%= content_for :meta do %>
+  <%= raw %(<meta name="msvalidate.01" content="C4921EADBBF35C2BD8F4BE9E9F78C4F6" />) -%> 
+<% end %>
 <%= render 'html_tag' %>
 <%= render 'head' %>
 <body id='<%= @body_id %>'>
