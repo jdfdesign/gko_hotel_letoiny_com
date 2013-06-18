@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506081612) do
+ActiveRecord::Schema.define(:version => 20130618093621) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -559,11 +559,12 @@ ActiveRecord::Schema.define(:version => 20130506081612) do
     t.integer  "site_id"
     t.integer  "hotel_reservation_id"
     t.date     "book_date"
-    t.integer  "guests",               :default => 1
+    t.integer  "guests",                             :default => 1
     t.string   "service_name"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
     t.time     "start_time"
+    t.string   "place",                :limit => 30
   end
 
   add_index "spa_reservations", ["hotel_reservation_id"], :name => "index_spa_reservations_on_hotel_reservation_id"
@@ -616,11 +617,11 @@ ActiveRecord::Schema.define(:version => 20130506081612) do
     t.integer  "site_id"
     t.integer  "hotel_reservation_id"
     t.date     "book_date"
-    t.integer  "guests",               :default => 2
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.integer  "guests",                             :default => 2
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
     t.string   "restaurant_name"
-    t.boolean  "lunch",                :default => false
+    t.string   "service",              :limit => 10
   end
 
   add_index "table_reservations", ["hotel_reservation_id"], :name => "index_table_reservations_on_hotel_reservation_id"
