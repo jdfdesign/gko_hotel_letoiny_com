@@ -1,14 +1,14 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 496508378fab1a3f17c281ca38cc6ed3d22c9c44
-  tag: v0.6.40.rc14
+  revision: 9f422bcaa67bf4150d8dd65b8bf5b5ce5cd9eba1
+  tag: v0.6.40.rc15
   specs:
-    gko_auth (0.6.40.rc14)
+    gko_auth (0.6.40.rc15)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_blog (0.6.40.rc14)
-    gko_categories (0.6.40.rc14)
-    gko_core (0.6.40.rc14)
+    gko_blog (0.6.40.rc15)
+    gko_categories (0.6.40.rc15)
+    gko_core (0.6.40.rc15)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -51,19 +51,19 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.40.rc14)
+    gko_documents (0.6.40.rc15)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.6.40.rc14)
-      gko_core (= 0.6.40.rc14)
-      gko_inquiries (= 0.6.40.rc14)
-    gko_image_bank (0.6.40.rc14)
-    gko_inquiries (0.6.40.rc14)
+    gko_hotel (0.6.40.rc15)
+      gko_core (= 0.6.40.rc15)
+      gko_inquiries (= 0.6.40.rc15)
+    gko_image_bank (0.6.40.rc15)
+    gko_inquiries (0.6.40.rc15)
       filters_spam (~> 0.2)
-    gko_newsletters (0.6.40.rc14)
+    gko_newsletters (0.6.40.rc15)
       createsend
-    gko_stickers (0.6.40.rc14)
-    gko_twits (0.6.40.rc14)
+    gko_stickers (0.6.40.rc15)
+    gko_twits (0.6.40.rc15)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
