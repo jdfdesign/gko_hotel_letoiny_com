@@ -7,7 +7,7 @@
 
       <div class="header-nav">
         <!-- Be sure to leave the brand out there if you want it shown -->
-        <%= render 'site_title' %>
+      <h1 id="site-title" class="brand"><%= link_to(site.title, root_url) %></h1>
 		<%= content_tag(:h4, site.subtitle.html_safe, :id => "site-subtitle") if site.subtitle.present? %>
 		<div class="header-top">
 			<%= render 'locales_select' %>
