@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <%= content_for :meta do %>
-  <%= raw %(<meta name="msvalidate.01" content="C4921EADBBF35C2BD8F4BE9E9F78C4F6" />) -%> 
+  <%= raw %(<meta name="msvalidate.01" content="C4921EADBBF35C2BD8F4BE9E9F78C4F6" />) -%>
+  <%= raw %(<meta name="p:domain_verify" content="dd60259abb01729eb3a4a9d5bb56910b"/>) -%>
+  <%= raw %(<meta name="robots" content="noodp">) -%> 
 <% end %>
 <%= render 'html_tag' %>
 <%= render 'head' %>
@@ -54,5 +56,6 @@
 		<% end %>
 	<% end %>
 	<%= render 'google_analytics' %>
-<body>
+	<script type="text/javascript" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+</body>
 </html>
