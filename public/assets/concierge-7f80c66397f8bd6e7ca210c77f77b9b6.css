@@ -165,7 +165,7 @@ textarea {
 /* line 9, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/scaffolding.scss */
 body {
   margin: 0;
-  font-family: "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
   font-size: 13px;
   line-height: 20px;
   color: #3b3831;
@@ -1040,7 +1040,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
 }
 
 /* line 55, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/forms.scss */
@@ -5619,7 +5619,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "museo-sans", "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Helvetica Neue", Helvetica, "Arial", sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
