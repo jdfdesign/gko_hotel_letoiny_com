@@ -5467,7 +5467,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 22, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
 .navbar-inner {
-  min-height: 140px;
+  min-height: 120px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #413f38;
@@ -5513,7 +5513,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 60px 20px 60px;
+  padding: 50px 20px 50px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -5528,7 +5528,7 @@ input[type="submit"].btn.btn-mini {
 /* line 67, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
 .navbar-text {
   margin-bottom: 0;
-  line-height: 140px;
+  line-height: 120px;
 }
 
 /* line 74, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
@@ -5542,7 +5542,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 83, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
 .navbar .divider-vertical {
-  height: 140px;
+  height: 120px;
   margin: 0 9px;
   border-left: 1px solid #3e3c35;
   border-right: 1px solid #44413a;
@@ -5551,7 +5551,7 @@ input[type="submit"].btn.btn-mini {
 /* line 93, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
 .navbar .btn,
 .navbar .btn-group {
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 /* line 98, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
@@ -5581,7 +5581,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-form select,
 .navbar-form .radio,
 .navbar-form .checkbox {
-  margin-top: 55px;
+  margin-top: 45px;
 }
 /* line 115, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
 .navbar-form input,
@@ -5612,7 +5612,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: 55px;
+  margin-top: 45px;
   margin-bottom: 0;
 }
 /* line 141, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
@@ -5725,7 +5725,7 @@ input[type="submit"].btn.btn-mini {
 /* line 238, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/navbar.scss */
 .navbar .nav > li > a {
   float: none;
-  padding: 60px 15px 60px;
+  padding: 50px 15px 50px;
   color: #dedad1;
   text-decoration: none;
   text-shadow: 0 1px 0 #44413a;

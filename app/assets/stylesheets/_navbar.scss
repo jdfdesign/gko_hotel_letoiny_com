@@ -58,11 +58,15 @@
 	}
 	.header-nav {
 		@include clearfix;
-	}
-
+	} 
+  .header-top .nav > li > a,
+  .nav > li > a {
+    font-size: $baseFontSize - 4; 
+  }
 	.nav-collapse {
 		.nav {
-			margin-top: 16px;
+			margin-top: 4px;
+			margin-bottom: 4px;
 		}
 		.nav > li {
 			float: none;
@@ -72,8 +76,26 @@
 		}
 		.nav > li > a {
 			padding: 0 12px;
+			
 		}
 	}
+	
+  .address {
+    font-size: $baseFontSize - 4;
+    color: lighten($navbarBackground, 40%);
+    position: absolute;
+    top: 36px;
+    right: 268px;
+    z-index: 911;
+    line-height: 15px;
+    a {
+      color: lighten($navbarBackground, 40%);
+      text-decoration: underline;
+      &:hover {
+        color: lighten($navbarBackground, 80%);
+      };
+    }
+  }
 } 
 
 
@@ -88,7 +110,8 @@
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 1px; 
-	@include border-radius(0 0 8px 8px);
+	@include border-radius(0 0 8px 8px); 
+	font-size: $baseFontSize - 4;
   &:hover { 
     @include button-background($acidGreen, $acidGreen, $acidGreen, 0 1px 1px rgba(255,255,255,.75));
     border: 1px solid $acidGreen;

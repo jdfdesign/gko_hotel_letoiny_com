@@ -12,7 +12,7 @@
 	<%= render 'header' %>
 	<% if content_for?(:page_content) %>
     <%= yield :page_content %>
-  <% else %>  
+  <% else %> 
     <div id='content-container' class='container-fluid'>
     <!--<div class='wrapper-content'>-->
       <div id="content" class='row-fluid'>
@@ -57,5 +57,6 @@
 	<% end %>
 	<%= render 'google_analytics' %>
 	<script type="text/javascript" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+
 </body>
 </html>

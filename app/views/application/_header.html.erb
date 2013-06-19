@@ -1,4 +1,4 @@
-<% cache [I18n.locale, site,'header5'] do %>
+<%# cache [I18n.locale, site,'header10'] do %>
 <!-- Header
 ================================================== -->
 <header class="navbar navbar-fixed-top hide-on-print">
@@ -24,9 +24,10 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
+  <p class="address visible-desktop">Hotel Le Toiny St. Barth<br/>Anse de Toiny, 97133 Saint Barthelemy<br/>French West Indies, Caribbean<br/>Tel: +590 (0)590 27 88 88<br/>Fax: +590 (0) 590 27 89 30<br/><%= mail_to "reservations@letoiny.com" %></p>  
     <%= link_to(image_tag("logo_relais_chateaux_white.png"), "http://www.relaischateaux.com", :id => "logo_relais_chateaux", :target => "_blank", :class => 'visible-desktop', :title => t("r_and_c").html_safe, :rel => "tooltip", :data => { :placement => 'bottom', :html => "true"}) %>
   <%= link_to(image_tag("gold_cntraveller_2013.png"), "http://www.cntraveler.com/hotels/caribbean/french-west-indies/h-tel-le-toiny-st-barts-st-barts-st-barts", :id => "logo_gold_cntraveller_2013", :target => "_blank", :class => 'visible-desktop') %>
   
 </header>
-<% end %>
+<%# end %>

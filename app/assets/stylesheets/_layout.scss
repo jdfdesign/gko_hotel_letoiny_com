@@ -18,15 +18,32 @@
 		margin-top: 8px;
 	}
 	.nav > li > a {
-		padding: 0 10px 0;
+		padding: 0 5px 0;
 		line-height: $footerHeight - 2;
+		font-size: $baseFontSize - 4; 
 	}
 	.pipe-menu-container ul.nav {
 		float:left;
 		li {
 			float:left;
 		}
-	} 
+	}
+
+}
+footer .address {
+  font-size: $baseFontSize - 4;
+  color: lighten($navbarBackground, 40%);
+  line-height: 15px;
+  text-align: center;
+  border-top: lighten($navbarBackground, 10%);
+  padding: 0 20px; 
+  a {
+    color: lighten($navbarBackground, 40%);
+    text-decoration: underline;
+    &:hover {
+      color: lighten($navbarBackground, 80%);
+    };
+  }
 } 
 #socials-container {
 	margin-right: $footerHeight;
@@ -40,15 +57,15 @@
 		width: $footerHeight;
 		line-height: $footerHeight;
 		font-size: 18px;
-		border-left: 1px solid lighten($brown, 8%);
-		background-color: $brown;
+		border-left: 1px solid lighten($navbarBackground, 8%);
+		background-color: $navbarBackground;
 		[class^="icon-"], [class*=" icon-"] {
 			line-height: $footerHeight / 2;
 			height: $footerHeight;
 			width: $footerHeight;
 		}
 		&:hover {
-			background-color: lighten($brown, 8%);
+			background-color: lighten($navbarBackground, 8%);
 		};
 	}
 	.nav > li > a#toolfree {
@@ -58,10 +75,3 @@
 		};
 	}
 } 
-#address {
-  p {
-    margin: 0;
-    color: lighten($brown, 30%);
-    font-size: 8px;
-  }
-}
