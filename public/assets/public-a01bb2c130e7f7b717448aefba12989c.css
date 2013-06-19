@@ -8425,7 +8425,7 @@ footer .address a:hover {
 /* line 63, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .header-top .nav > li > a,
 .navbar .nav > li > a {
-  font-size: 11px;
+  font-size: 10px;
 }
 /* line 67, ../../app/assets/stylesheets/_navbar.scss */
 .navbar .nav-collapse .nav {
@@ -8493,7 +8493,7 @@ footer .address a:hover {
   -webkit-border-radius: 0 0 8px 8px;
   -moz-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
-  font-size: 11px;
+  font-size: 10px;
 }
 /* line 523, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-454a153a5e18/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/bootstrap/mixins.scss */
 #locales-btn:hover, #locales-btn:active, #locales-btn.active, #locales-btn.disabled, #locales-btn[disabled] {
