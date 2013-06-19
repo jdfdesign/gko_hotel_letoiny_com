@@ -41,6 +41,11 @@ module GkoLetoinyCom
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0' 
+    config.assets.version = '1.0'
+    
+    config.after_initialize do |app|
+      app.routes.append{match 'admin/*path', :to => 'admin/base#error_404'}
+      app.routes.append{match '*path', :to => 'base#error_404'}
+    end 
   end
 end

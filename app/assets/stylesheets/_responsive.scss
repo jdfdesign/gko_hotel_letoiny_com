@@ -89,7 +89,13 @@
 			}
 		}
 	}
-
+  .navbar .btn {
+    margin-top: 0;
+  }
+  .navbar .btn-navbar {
+    margin: 0;
+    width: 100%;
+  }
 	#socials-container {
 		clear: both;
 		float: none;
@@ -97,6 +103,13 @@
 		@include center-block;
 		@include clearfix;
 	}
+  #home #footer-container {
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 1030;
+  }
 }
 
 
