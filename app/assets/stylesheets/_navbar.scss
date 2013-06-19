@@ -61,7 +61,7 @@
 	} 
   .header-top .nav > li > a,
   .nav > li > a {
-    font-size: $baseFontSize - 4; 
+    font-size: $baseFontSize - 2; 
   }
 	.nav-collapse {
 		.nav {
@@ -84,8 +84,8 @@
     font-size: $baseFontSize - 4;
     color: lighten($navbarBackground, 40%);
     position: absolute;
-    top: 36px;
-    right: 268px;
+    top: 40px;
+    right: 248px;
     z-index: 911;
     line-height: 15px;
     a {
@@ -111,7 +111,7 @@
 	text-transform: uppercase;
 	letter-spacing: 1px; 
 	@include border-radius(0 0 8px 8px); 
-	font-size: $baseFontSize - 4;
+	font-size: $baseFontSize - 2;
   &:hover { 
     @include button-background($acidGreen, $acidGreen, $acidGreen, 0 1px 1px rgba(255,255,255,.75));
     border: 1px solid $acidGreen;
