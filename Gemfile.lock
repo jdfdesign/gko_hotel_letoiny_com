@@ -1,14 +1,14 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 8bea945a1ba1d0ae5cc4d5ad02e28c036cbcceb0
-  tag: v0.6.41.rc2
+  revision: 20f8e21123e8244959cbb6caf87c845b83cb04c5
+  tag: v0.6.42
   specs:
-    gko_auth (0.6.41.rc1)
+    gko_auth (0.6.42)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_blog (0.6.41.rc1)
-    gko_categories (0.6.41.rc1)
-    gko_core (0.6.41.rc1)
+    gko_blog (0.6.42)
+    gko_categories (0.6.42)
+    gko_core (0.6.42)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -51,19 +51,19 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-    gko_documents (0.6.41.rc1)
+    gko_documents (0.6.42)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_hotel (0.6.41.rc1)
-      gko_core (= 0.6.41.rc1)
-      gko_inquiries (= 0.6.41.rc1)
-    gko_image_bank (0.6.41.rc1)
-    gko_inquiries (0.6.41.rc1)
+    gko_hotel (0.6.42)
+      gko_core (= 0.6.42)
+      gko_inquiries (= 0.6.42)
+    gko_image_bank (0.6.42)
+    gko_inquiries (0.6.42)
       filters_spam (~> 0.2)
-    gko_newsletters (0.6.41.rc1)
+    gko_newsletters (0.6.42)
       createsend
-    gko_stickers (0.6.41.rc1)
-    gko_twits (0.6.41.rc1)
+    gko_stickers (0.6.42)
+    gko_twits (0.6.42)
 
 GIT
   remote: git@github.com:jdfdesign/gko_concierge.git
@@ -253,7 +253,7 @@ GEM
     rmagick (2.13.2)
     routing-filter (0.3.1)
       actionpack
-    ruby-ole (1.2.11.6)
+    ruby-ole (1.2.11.7)
     rubyzip (0.9.6.1)
     sass (3.2.7)
     sass-rails (3.2.6)

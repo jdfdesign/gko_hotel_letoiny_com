@@ -1,3 +1,17 @@
+.nav-fly-out {
+  position: absolute;
+  left: 100%;
+  background: #2e2c27;
+  padding: 15px 20px 20px 20px;
+  width: 220px;
+  top: 0;
+  text-align: left;
+  display: none;
+  letter-spacing: 0px;
+  color: $navbarLinkColor; 
+  min-height: 180px;
+}
+
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */ 

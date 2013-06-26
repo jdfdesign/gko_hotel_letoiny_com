@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624120928) do
+ActiveRecord::Schema.define(:version => 20130626134349) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -464,6 +464,7 @@ ActiveRecord::Schema.define(:version => 20130624120928) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "menu_title"
+    t.text     "alt"
   end
 
   add_index "section_translations", ["section_id"], :name => "index_section_translations_on_section_id"
@@ -496,6 +497,7 @@ ActiveRecord::Schema.define(:version => 20130624120928) do
     t.boolean  "robot_follow",      :default => true
     t.boolean  "restricted",        :default => false
     t.string   "template"
+    t.text     "alt"
   end
 
   add_index "sections", ["link_id", "link_type"], :name => "index_sections_on_link_id_and_link_type"

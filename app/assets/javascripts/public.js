@@ -55,6 +55,24 @@ var Site = {
 	},
 
     attachEvents : function() {
+      /*********************/
+      /* Left Nav Fly Outs */ 
+      /*********************/
+
+      if ( $('.nav-fly-out').size() > 0 ){ 
+        $('.nav-fly-out').hide();
+        if ($(window).width() > breakpoint) {
+          $('.nav-menu > li > a').hover( 
+            function(){
+              $(this).siblings('.nav-fly-out').show();
+            },
+            function(){
+              $(this).siblings('.nav-fly-out').hide();
+            }
+          ); 
+        }
+      }
+      	
 		$('.nav li.dropdown').on('click.dropdown.data-api', function (e) {
 			if ($(window).width() > breakpoint) {
 				e.preventDefault();
