@@ -19,7 +19,7 @@
   <%= menu_link(section, :dropdown => has_dropdown) -%> 
   <%# specific to laurentbenoit.com %> 
   <% if has_contents %>
-    <ul class='dropdown-menu' role="menu" aria-labelledby="dLabel">
+    <ul class='dropdown-menu'>
     <% contents.each do |content| %>
       <li><%= link_to(content.title, content.public_url) %></li>
     <% end %>
