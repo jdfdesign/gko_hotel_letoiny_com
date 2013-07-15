@@ -1,0 +1,46 @@
+.footer {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: $baseLineHeight * 2;
+  padding-bottom: $baseLineHeight * 2;
+  color: $navbarText;
+  font-size: 11px; 
+  .nav {
+    margin: 0;
+  }
+  .nav > li {
+    display:block;
+    float: none; 
+    @include clearfix;
+  }
+  .nav > li > a {
+    float: none;
+    color: $navbarLinkColor;
+    text-decoration: none;
+    text-shadow: 0 1px 0 $navbarBackgroundHighlight;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8 15px;
+    border-bottom: 1px solid lighten($navbarBackground, 10%);
+  }
+
+
+  // Hover/focus
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: transparent;
+    color: $navbarLinkColorHover;
+    text-decoration: none;
+  }
+
+  // Active nav items
+  .nav > .active > a,
+  .nav > .active > a:hover,
+  .nav > .active > a:focus {
+    color: $navbarLinkColorActive;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}

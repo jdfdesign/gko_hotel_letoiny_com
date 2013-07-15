@@ -4,6 +4,9 @@
   <%= raw %(<meta name="p:domain_verify" content="dd60259abb01729eb3a4a9d5bb56910b"/>) -%>
   <%= raw %(<meta name="robots" content="noodp">) -%> 
 <% end %>
+<%= content_for :head do %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic,700italic' rel='stylesheet' type='text/css'>
+<% end %>
 <%= render 'html_tag' %>
 <%= render 'head' %>
 <body id='<%= @body_id %>'>
@@ -13,23 +16,16 @@
 	<% if content_for?(:page_content) %>
     <%= yield :page_content %>
   <% else %> 
-    <div id='content-container' class='container-fluid'>
-    <!--<div class='wrapper-content'>-->
-      <div id="content" class='row-fluid'>
-        <div id='main-column' class='content-sidebar'>
-          <div class="main-content-inner">
-            <%= render 'layouts/messages' %> 
-            <%= yield %>
-          </div>
-        </div>
-        <aside id='sidebar' class='right'>
-          <div id='sidebar-header'><%= yield :left_sidebar %></div>
-          <div id='sidebar-content'><%= yield :sidebar %></div>
-        </aside>
-      </div>
-    </div>
-    <% end %>  
-    <%= render 'footer' %>
+  <div class="main">
+    <%= render 'layouts/messages' %> 
+    <%= yield %>
+  </div>
+  <aside id='sidebar' class='right'>
+    <div id='sidebar-header'><%= yield :left_sidebar %></div>
+    <div id='sidebar-content'><%= yield :sidebar %></div>
+  </aside>
+  <% end %>  
+  <%= render 'footer' %>
   </div>
   <%= render 'layouts/modals' %> 
   <!-- Le javascript

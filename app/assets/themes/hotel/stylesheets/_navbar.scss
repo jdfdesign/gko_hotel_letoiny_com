@@ -1,0 +1,108 @@
+$logo-height: 59px;
+.header-top {
+  @include clearfix;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $themeColor;
+  .header-top-inner {
+    padding-left:  20px;
+    padding-right: 20px;
+    border-bottom: 1px solid lighten($navbarBackground, 10%);
+    background-color: $themeColor;
+    // Prevent floats from breaking the navbar
+    @include clearfix();
+  }
+  
+  .brand {
+    margin-top: ($navbarHeight - $logo-height) / 2;
+    margin-bottom: ($navbarHeight - $logo-height) / 2;
+    padding-left: 0; 
+    padding-right: 0;
+    position: relative;
+    width: 132px;
+    height: $logo-height;
+    float: left;
+    a {
+      
+      font: 0/0 a;
+      text-shadow: none;
+      height: $logo-height;
+      width: 132px;
+      border: 0; 
+      background: image-url('logo.png') no-repeat;
+      background-size: 132px;
+      display: block; 
+      position: absolute;
+      margin-top: -$logo-height / 2;
+      top: 50%;
+      left: 0;
+    }
+  }
+  .nav {
+    float: right;
+    position: relative; 
+    margin-bottom: 0;
+   
+  }
+  .nav > li {
+    float: left;
+  }
+  .nav > li > a { 
+    float: none;
+    // Vertically center the text given $navbarHeight
+    color: $navbarLinkColor;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 15px;
+    line-height: 60px;
+    border-left: 1px solid lighten($navbarBackground, 10%);
+  }
+  // Hover/focus
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover/:focus from .active
+    color: $navbarLinkColorHover;
+    text-decoration: none;
+  }
+  // Active nav items
+  .nav > .active > a,
+  .nav > .active > a:hover,
+  .nav > .active > a:focus {
+    color: $navbarLinkColorActive;
+    text-decoration: none;
+    background-color: $navbarLinkBackgroundActive;
+  }
+}
+
+/* Navbar
+-------------------------------------------------- */ 
+
+.navbar-inner {
+  border: none;
+  @include border-radius(0);
+  @include box-shadow(none); 
+  @include gradient-vertical($navbarBackground, $navbarBackground);
+}
+ 
+.navbar {
+  margin-bottom: 0;
+  
+  
+  .nav {
+    margin-top: $baseLineHeight;
+  }
+  .nav > li > a {
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8 15px;
+    
+  }
+}
+
