@@ -1,12 +1,18 @@
-<%# cache [I18n.locale, site, 'site_header'] do %>
+<% cache [I18n.locale, site, 'site_header2'] do %>
 <!-- Header
 ================================================== -->
-<header class="navbar hide-on-print">
+<header class="navbar navbar-fixed-top hide-on-print">
   <div class="navbar-inner">
-    <div class="container-fluid">
-    <!-- Be sure to leave the brand out there if you want it shown -->
-      
-        <%= content_tag(:h4, site.subtitle.html_safe, :id => "site-subtitle") if site.subtitle.present? %>
+    <div class="row-fluid">
+
+      <div class="header-nav">
+        <!-- Be sure to leave the brand out there if you want it shown -->
+      <h1 id="site-title" class="brand"><%= link_to(site.title, root_url) %></h1>
+		<%= content_tag(:h4, site.subtitle.html_safe, :id => "site-subtitle") if site.subtitle.present? %>
+		<div class="header-top">
+			<%= render 'locales_select' %>
+			<%= render_menu('tools') %>
+		</div>
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span><%= t(:navigation_menu) %><i class="icon-chevron-down icon-white"></i></span>
@@ -17,6 +23,11 @@
           <%= render_primary_menu %>
         </div>
       </div>
-    </div>    
-  </header>
-<%# end %>
+    </div>
+  </div>
+  <p class="address visible-desktop">Hotel Le Toiny St. Barth - Anse de Toiny<br/>97133 Saint Barthelemy - French West Indies, Caribbean<br/>Tel: +590 (0)590 27 88 88<br/>Fax: +590 (0) 590 27 89 30<br/><%= mail_to "reservations@letoiny.com" %></p>  
+    <%= link_to(image_tag("logo_relais_chateaux_white.png"), "http://www.relaischateaux.com", :id => "logo_relais_chateaux", :target => "_blank", :class => 'visible-desktop', :title => t("r_and_c").html_safe, :rel => "tooltip", :data => { :placement => 'bottom', :html => "true"}) %>
+  <%= link_to(image_tag("gold_cntraveller_2013.png"), "http://www.cntraveler.com/hotels/caribbean/french-west-indies/h-tel-le-toiny-st-barts-st-barts-st-barts", :id => "logo_gold_cntraveller_2013", :target => "_blank", :class => 'visible-desktop') %>
+  
+</header>
+<% end %>

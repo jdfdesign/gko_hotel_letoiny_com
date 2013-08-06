@@ -21,7 +21,9 @@
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
-
+.nav li [class^="icon-"] {
+  display: none;
+}
 .navbar-inner {
 	text-shadow: 0 1px 1px #444;
 	@include reset-filter;

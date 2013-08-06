@@ -1,5 +1,6 @@
 //= require jquery
-//= require jquery_ujs
+//= require jquery_ujs 
+//= require jquery.mobile.detection.js
 //= require gko/public/jquery.grid.responsive.js
 //= require gko/jquery.mobile.events.js
 //= require jquery.easing.min.js
@@ -52,6 +53,10 @@ var Site = {
 		
 		$('a[rel="tooltip"], a[rel="tooltip nofollow"]').tooltip({html: true});
 		$('input.date, input.datetime').datepicker();
+		
+		if(jQuery.browser.mobile && (link = $("#online-booking"))) { 
+		  link.attr("href", "https://mobile.synxis.com/22812?shell=mobile_shared_toiny&template=mobile_shared_toiny");
+		}
 	},
 
     attachEvents : function() {
