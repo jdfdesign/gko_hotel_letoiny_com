@@ -1,223 +1,183 @@
-$brown: #44413A;
-$acidGreen: #98CB38;
-$zindexPane: 100;
-$zindexLogoRelais: 90;
 
-@import "variables";
-@import "twitter.bootstrap.2.2.1/bootstrap-awesome";
-@import "twitter.bootstrap.2.2.1/bootstrap-datepicker";
-@import "twitter.bootstrap.2.2.1/bootstrap-image-gallery";
-@import "gko/public/base";
-@import "layout";
-@import "navbar";
-@import "ticker";
-@import "scrollpane";
-@import "flexslider/flexslider";
-@import "supersized";
+// overwrite default bootstrap
+$theme-color: #44413A; // dark brown > rgba(68, 65, 58, 1)
+$theme-medium-color: #69655a; // rgba(105, 101, 90, 1);
+$theme-light-color: #d5d4d2; // light brown                   
+$theme-accent-color: #63cbd8; // orange                                           
+$theme-break-point: 1020px; 
+$toolbar-height: 40px;
+$navbar-fixed-left: 250px;                   
 
+@import "theme/font"; 
+@import "theme/bootstrap-variables";
+@import "theme/additionnal-variables";
+@import "bootstrap/bootstrap";
+@import "font-awesome-3.2.1/font-awesome";
+@import "theme/navbar";
+@import "theme/toolbar"; 
+@import "theme/footer";
+@import "theme/carousel";         
+@import "theme/supersized";
+
+/* FIX FOR IE DEVICE_WIDTH BUG
+-------------------------------------------------- */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}                                                   
+@-o-viewport{width:device-width}
+@viewport{width:device-width}                                     
+
+
+// Color for the placeholder plugin                        
+.placeholder {
+  color: $input-color-placeholder;
+}
+
+/* FIX FOR GMAP BUG
+-------------------------------------------------- */
+#map-canvas {
+  height: 400px;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* GLOBAL STYLE
+-------------------------------------------------- */
+// We do not want focus
+// -------------------------
 a:focus,
 .btn:focus {
-  outline: 0;
+  outline: 0;     
+}                  
+::selection {
+	background-color: $theme-medium-color;
+	color: #fff;                                                                         
+}
+a {
+  @include transition(all 0.4s ease-in-out);  
 }
 
 a[data-pin-log="button_pinit_floating"] {
   z-index: 1000000;
-}
-/* =PATCH
-----------------------------------------------------*/
-
-// Patch to resolve conflict with bootstrap
-#supersized {
-	img {
-		max-width: none;
-	}
-}
-
-/* =SPECIFIC
-----------------------------------------------------*/  
-.flexslider {
-	margin-bottom: $baseLineHeight / 2;
-}
-
-.flex-direction-nav a { opacity: 1; }
-.flex-direction-nav .flex-next {right: 6px;}
-.flex-direction-nav .flex-prev {left: 6px;}
-.flexslider:hover .flex-next {opacity: 1;}
-.flexslider:hover .flex-prev {opacity: 1;}
-.main-content-inner {
-	padding: $baseLineHeight 0;
-}
-.accordion-group {
-	background-color: $white;
-}
-.modal {
-	background-color: $bodyBackground;
-	@include border-radius(10px 10px 0 0);
-}
-.modal-header {
-	@include border-radius(6px 6px 0 0);
-	background-color: $navbarBackgroundHighlight;
-	color: $white;
-	.close {
-		color: $white;
-		text-shadow: $black;
-	}
-}
-.modal-footer {
-  background-color: $bodyBackground;
-  border-top: 1px solid darken($bodyBackground, 8%);
-}
-#logo_relais_chateaux {
-	position:absolute; 
-	top:54px;
-	right:110px;
-	z-index: $zindexLogoRelais;
-	opacity: .7;
-	z-index: 911;
-}
-#logo_gold_cntraveller_2013 {
-	position:absolute; 
-	top:44px;
-	right:8px;
-	z-index: $zindexLogoRelais;
-	opacity: .7;
-	z-index: 911;
-}
-
-#start-slideshow {
-	text-align: right;
-	margin-bottom: $baseLineHeight;
-	font-size: 10px;
-	text-decoration: none;
-	i {
-		padding-left: 4px;
-	}
-}
-h1.page-title{
-	font-weight:normal;
-	font-size: 24px;
-	margin-top: 0;
-	margin-bottom:8px;
-}
-.nav > li > a {
-	font-size: 11px;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-/*-----------------------------------------
- GRID
------------------------------------------ */
-.grid > li { 
-		h2 {
-			text-transform: uppercase;
-			font-family: $baseFontFamily;
-			font-size: $baseFontSize; 
-			font-weight: bold;
-			line-height: $baseLineHeight;
-		} 
-		.thumbnail {
-			background-color: rgba(255,255,255,.7);
-			&:hover {
-				background-color: rgba(255,255,255,1);
-			};
-		}
-}
-.grid > li.document_item {
-	text-align: center;
-	.thumbnail {
-		.date {
-			
-		}
-		.country {
-			clear: both;
-			font-weight: bold;
-		}
-		.links {
-			display: none;
-		}
-	}
-}
-
-
-/*-----------------------------------------
- SIBEBAR
------------------------------------------ */
-
-/*-----------------------------------------
- HOME
------------------------------------------ */
-
-.html-text {
-	clear: both;
-	ul { list-style: disc outside; margin-left: 30px; }
-	li { margin-bottom: 0px; }
-	ul, ol { margin-bottom: .8em; }
-	p { margin-bottom: .8em; text-align: justify; }
-	 
-	table {
-	  margin-bottom: $baseLineHeight * 2;
-	  td {
-		border-color: $textColor;
-	  }
-	}
-	
-	h1 {
-		font-size: 26px;
-		line-height: 36px; 
-	}
-	
-	h2 {
-		line-height: 24px;
-		font-size: 16px;
-		letter-spacing: 1px; 
-		text-transform: uppercase;
-		margin: 16px 0 4px 0;
-		border-bottom: 1px solid #B7B6B6;
-		font-weight: normal;
-	}
-	
-	h3 {
-		line-height: 24px;
-		font-size: 14px;
-		font-style: italic;
-		letter-spacing: 0px; 
-		margin: 16px 0 4px 0;
-		border-bottom: 1px dotted #B7B6B6;
-	}
 } 
 
-/* loading screen */ 
-.ui-loading { overflow: hidden !important; }
-.ui-loading .ui-loader { display: block; }
-.ui-loader { display: none; position: absolute; opacity: .85; z-index: 1004; left: 50%; width: 200px; margin-left: -130px; margin-top: -35px; padding: 10px 30px; }
-.ui-loader .ui-icon { position: static; display: block; opacity: .9; margin: 0 auto; width: 35px; height: 35px; 
-	background:transparent asset-url("gko-core/ajax-loader.gif", image) no-repeat}
-
-
-
-.ui-icon-loading {
-	position: static;
-	display: block;
-	opacity: .9;
-	margin: 0 auto;
-	width: 35px;
-	height: 35px;
-	background-color: transparent;
-	background-image: asset-url("gko-core/ajax-loader.gif", image);
-	width: 40px;
-	height: 40px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
-	background-size: 35px 35px;
+html {
+  overflow-y: scroll;
+  height: 100%;
 }
-.hotel_inquiry select,
-.table_inquiry select {
-  width: auto; 
-	display: inline;
+body {
+  font-weight: 300;
+	height: 100%; 
+	
+	background-image: image-path("table_03.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+	@media (min-width: $grid-float-breakpoint) {
+  
+  }
 }
 
+.page-wrapper {
+  min-height: 100%;
+  position: relative;
+  @media (min-width: $grid-float-breakpoint) {
+     
+    @include center-block;
+    max-width: 1000px; 
+    
+  }
+}
+.main-content { 
+  background-color: $theme-light-color;
+  @media (min-width: $grid-float-breakpoint) {
+    margin-left: $navbar-fixed-left;
+  }
+  @media (min-width: $theme-break-point) { 
+    padding: $line-height-computed;
+    margin-left: $navbar-fixed-left + $line-height-computed;
+    margin-bottom: $line-height-computed;
+    background-color: rgba(241, 237, 228, .85);
+  }
+}
 
-@import "responsive";
+.home {
+  .main-content { 
+    @media (min-width: $theme-break-point) { 
+      background-color: none;
+    }
+  }
+}
+.container.no-margin {
+  padding-left: 0;
+  padding-right: 0;
+}
+.page-title {
+	padding: $line-height-computed 0 0 0;
+	font-size: 36px;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.copy-text {
+  font-size: 16px;
+  font-weight: 300;
+  ul { list-style: disc outside; margin-left: 30px; }
+  ol { margin-left: 30px; }
+	h3 {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		text-align: left;
+		letter-spacing: 1px;
+	}
+	
+	a {
+	  color: $theme-medium-color;
+	  text-decoration: underline;
+	  &:hover,
+	  &:focus { 
+	    text-decoration: none;
+	    color: $theme-light-color;
+	    background-color: $theme-medium-color;
+	  }
+	}
+}
+
+.theme-inverse {
+  .main-content { 
+    color: $theme-light-color;
+    background-color: $theme-medium-color;
+
+    @media (min-width: $theme-break-point) { 
+      color:$theme-light-color;
+      background-color: rgba(68, 65, 58, .85);
+      margin-top: $line-height-computed; 
+    }
+  }
+}
+.home.theme-inverse {
+  .main-content { 
+    @media (min-width: $theme-break-point) { 
+      background-color: none;
+    }
+  }
+}
+.panel-home {
+  position: absolute;
+  bottom: 100px; 
+
+  img {
+    float: left; 
+    max-width: 150px;
+    margin-right: 20px;
+  }
+  
+  .btn-link {
+      color: $theme-light-color;
+  }
+}

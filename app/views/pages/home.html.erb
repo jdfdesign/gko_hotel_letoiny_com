@@ -1,26 +1,10 @@
-<% content_for :page_content do %> 
-<%# cache [is_mobile_device?.to_s, action_name, I18n.locale, resource.site, resource] do %>
-	<% if is_mobile_device? %>
-	<div id="carousel" class="flexslider carousel" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="li.gallery-item">
-	  <ul class="slides">
-		<% resource.images.each do |img| %>
-			<%= content_tag(:li, :class => "gallery-item", :rel => "gallery", :data => {:href => "#{img.thumbnail(:large).url}"}) do %>
-				<%= image_fu(img, "210x140#") %>
-			<% end %>
-		<% end %>
-	  </ul> 
-	</div>
-	<% end %> 
-    <%# end %> 
-	<% if @twits.try(:any?) %>
-	<div id="ticker-wrapper">
-		<ul id="ticker">
-			<% @twits.each do |twit| %>
-				<li><a href="#"><%= twit.body.try(:html_safe) %></a></li>
-			<% end %>
-		</ul>
-	</div>
-	<% end %>
-	<p></p>
-
-<% end %>   
+<div class="panel panel-default panel-home">
+  <div class="panel-heading">
+    <h3 class="panel-title">New Event at Le Gaiac</h3>
+  </div>
+  <div class="panel-body">
+    <img src="img/table_05.jpg" class="img-responsive">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p><a href="restaurant.html" class="btn btn-link">Read More &gt;</a></p>
+  </div>
+</div>

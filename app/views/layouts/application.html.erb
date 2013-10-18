@@ -6,54 +6,26 @@
 <% end %>
 <%= render 'html_tag' %>
 <%= render 'head' %>
-<body id='<%= @body_id %>'>
-  <div id="wrapper-wide-body">
-	<%= render 'header' %>
-	<% if content_for?(:page_content) %>
-    <%= yield :page_content %>
-  <% else %> 
-    <div id='content-container' class='container-fluid'>
-    <!--<div class='wrapper-content'>-->
-      <div id="content" class='row-fluid'>
-        <div id='main-column' class='content-sidebar'>
-          <div class="main-content-inner">
-            <%= render 'layouts/messages' %> 
-            <%= yield %>
-          </div>
-        </div>
-        <aside id='sidebar' class='right'>
-          <div id='sidebar-header'><%= yield :left_sidebar %></div>
-          <div id='sidebar-content'><%= yield :sidebar %></div>
-        </aside>
-      </div>
-    </div>
-    <% end %>  
-    <%= render 'footer' %>
-  </div>
-  <%= render 'layouts/modals' %> 
+<body class='<%= @body_id %>'>
+  <div class="page-wrapper">
+  	<%= render 'header' %>
+    <section class="outer-container main-content">
+      <%= yield %>
+    </section>
+  </div> 
+  <%= render 'footer' %>
+  <%= render 'toolbar' %>
+  <%= render 'supersized' %>
+  
   <!-- Le javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<%= yield :before_javascript_libraries %>
 	<%= javascript_include_tag "public" %>
 	<%= yield :after_javascript_libraries %>
-	
-	<% if site.home.images.order(:position).any? && !is_mobile_device? %>
-		<% cache [is_mobile_device?.to_s, I18n.locale, site, site.home, "slideshow"] do %>
-		<script type="text/javascript">
-		
-			jQuery(function($){
-			
-				$.supersized({
-					slide_interval : 3000, // Length between transitions
-					transition : 3, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-					transition_speed : 800, // Speed of transition
-					slides : [<%= raw site.home.images.order(:position).map{|c| "{image: '#{c.url}'}" }.join(",").to_s %>]
-				});
-		    });
-	    
-		</script>
-		<% end %>
-	<% end %>
 	<%= render 'google_analytics' %>
 	<script type="text/javascript" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
 
