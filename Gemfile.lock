@@ -55,6 +55,7 @@ GIT
     gko_documents (0.7.02)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
+    gko_features (0.7.02)
     gko_hotel (0.7.02)
       gko_core (= 0.7.02)
       gko_inquiries (= 0.7.02)
@@ -63,12 +64,6 @@ GIT
       filters_spam (~> 0.2)
     gko_stickers (0.7.02)
     gko_twits (0.7.02)
-
-GIT
-  remote: git@github.com:jdfdesign/gko_concierge.git
-  revision: b6a0159a18c5edabb3eef59ff66b018b1bedbda5
-  specs:
-    gko_concierge (0.0.11)
 
 GEM
   remote: http://rubygems.org/
@@ -295,9 +290,9 @@ DEPENDENCIES
   gko_auth!
   gko_blog!
   gko_categories!
-  gko_concierge (= 0.0.11)!
   gko_core!
   gko_documents!
+  gko_features!
   gko_hotel!
   gko_image_bank!
   gko_inquiries!

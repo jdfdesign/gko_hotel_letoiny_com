@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131018083441) do
+ActiveRecord::Schema.define(:version => 20131021132816) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -191,6 +191,44 @@ ActiveRecord::Schema.define(:version => 20131018083441) do
   end
 
   add_index "documents", ["site_id"], :name => "index_documents_on_site_id"
+
+  create_table "feature_translations", :force => true do |t|
+    t.integer  "feature_id"
+    t.string   "locale"
+    t.text     "body"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "feature_translations", ["feature_id"], :name => "index_feature_translations_on_feature_id"
+  add_index "feature_translations", ["locale"], :name => "index_feature_translations_on_locale"
+
+  create_table "features", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "section_id"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.string   "url"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "published_at"
+    t.integer  "position",        :default => 1
+    t.string   "image_mime_type"
+    t.string   "image_name"
+    t.integer  "image_size"
+    t.integer  "image_width"
+    t.integer  "image_height"
+    t.string   "image_uid"
+    t.string   "image_ext"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.date     "start_at"
+    t.date     "end_at"
+  end
+
+  add_index "features", ["owner_type", "owner_id"], :name => "index_features_on_owner_type_and_owner_id"
+  add_index "features", ["position", "section_id"], :name => "index_features_on_position_and_section_id"
 
   create_table "hotel_reservations", :force => true do |t|
     t.integer  "site_id"

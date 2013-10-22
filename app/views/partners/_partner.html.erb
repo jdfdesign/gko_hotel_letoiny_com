@@ -2,7 +2,7 @@
   <div class="thumbnail">
     <% if partner.image.present? %>
         <div class="thumbnail-image">
-          <% if partner.thumbnail -%>
+          <% if partner.link.present? -%>
               <%= link_to(image_tag(partner.thumbnail.url), partner.link, :target => :blank, :rel => 'external') %>
           <% else -%>
               <%= image_tag(partner.thumbnail.url) %>

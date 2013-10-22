@@ -8,14 +8,14 @@
 
      return unless current_section
 	 
-	if (current_section.root? || current_section.parent.root?)
-       sections = current_section.children.in_menu
-     elsif current_section.children.in_menu.any?
-		sections = current_section.children.in_menu
-	 else
-       sections = current_section.self_and_siblings.in_menu
-     end
-   end
+  	if (current_section.root? || current_section.parent.root?)
+      sections = current_section.children.in_menu
+    elsif current_section.children.in_menu.any?
+      sections = current_section.children.in_menu
+    else
+      sections = current_section.self_and_siblings.in_menu
+    end 
+  end
    #end
 %>
 <% if sections.try(:any?) %>

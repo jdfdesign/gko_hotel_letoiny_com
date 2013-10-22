@@ -29,14 +29,14 @@ ssh_options[:forward_agent] = true
 set :use_sudo, false
 set :group_writable, false
 set :deploy_via, :remote_cache
-set :password, 'Rv4rN2=|&dgT' # account password
-set :user, 'letoiny' # account username
-set :dbpassword, 'j3E#b~)Y3}'# database user password
-set :dbuser, 'letoiny_db'# database user name
+set :password, '066GSyia9u' # account password
+set :user, 'jdf' # account username
+set :dbpassword, '4s/lNLN.RK:/'# database user password
+set :dbuser, 'jdf_db'# database user name
 set :repository,  "git@github.com:jdfdesign/gko_hotel_letoiny_com.git" #Github repository  
-set :deploy_dir, "/home/#{user}/ror" #deploy directory
+set :deploy_dir, "/home/#{user}/ror/letoiny" #deploy directory 
 set :branch, 'new-design'
-set :stage, 'staging'
+set :stage, 'production'
 set :application, "#{stage}"
 set :rails_env, "#{stage}"
 set :deploy_to, "#{deploy_dir}/#{stage}"
@@ -117,7 +117,7 @@ namespace :deploy do
     run "ln -nsf #{shared_path}/config/config.yml #{release_path}/config/config.yml"
     run "ln -nsf #{shared_path}/system #{release_path}/public/system"
     run "chmod 755 #{release_path}/public"
-    run "ln -nsf /home/#{user}/ror/staging/current/public /home/#{user}/public_html/staging"
+    run "ln -nsf /home/#{user}/ror/letoiny/production/current/public /home/#{user}/public_html/letoiny"
   end
 
   desc <<-DESC

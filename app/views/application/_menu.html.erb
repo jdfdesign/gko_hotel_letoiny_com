@@ -13,14 +13,7 @@
       <% if !section.leaf? && has_children %>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
         <% section.children.in_menu.each do |c| %>
-          <% if c.children.in_menu.try(:any?) %>
-            <li class="dropdown-submenu">
-              <%= menu_link(c) -%>
-              <%= render("dropdown_menu", :sections => c.children.in_menu ) %>
-            </li>
-          <% else %>
-            <li><%= menu_link(c) -%></li>
-          <% end %> 
+          <li><%= menu_link(c) -%></li> 
           <% if c.alt.present? %>
             <li class="text">
               <%= c.alt.html_safe %>

@@ -17,9 +17,10 @@ group :production do
    gem 'gko_hotel'
    gem 'gko_categories'
    gem 'gko_stickers' 
+   gem 'gko_features'
    gem 'gko_image_bank'
   end
-  gem 'gko_concierge', '0.0.11', :git => 'git@github.com:jdfdesign/gko_concierge.git'
+  #gem 'gko_concierge', '0.0.11', :git => 'git@github.com:jdfdesign/gko_concierge.git'
 end
 
 #group :development do
@@ -34,5 +35,6 @@ end
 #  gem "gko_categories", :path => '~/Github/gko_cms3/gko_categories'
 #  gem "gko_stickers", :path => '~/Github/gko_cms3/gko_stickers'
 #  gem "gko_image_bank", :path => '~/Github/gko_cms3/gko_image_bank'
+#  gem "gko_features", :path => '~/Github/gko_cms3/gko_features'
 #  gem "gko_concierge", :path => '~/Github/gko/gko_concierge'
 #end
