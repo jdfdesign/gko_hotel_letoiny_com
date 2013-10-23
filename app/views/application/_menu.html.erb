@@ -10,7 +10,7 @@
         #end specific to laurentbenoit.com 
         has_dropdown = has_children || has_contents
         li_classes = []
-        li_classes << "active" if !section.is_a?(Redirect) and active_url?(section.public_url)
+       # li_classes << "active" if !section.is_a?(Redirect) and active_url?(section.public_url)
         li_classes << "dropdown" if has_dropdown
         li_classes << section.menu_css_class if section.menu_css_class.present?
         li_classes = li_classes.join(" ")
