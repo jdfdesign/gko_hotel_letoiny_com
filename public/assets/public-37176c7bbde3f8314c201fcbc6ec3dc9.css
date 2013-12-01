@@ -2301,8 +2301,8 @@ table th[class*="span"],
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/assets/fontawesome.3.0.2/fontawesome-webfont.eot");
-  src: url("/assets/fontawesome.3.0.2/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fontawesome.3.0.2/fontawesome-webfont.woff") format("woff"), url("/assets/fontawesome.3.0.2/fontawesome-webfont.ttf") format("truetype");
+  src: url("/assets/fontawesome.3.0.2/fontawesome-webfont-635909f146e208b3509acdf3b154bf0d.eot");
+  src: url("/assets/fontawesome.3.0.2/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fontawesome.3.0.2/fontawesome-webfont-a0fbd98b232e7e1ef9cdaad813b26eb3.woff") format("woff"), url("/assets/fontawesome.3.0.2/fontawesome-webfont-6a4e273908b7e43d9e479d38b8ae5957.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -7797,7 +7797,7 @@ a.label:hover, a.badge:hover {
 
 /* line 66, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-133527da0899/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/_bootstrap-image-gallery.scss */
 .modal-loading .modal-image {
-  background: url(/assets/twitter_ext/loading.gif) center no-repeat;
+  background: url(/assets/twitter_ext/loading-b7ff30d20adcf2b850f420d17048930c.gif) center no-repeat;
 }
 
 /* line 69, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-133527da0899/gko_core/vendor/assets/stylesheets/twitter.bootstrap.2.2.1/_bootstrap-image-gallery.scss */
@@ -7970,7 +7970,7 @@ aside > section {
 
 /* line 53, ../../../../.rvm/gems/ruby-1.8.7-p374/bundler/gems/gko_cms3-133527da0899/gko_core/app/assets/stylesheets/gko/public/_default.scss */
 .missing-document-preview {
-  background: transparent url(/assets/gko/icon_pdf_grey_light_x110.png) left center no-repeat;
+  background: transparent url(/assets/gko/icon_pdf_grey_light_x110-d825c44fddb67d9997a6c30644ec1433.png) left center no-repeat;
   min-height: 110px;
 }
 
@@ -8404,7 +8404,7 @@ footer .address a:hover {
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
-  background: transparent url(/assets/logo.png) center center no-repeat;
+  background: transparent url(/assets/logo-9302d960d592018c70edf677571d4c9d.png) center center no-repeat;
   background-size: contain;
   cursor: pointer;
   text-decoration: none;
@@ -8767,14 +8767,14 @@ ul#ticker li span {
 
 /* line 74, ../../app/assets/stylesheets/_scrollpane.scss */
 .jspArrow.jspArrowDown {
-  background-image: url(/assets/d.gif);
+  background-image: url(/assets/d-fb92539a4c5dc5b3bed8416d8ea74b51.gif);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 /* line 80, ../../app/assets/stylesheets/_scrollpane.scss */
 .jspArrow.jspArrowUp {
-  background-image: url(/assets/u.gif);
+  background-image: url(/assets/u-b67840ad090258b4861d752fd4348155.gif);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -8934,7 +8934,7 @@ html[xmlns] .slides {
   height: 30px;
   margin: -20px 0 0;
   display: block;
-  background: url(/assets/flexslider/bg_direction_nav.png) no-repeat 0 0;
+  background: url(/assets/flexslider/bg_direction_nav-3c36224a76ddbcac2e36b643832074cf.png) no-repeat 0 0;
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -9107,7 +9107,7 @@ img {
   height: 60px;
   margin: -30px 0 0 -30px;
   text-indent: -999em;
-  background: url(/assets/progress.gif) no-repeat center center;
+  background: url(/assets/progress-311f8f4ff9beeadb2e3b2e29b420d002.gif) no-repeat center center;
 }
 
 /* line 19, ../../app/assets/stylesheets/_supersized.scss */
@@ -9179,7 +9179,7 @@ img {
 
 /* line 28, ../../app/assets/stylesheets/_supersized.scss */
 #supersized li.image-loading {
-  background: #111111 url(/assets/progress.gif) no-repeat center center;
+  background: #111111 url(/assets/progress-311f8f4ff9beeadb2e3b2e29b420d002.gif) no-repeat center center;
   width: 100%;
   height: 100%;
 }
@@ -11169,13 +11169,13 @@ h1.page-title {
     font-weight: bold;
     color: #d8d8d8;
     text-shadow: 0 1px 1px #444;
-    background-image: url(/assets/icon_arrow_bottom_36_white.png);
+    background-image: url(/assets/icon_arrow_bottom_36_white-5d8d92e1357d690021c293111408cdd7.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   /* line 177, ../../app/assets/stylesheets/_responsive.scss */
   #main-column-tab.closed {
-    background-image: url(/assets/icon_arrow_top_36_white.png);
+    background-image: url(/assets/icon_arrow_top_36_white-117777e94bb51784b30ea1873f0f54a4.png);
   }
 
   /* line 181, ../../app/assets/stylesheets/_responsive.scss */

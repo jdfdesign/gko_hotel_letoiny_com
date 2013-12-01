@@ -132,12 +132,12 @@ var Site = {
 		
 		// Enable ajax on form to send register user to bronto
 		//------------------------------------------------------- 
-		$('#table-booking').on('click', function(e) {
+		$('a#table-booking').on('click', function(e) {
 			e.preventDefault();
 			$('#booking-table-modal').modal({});
 		});
 		
-		$('#inquiry').on('click', function(e) {
+		$('a#inquiry').on('click', function(e) {
 			e.preventDefault();
 			$('#inquiry-modal').modal({});
 		});

@@ -1,9 +1,9 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.6'
+  gem 'sass-rails', '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 1.2.6'
 end
 
 group :production do
@@ -20,7 +20,7 @@ group :production do
    gem 'gko_stickers' 
    gem 'gko_image_bank'
   end
-  gem 'gko_concierge', '0.0.11', :git => 'git@github.com:jdfdesign/gko_concierge.git'
+  #gem 'gko_concierge', '0.0.11', :git => 'git@github.com:jdfdesign/gko_concierge.git'
 end
 
 #group :development do
